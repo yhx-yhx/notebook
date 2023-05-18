@@ -1,0 +1,21 @@
+name: Vitepress Deploy
+
+on:
+  push:
+    branches:
+      - main # 这里应为你的默认分支名
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 可以根据需要更改操作系统环境
+    steps:
+      - uses: actions/checkout@v2
+      - name: dev dependencies
+        run: npm run dev
+      - name: Build site
+        run: npm run build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          publish_dir: ./docs/.vitepress/dist
