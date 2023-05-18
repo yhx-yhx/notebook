@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest # 可以根据需要更改操作系统环境
     steps:
       - uses: actions/checkout@v2
-      - name: dev dependencies
-        run: npm run dev
+      - name: install dependencies
+        run: npm install
       - name: Build site
         run: npm run build
       - name: Deploy to GitHub Pages
