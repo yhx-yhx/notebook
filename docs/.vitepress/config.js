@@ -22,7 +22,7 @@ export default defineConfig({
   // }, 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/green.svg', // 左侧导航栏图标
+    logo: './green.svg', // 左侧导航栏图标
     // siteTitle: 'Hello World', // 左侧导航栏标题
     outline: 'deep', // 在大纲中显示的标题级别
     // editLink: { // 提供编辑页面的连接
