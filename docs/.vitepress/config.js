@@ -8,7 +8,7 @@ export default defineConfig({
   titleTemplate: 'Blog', // 网站标题后缀- “VitePress | Blog”
   base: '/notebook/', //base url
   head: [
-    ['link', { rel: 'icon', href: './favicon.ico' }]
+    ['link', { rel: 'icon', href: '../.vitepress/public/logo.png' }]
   ],
   // locales: {
   //   root: {
@@ -32,6 +32,7 @@ export default defineConfig({
     //   pattern: 'https://gitee.com/vuejs/vitepress/edit/main/pages/:path',
     //   text: 'Edit this page on GitHub'
     // },
+    cleanUrls: 'without-subfolders', // 删除路径中的.html后缀
     lastUpdatedText: '上次更新', // 上次更新时间显示文本
     outlineTitle: '快速导航', // 大纲的标题
     docFooter: { // 文档底部文本

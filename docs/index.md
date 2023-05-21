@@ -6,7 +6,7 @@ hero:
   text: "Random And Whimsical Site"
   # tagline: My great project tagline
   image:
-    src: ./.vitepress/public/green.svg
+    src: '../.vitepress/public/logo.png'
     alt: My Awesome Code
   actions:
     - theme: brand
