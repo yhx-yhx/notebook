@@ -7,6 +7,9 @@ export default defineConfig({
   description: "A Random And Illogical Site",
   titleTemplate: 'Blog', // 网站标题后缀- “VitePress | Blog”
   base: '/notebook/', //base url
+  head: [
+    ['link', { rel: 'icon', href: './favicon.ico' }]
+  ],
   // locales: {
   //   root: {
   //     label: 'English',
@@ -22,7 +25,7 @@ export default defineConfig({
   // }, 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: './green.svg', // 左侧导航栏图标
+    logo: '../.vitepress/public/green.svg', // 左侧导航栏图标
     // siteTitle: 'Hello World', // 左侧导航栏标题
     outline: 'deep', // 在大纲中显示的标题级别
     // editLink: { // 提供编辑页面的连接
