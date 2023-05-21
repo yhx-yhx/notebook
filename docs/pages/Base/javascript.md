@@ -561,7 +561,7 @@ console.log(innerWidth);
 
 ## location
 
-![image-20220830151358308](../../.vitepress/public/image-20220830151358308.png)
+![image-20220830151358308](/image-20220830151358308.png)
 
 # DOM
 

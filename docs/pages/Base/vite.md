@@ -6,7 +6,7 @@
 npm init vue@latest
 ```
 
-![vite初始化](../../.vitepress/public/vite初始化.png)
+![vite初始化](/vite初始化.png)
 
 ps:根据 需求自行选择；
 

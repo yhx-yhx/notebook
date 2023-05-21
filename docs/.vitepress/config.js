@@ -6,9 +6,9 @@ export default defineConfig({
   title: "My Awesome Code",
   description: "A Random And Illogical Site",
   titleTemplate: 'Blog', // 网站标题后缀- “VitePress | Blog”
-  base: '/notebook/', //base url
+  base: '/notebook/', //base url 
   head: [
-    ['link', { rel: 'icon', href: '/notebook/logo.png' }]
+    ['link', { rel: 'icon', href: '/logo.png' }]
   ],
   // locales: {
   //   root: {
@@ -26,7 +26,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // logo: '../.vitepress/public/green.svg', // 左侧导航栏图标
-    // siteTitle: 'Hello World', // 左侧导航栏标题
+    // siteTitle: 'Hello World', // 左侧导航栏标题 
     outline: 'deep', // 在大纲中显示的标题级别
     // editLink: { // 提供编辑页面的连接
     //   pattern: 'https://gitee.com/vuejs/vitepress/edit/main/pages/:path',
