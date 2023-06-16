@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,V as l}from"./chunks/framework.b7ceec1d.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"pages/Components/Vue3Echarts.md"}'),p={name:"pages/Components/Vue3Echarts.md"},o=l("",5),e=[o];function r(t,c,D,y,F,C){return n(),a("div",null,e)}const b=s(p,[["render",r]]);export{i as __pageData,b as default};
