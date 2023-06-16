@@ -61,9 +61,12 @@ export default defineConfig({
         ]
       },
       {
-        text: 'BUG FIX',
+        text: 'Notes',
         items: [
-          { text: '2023/4', link: '/pages/Other/Bug/2023/4' },
+          { text: '2023/4', link: '/pages/Notes/2023/4' },
+          { text: 'learn_vue3_doc', link: '/pages/Notes/2023/learn_vue3_doc' },
+          { text: 'learn_vue3_coderwhy', link: '/pages/Notes/2023/learn_vue3_coderwhy' },
+          { text: 'default', link: '/pages/Notes/2023/Others/Nodes/default' },
         ]
       },
       {
@@ -76,7 +79,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'LIVE',
+        text: 'Live',
         items: [
           { text: 'noisy', link: '/pages/Other/Live/noisy' },
           { text: 'trivial', link: '/pages/Other/Live/trivial' },
@@ -106,9 +109,9 @@ export default defineConfig({
         ]
       },
       {
-        text: 'BUG FIX',
+        text: 'Notes',
         items: [
-          { text: '2023/4', link: '/pages/Other/Bug/2023/4' },
+          { text: '2023/4', link: '/pages/Notes/2023/4' },
         ]
       },
       {
@@ -121,7 +124,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'LIVE',
+        text: 'Live',
         items: [
           { text: 'noisy', link: '/pages/Other/Live/noisy' },
           { text: 'trivial', link: '/pages/Other/Live/trivial' },
@@ -133,10 +136,10 @@ export default defineConfig({
     search: {
       provider: 'local',
     },
-    // carbonAds: {
-    //   code: 'yhx',
-    //   placement: 'yhx'
-    // },
+    carbonAds: {
+      // code: 'yhx',
+      // placement: 'yhx'
+    },
     socialLinks: [
       { icon: 'github', link: 'https://gitee.com/yhx825/superdemo' }
     ],

@@ -4962,3 +4962,7 @@ svg.DocSearch-Hit-Select-Icon {
 .vp-doc blockquote p {
   font-size: 14px
 }
+
+.VPCarbonAds {
+  border: 2px var(--vp-badge-info-border) solid;
+}
