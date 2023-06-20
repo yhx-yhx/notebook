@@ -29,10 +29,11 @@ export default defineConfig({
     // siteTitle: 'Hello World', // 左侧导航栏标题 
     outline: 'deep', // 在大纲中显示的标题级别
     // editLink: { // 提供编辑页面的连接
-    //   pattern: 'https://gitee.com/vuejs/vitepress/edit/main/pages/:path',
+    //   pattern: 'https://github.com/yhx-yhx/notebook/tree/main/pages/:path',
     //   text: 'Edit this page on GitHub'
     // },
     cleanUrls: 'without-subfolders', // 删除路径中的.html后缀
+    lastUpdated: true,
     lastUpdatedText: '上次更新', // 上次更新时间显示文本
     outlineTitle: '快速导航', // 大纲的标题
     docFooter: { // 文档底部文本
@@ -67,6 +68,7 @@ export default defineConfig({
           { text: 'learn_vue3_doc', link: '/pages/Notes/2023/learn_vue3_doc' },
           { text: 'learn_vue3_coderwhy', link: '/pages/Notes/2023/learn_vue3_coderwhy' },
           { text: 'default', link: '/pages/Notes/2023/Others/Nodes/default' },
+          { text: 'third_party_warehouse', link: '/pages/Notes/2023/Others/Nodes/third_party_warehouse' },
         ]
       },
       {
@@ -88,7 +90,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'LINK',
+        text: 'Link',
         items: [
           { text: 'Docs', link: '/pages/Other/Link/Docs/index' },
           { text: 'Live', link: '/pages/Other/Link/Live/index' },
