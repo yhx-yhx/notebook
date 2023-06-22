@@ -4966,3 +4966,7 @@ svg.DocSearch-Hit-Select-Icon {
 .VPCarbonAds {
   border: 2px var(--vp-badge-info-border) solid;
 }
+
+.line-numbers-mode {
+  margin: 0 !important;
+}

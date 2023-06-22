@@ -64,6 +64,7 @@ export default defineConfig({
       {
         text: 'Notes',
         items: [
+          { text: 'min_title', link: '/pages/Notes/2023/title' },
           { text: '2023/4', link: '/pages/Notes/2023/4' },
           { text: 'learn_vue3_doc', link: '/pages/Notes/2023/learn_vue3_doc' },
           { text: 'learn_vue3_coderwhy', link: '/pages/Notes/2023/learn_vue3_coderwhy' },
@@ -78,6 +79,10 @@ export default defineConfig({
           { text: 'router 处理方案', link: '/pages/Other/Plan/router' },
           { text: 'axios封装', link: '/pages/Other/Plan/axios_request' },
           { text: 'hls 解决方案', link: '/pages/Other/Plan/hls' },
+          { text: 'pdf预览', link: '/pages/Other/Plan/pdf' },
+          { text: 'xlsx', link: '/pages/Other/Plan/xlsx' },
+          { text: 'download', link: '/pages/Other/Plan/download' },
+          { text: 'xgplayer', link: '/pages/Other/Plan/xgplayer' },
         ]
       },
       {
@@ -123,6 +128,8 @@ export default defineConfig({
           { text: 'router 处理方案', link: '/pages/Other/Plan/router' },
           { text: 'axios封装', link: '/pages/Other/Plan/axios_request' },
           { text: 'hls 解决方案', link: '/pages/Other/Plan/hls' },
+          { text: 'pdf预览', link: '/pages/Other/Plan/pdf' },
+          { text: 'xlsx', link: '/pages/Other/Plan/xlsx' },
         ]
       },
       {

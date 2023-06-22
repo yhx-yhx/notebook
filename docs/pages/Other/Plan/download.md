@@ -1,14 +1,16 @@
 ## 一般常用 下载方法
 
+<br/>
+
 ```javascript
 function  Download(url, title="文件名字"){
     const elLink = document.createElement('a')
     elLink.href = url //下载地址
     elLInk.download = title //所下载文件名字
-	document.body.appendChild(elLink)
-	elLink.style.display = "none";
-	elLink.click()
-	document.removeChild(elLink)
+    document.body.appendChild(elLink)
+    elLink.style.display = "none";
+    elLink.click()
+    document.removeChild(elLink)
 } 
 ```
 
@@ -24,8 +26,9 @@ function  Download(url, title="文件名字"){
 
 
 
-
 ## canvas 转成 png 下载
+
+<br/>
 
 ```javascript
 <canvas id="canvas"></canvas>
@@ -52,4 +55,3 @@ function  Download(url, title="文件名字"){
         })
     </script>
 ```
-
