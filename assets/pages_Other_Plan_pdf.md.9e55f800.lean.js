@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,V as l}from"./chunks/framework.b7ceec1d.js";const b=JSON.parse('{"title":"在线预览pdf","description":"","frontmatter":{},"headers":[],"relativePath":"pages/Other/Plan/pdf.md"}'),p={name:"pages/Other/Plan/pdf.md"},e=l("",5),o=[e];function t(r,c,i,D,F,d){return a(),n("div",null,o)}const u=s(p,[["render",t]]);export{b as __pageData,u as default};
