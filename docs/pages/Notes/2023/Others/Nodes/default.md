@@ -7,7 +7,7 @@
 以下是一个示例，展示如何在 Element Plus 的 Upload 组件中实现按钮级别上传显示和进度调：
 
 ```
-复制代码<template>
+<template>
   <el-upload
     action="/upload"
     :show-file-list="false"
@@ -105,7 +105,7 @@ export default defineConfig({
 以下示例展示如何使用这两个属性来居中放置 SVG 中的文本元素：
 
 ```
-svg复制代码<svg width="300" height="200">
+svg<svg width="300" height="200">
   <rect x="50" y="50" width="200" height="100" fill="#eee" stroke="#ddd"/>
   <text x="150" y="100" text-anchor="middle" alignment-baseline="middle">居中对齐</text>
 </svg>
@@ -128,8 +128,8 @@ svg复制代码<svg width="300" height="200">
 以下是 `gif.js` 库的一个基本示例：
 
 ```
-html复制代码<canvas id="my-canvas" width="320" height="240"></canvas>
-js复制代码import GIF from 'gif.js';
+html<canvas id="my-canvas" width="320" height="240"></canvas>
+jsimport GIF from 'gif.js';
 
 const canvas = document.getElementById('my-canvas');
 const ctx = canvas.getContext('2d');
@@ -171,7 +171,7 @@ gif.render'''';
 最简单的方式就是使用普通的 `<img>` 标签来展示 GIF 图像。浏览器原生支持 GIF 格式图像，因此只需将 GIF 文件路径设置为 `<img>` 标签的 `src` 属性即可。例如：
 
 ```
-html复制代码<img src="animation.gif" alt="Gif animation">
+html<img src="animation.gif" alt="Gif animation">
 ```
 
 优点：易于实现、易于维护。
@@ -183,13 +183,13 @@ html复制代码<img src="animation.gif" alt="Gif animation">
 这种方法是使用多张图片来表示动画序列，每张图片都代表着 GIF 动画序列的一个帧。在 JS 中可以通过定时器或动画库来切换每张图片，从而呈现 GIF 动画效果。例如：
 
 ```
-html复制代码<div id="animation">
+html<div id="animation">
   <img src="frame1.png" />
   <img src="frame2.png" />
   <img src="frame3.png" />
   ...
 </div>
-js复制代码const animationContainer = document.getElementById('animation');
+jsconst animationContainer = document.getElementById('animation');
 const frames = animationContainer.children;
 let currentFrame = 0;
 
@@ -215,11 +215,11 @@ setInterval(() => {
 前端常见的一些 JavaScript 动画库，如 jQuery, Tween.js, GSAP 等都可以负责加载并渲染 GIF 图像。这些库通常具有更强大的功能，并提供一系列 API 来直接控制动画的行为，例如播放、暂停、跳转和控制播放速度等。例如使用 gif.js 库:
 
 ```
-html复制代码<div>
+html<div>
   <button id="generate">Generate GIF</button>
   <canvas id="preview" width="300" height="225"></canvas>
 </div>
-js复制代码import GIF from ''gif.js'';
+jsimport GIF from ''gif.js'';
 
 const canvas = document.getElementById('preview');
 const context = canvas.getContext('2d');
@@ -264,7 +264,7 @@ document.getElementById('generate').addEventListener('click', function(e) {
 以下是一个基本的 `Fuse.js` 示例：
 
 ```
-js复制代码import Fuse from 'fuse.js';
+jsimport Fuse from 'fuse.js';
 
 const data = [
   { name: 'John Doe', age: 25, city: 'New York' },
@@ -692,7 +692,7 @@ console.log(`Document has focus: ${document.hasFocus()}`);
 **语法：**
 
 ```
-复制代码const selectionObject = window.getSelection();
+const selectionObject = window.getSelection();
 ```
 
 其中，`selectionObject`是一个 `Selection` 对象，它包含所选文本及其相关属性和方法。
@@ -702,13 +702,13 @@ console.log(`Document has focus: ${document.hasFocus()}`);
 1. 获取所选文本：
 
 ```
-复制代码const selectionText = window.getSelection().toString();
+const selectionText = window.getSelection().toString();
 ```
 
 1. 设置所选文本样式：
 
 ```
-复制代码const selectionObject = window.getSelection();
+const selectionObject = window.getSelection();
 if (selectionObject.rangeCount) {
   const selectedRange = selectionObject.getRangeAt(0);
   const newNode = document.createElement('span');
@@ -720,7 +720,7 @@ if (selectionObject.rangeCount) {
 1. 清除所选文本样式：
 
 ```
-复制代码const selectionObject = window.getSelection();
+const selectionObject = window.getSelection();
 if (selectionObject.rangeCount) {
   const selectedRange = selectionObject.getRangeAt(0);
   const parentNode = selectedRange.commonAncestorContainer;
@@ -734,7 +734,7 @@ if (selectionObject.rangeCount) {
 1. 监听文本选择变化事件：
 
 ```
-复制代码document.addEventListener('selectionchange', () => {
+document.addEventListener('selectionchange', () => {
   console.log(window.getSelection().toString());
 });
 ```
@@ -754,7 +754,7 @@ if (selectionObject.rangeCount) {
 1. 将要缓存的组件包装在 `<keep-alive>`标记内
 
 ```
-html复制代码<template>
+html<template>
   <div>
     <keep-alive>
       <component :is="currentComponent"></component>
@@ -771,7 +771,7 @@ html复制代码<template>
 您可以通过 `include` 和 `exclude` prop 定义将哪些组件缓存或不缓存。其中，`include` 和 `exclude` 分别是字符串或正则表达式数组，可以匹配要包含或排除的组件名称。
 
 ```
-html复制代码<template>
+html<template>
   <div>
     <keep-alive :include="cachedViews">
       <router-view></router-view>
@@ -797,7 +797,7 @@ export default {
 您可以使用 `activated` 和 `deactivated` 生命周期钩子函数，在组件激活和失去焦点时执行特定逻辑。例如，您可以在 `activated` 生命周期钩子函数中加载数据或执行其他相关操作，从而提高组件渲染的速度。
 
 ```
-html复制代码<template>
+html<template>
   <div>
     <keep-alive>
       <router-view></router-view>

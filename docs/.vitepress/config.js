@@ -5,7 +5,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: "My Awesome Code",
   description: "A Random And Illogical Site",
-  titleTemplate: 'Blog', // 网站标题后缀- “VitePress | Blog”
+  titleTemplate: 'Jottings', // 网站标题后缀- “VitePress | Blog”
   base: '/notebook/', //base url 
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
@@ -45,13 +45,13 @@ export default defineConfig({
       {
         text: 'Base',
         items: [
-          { text: 'JAVASCRIPT', link: '/pages/Base/javascript' },
+          { text: 'JavaScript', link: '/pages/Base/javascript' },
           { text: 'CSS', link: '/pages/Base/css' },
-          { text: 'HTML', link: '/pages/Base/html' },
-          { text: 'VUE', link: '/pages/Base/vue' },
-          { text: 'VUEROUTER', link: '/pages/Base/vuerouter' },
-          { text: 'TYPESCRIPT', link: '/pages/Base/typescript' },
-          { text: 'GIT', link: '/pages/Base/git' },
+          { text: 'Html', link: '/pages/Base/html' },
+          { text: 'Vue', link: '/pages/Base/vue' },
+          { text: 'VueRouter', link: '/pages/Base/vuerouter' },
+          { text: 'TypeScriptT', link: '/pages/Base/typescript' },
+          { text: 'git', link: '/pages/Base/git' },
         ]
       },
       {
@@ -75,6 +75,7 @@ export default defineConfig({
       {
         text: 'Plan',
         items: [
+          { text: 'hooks', link: '/pages/Other/Plan/hooks' },
           { text: '大屏可视化响应式', link: '/pages/Other/Plan/screen' },
           { text: 'router 处理方案', link: '/pages/Other/Plan/router' },
           { text: 'axios封装', link: '/pages/Other/Plan/axios_request' },
@@ -83,6 +84,12 @@ export default defineConfig({
           { text: 'xlsx', link: '/pages/Other/Plan/xlsx' },
           { text: 'download', link: '/pages/Other/Plan/download' },
           { text: 'xgplayer', link: '/pages/Other/Plan/xgplayer' },
+        ]
+      },
+      {
+        text: 'Config',
+        items: [
+          { text: 'nvm', link: '/pages/Config/nvm' }
         ]
       },
       {

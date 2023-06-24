@@ -1,5 +1,82 @@
 ### learn vue 3文档
 
+### 组件注册
+
+- `全局注册` app.component(’组件名‘，组件的实现 )；
+- `局部注册` components :{ComponentA}
+- 组件名命名格式 双驼峰命名
+
+### props
+
+- `setup语法糖`显式的声明 
+- `setup(props)`来接受 props 
+- `defineProps(['foo'])`数组
+- `defineProps({foo:{type:String},likes:Number})`
+- props 不传值 `隐式转换` true
+- 单项数据流
+
+### 组件的事件
+
+- 组件的触发事件 没有冒泡机制
+- 父组件 绑定事件 @cs=“（n）=>cs+=n”
+- 子组件 $emit('cs','2') `参数一事件名 参数2 传参`
+- 原生事件 作为 自定义事件 将不会触发原生事件 仅会出发自定义事件
+
+### 事件的校验
+
+
+
+
+
+### 组件v-model
+
+- 父组件 v-model=“value”
+- 子组件  $emit('update:modelValue') $props.modelValue
+- 父组件 v-model:titile="value"
+- 子组件 $emit('update:title') $props.titile
+- 修饰符  父组件v-model.capitalize = "text"
+- 子组件 $props.modelModifers.capitalize 
+- 父组件 v-model:title.capitalize = "text"
+- 子组件 $props.titleModifers.capitlize 
+- `怎么自定义修饰符呢`
+
+### 插槽
+
+- 动态指令插槽 `#[name]`
+
+- 作用域插槽
+
+- ```vue
+  <template>
+    <MyComponent>
+      <!-- 使用显式的默认插槽 -->
+      <template #default="{ message }">
+        <p>{{ message }}</p>
+      </template>
+  
+      <template #footer>
+  	<!-- 此处 使用 {{message}} 会报错-->
+        <p>Here's some contact info</p>
+      </template>
+    </MyComponent>
+  </template>
+  ```
+
+  ### 依赖注入
+
+- provide   provide(/*注入名*/，‘值’)  `可以放在组件内部 也可放在全局`
+
+- inject（‘注入名’，‘默认值’） 来获取  `接受`
+
+- `没提供有接收 会警告`
+
+- 为了确保数据单向 不被修改 可以 使用 `readonly包装` API
+
+- 建议使用Symbol 来作为注入名以避免潜在的冲突。
+
+
+
+
 #### 穿透$attr
 
 - 继承 `例如class style id @等`
