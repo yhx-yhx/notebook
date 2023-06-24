@@ -25,7 +25,7 @@
 
 安装完成后 
 
-![image-20230514135829831](C:\Users\YHX\AppData\Roaming\Typora\typora-user-images\image-20230514135829831.png)
+![image-20230514135829831](/images/image-20230514135829831.png)
 
 修改 settings.txt 文件
 
