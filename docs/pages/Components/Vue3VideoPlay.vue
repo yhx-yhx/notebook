@@ -2,17 +2,31 @@
 <script setup>
 import 'element-plus/dist/index.css'
 import { ElButton, ElSelect, ElForm, ElFormItem, ElInput, ElOption, ElRow, ElCol, ElCard } from 'element-plus'
-import { onMounted, reactive } from 'vue';
-// import pkg from "vue3-video-play";
-// const { videoPlay } = pkg
+import { onMounted, reactive, ref } from 'vue';
 import 'vue3-video-play/dist/style.css' // 引入css
+// if (!import.meta.env.SSR) {
+//     const { videoPlay } = await import('vue3-video-play')
+//     // var videoPlay = () => import('vue3-video-play')
+//     // const pkg = defineClientComponent(() => {
+//     //     return import('vue3-video-play')
+//     // })
+//     app.use(plugin)
+//     console.log('videoPlay', videoPlay)
+// }
+const temp = ref()
+if (!import.meta.env.SSR) {
+    // const pkg = () => import('vue3-video-play')
+    import('vue3-video-play').then((module) => {
+        // use code
+        console.log('module', module)
+        const { videoPlay } = module
+        console.log('videoPlay', videoPlay)
+        temp.value = videoPlay
+    })
 
-import { defineClientComponent } from 'vitepress'
 
-const pkg = defineClientComponent(() => {
-    return import('vue3-video-play')
-})
-const { videoPlay } = pkg
+
+}
 
 const options = reactive({
     width: '100%', //播放器高度
@@ -74,28 +88,32 @@ const onCanplay = (ev) => {
 </script>
 
 <template>
-    <!-- <client-only> -->
+    <client-only>
+        <ElCard>
+            <el-form label-width="100px">
+                <el-row>
+                    <el-col :span="11" :offset="0">
+                        <el-form-item label="视频源src">
+                            <el-input v-model="options.src" placeholder="请输入视频源（src）" clearable></el-input>
+                        </el-form-item>
+                    </el-col>
+                    <el-col :span="11" :offset="0">
+                        <el-form-item label="视频格式">
+                            <el-select v-model="options.type" value-key="" placeholder="" clearable>
+                                <el-option v-for="item in dicts.type" :key="item.value" :label="item.label"
+                                    :value="item.value">
+                                </el-option>
+                            </el-select>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+            </el-form>
+            <div v-if="temp">true
+                <videoPlay style="height:100px;width:500px" v-bind="options" @play="onPlay" />
+            </div>
+            <div v-else>false</div>
 
-    <ElCard>
-        <el-form label-width="100px">
-            <el-row>
-                <el-col :span="11" :offset="0">
-                    <el-form-item label="视频源src">
-                        <el-input v-model="options.src" placeholder="请输入视频源（src）" clearable></el-input>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="11" :offset="0">
-                    <el-form-item label="视频格式">
-                        <el-select v-model="options.type" value-key="" placeholder="" clearable>
-                            <el-option v-for="item in dicts.type" :key="item.value" :label="item.label" :value="item.value">
-                            </el-option>
-                        </el-select>
-                    </el-form-item>
-                </el-col>
-            </el-row>
-        </el-form>
-        <videoPlay v-bind="options" @play="onPlay" />
-    </ElCard>
-    <!-- </client-only> -->
+        </ElCard>
+    </client-only>
 </template>
 
