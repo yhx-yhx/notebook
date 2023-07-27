@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,V as l}from"./chunks/framework.6c74f19e.js";const C=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"pages/Other/Plan/xlsx.md"}'),p={name:"pages/Other/Plan/xlsx.md"},o=l("",7),e=[o];function t(r,c,F,y,D,A){return n(),a("div",null,e)}const b=s(p,[["render",t]]);export{C as __pageData,b as default};

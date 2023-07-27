@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,V as l}from"./chunks/framework.6c74f19e.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"pages/Other/Plan/xgplayer.md"}'),p={name:"pages/Other/Plan/xgplayer.md"},o=l("",11),e=[o];function t(r,c,D,F,y,C){return n(),a("div",null,e)}const u=s(p,[["render",t]]);export{i as __pageData,u as default};
