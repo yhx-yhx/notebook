@@ -74,38 +74,28 @@ const onCanplay = (ev) => {
 </script>
 
 <template>
-    <client-only>
+    <!-- <client-only> -->
 
-        <ElCard>
-            <el-form label-width="100px">
-                <el-row>
-                    <el-col :span="11" :offset="0">
-                        <el-form-item label="视频源src">
-                            <el-input v-model="options.src" placeholder="请输入视频源（src）" clearable></el-input>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="11" :offset="0">
-                        <el-form-item label="视频格式">
-                            <el-select v-model="options.type" value-key="" placeholder="" clearable>
-                                <el-option v-for="item in dicts.type" :key="item.value" :label="item.label"
-                                    :value="item.value">
-                                </el-option>
-                            </el-select>
-                        </el-form-item>
-                    </el-col>
-                    <!-- <el-col :span="10" :offset="1">
-                    
-                </el-col> -->
-
-                </el-row>
-            </el-form>
-
-
-
-
-
-            <videoPlay ref="aplayVideo" v-bind="options" @play="onPlay" />
-        </ElCard>
-    </client-only>
+    <ElCard>
+        <el-form label-width="100px">
+            <el-row>
+                <el-col :span="11" :offset="0">
+                    <el-form-item label="视频源src">
+                        <el-input v-model="options.src" placeholder="请输入视频源（src）" clearable></el-input>
+                    </el-form-item>
+                </el-col>
+                <el-col :span="11" :offset="0">
+                    <el-form-item label="视频格式">
+                        <el-select v-model="options.type" value-key="" placeholder="" clearable>
+                            <el-option v-for="item in dicts.type" :key="item.value" :label="item.label" :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
+                </el-col>
+            </el-row>
+        </el-form>
+        <videoPlay v-bind="options" @play="onPlay" />
+    </ElCard>
+    <!-- </client-only> -->
 </template>
 
