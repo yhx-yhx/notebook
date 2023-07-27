@@ -45,6 +45,7 @@ function  Download(url, title="文件名字"){
         app.fillStyle = gradient;
         //绘制图形
         app.fillRect(0, 0, 500, 500);
+        // toDataURL 方式实现
         canvas.addEventListener('click', (e, title = "文件") => {
             const link = document.createElement('a');
             link.href = canvas.toDataURL();
@@ -53,5 +54,26 @@ function  Download(url, title="文件名字"){
             link.click()
             document.body.removeChild(link);
         })
+        // toBlob 方式实现
+        canvas.addEventListener('click', (e, title = "文件") => {
+            const link = document.createElement('a');
+            canvas.toBlob((blob)=>{
+                let url = new URL.createObjectURL(blob)
+                link.href = url
+                link.download = title;
+                document.body.appendChild(link);
+                link.click()
+                URL.revokeObjectURL(url)
+                document.body.removeChild(link);
+            },'image/png');
+           
+        })
     </script>
 ```
+<br/>
+
+##下载本地资源文件
+
+```javascript
+fetch(url,{method:'get'}).then(res=>res.json()).then(res=>console.log(res))
+````

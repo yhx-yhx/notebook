@@ -252,7 +252,7 @@ path :path.resolve(__dirname,'///**')
   -  postcss.config.js `plugins[require('autoprefixer')}]}` 
   -  use:["css-loader","style-loader","postcss"]
   -  `postcss-preset-env`  囊括了 autoprefixder 将css新特性 转换 成浏览器支持的 属性或者值 
-  -  `plugins[require('postcss-preset-env')}]}` 
+  -  '`plugins[require('postcss-preset-env')}]}`' 
   -  #八位 后两位透明度 css新特性 
 
 #### webpack打包其他资源
@@ -357,8 +357,10 @@ devtools:"source-map" 文件映射
   -  自动解析包
 
 - postcss 
+```javascript
   - npm i postcss-preset-env -D `css前缀`
   - 配置 postcss.config.js module.exports = {plugins:[require('postcss-preset-env')]}
+```
 
 - 原理
 

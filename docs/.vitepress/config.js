@@ -1,7 +1,17 @@
 import { defineConfig } from 'vitepress'
+// import { SearchPlugin } from "vitepress-plugin-search";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  // vite: {
+  //   plugins: [SearchPlugin({
+  //     previewLength: 80, // 这个选项决定了搜索结果预览的长度，单位是字符数
+  //     buttonLabel: "搜索", // 这个选项可以用来改变搜索按钮的标签
+  //     placeholder: "搜索文档", // 这个选项可以用来设置搜索输入框的占位符
+  //     allow: [], // 这是一个数组，你可以在这个数组中指定哪些页面可以被搜索
+  //     ignore: [] // 这也是一个数组，你可以在这个数组中指定哪些页面不被搜索
+  //   })]
+  // },
   lang: 'zh-CN',
   title: "My Awesome Code",
   description: "A Random And Illogical Site",
@@ -33,8 +43,15 @@ export default defineConfig({
     //   text: 'Edit this page on GitHub'
     // },
     cleanUrls: 'without-subfolders', // 删除路径中的.html后缀
-    lastUpdated: true,
-    lastUpdatedText: '上次更新', // 上次更新时间显示文本
+    lastUpdated: {
+      text: '上次更新',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
+    // lastUpdated: true,
+    // lastUpdatedText: '上次更新', // 上次更新时间显示文本
     outlineTitle: '快速导航', // 大纲的标题
     docFooter: { // 文档底部文本
       prev: '上一节',
@@ -57,8 +74,8 @@ export default defineConfig({
       {
         text: 'Components',
         items: [
-          { text: 'Vue3VideoPlay', link: '/pages/Components/Vue3VideoPlay' },
-          { text: 'Vue3Echarts', link: '/pages/Components/Vue3Echarts' },
+          { text: 'Vue3VideoPlay', link: '/pages/ComponentsExample/Vue3VideoPlay' },
+          { text: 'Vue3Echarts', link: '/pages/ComponentsExample/Vue3Echarts' },
         ]
       },
       {
@@ -150,7 +167,27 @@ export default defineConfig({
       },
     ],
     search: {
-      provider: 'local',
+      provider: 'local'
+      // options: {
+      //   locales: {
+      //     root: { //这里是个大坑，zh是不生效的，改为root即可
+      //       translations: {
+      //         button: {
+      //           buttonText: '搜索文档',
+      //           buttonAriaLabel: '搜索文档'
+      //         },
+      //         modal: {
+      //           noResultsText: '无法找到相关结果',
+      //           resetButtonTitle: '清除查询条件',
+      //           footer: {
+      //             selectText: '选择',
+      //             navigateText: '切换'
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
     },
     carbonAds: {
       // code: 'yhx',
