@@ -29,8 +29,8 @@ if (!import.meta.env.SSR) {
 }
 
 const options = reactive({
-    width: '100%', //播放器高度
-    height: '100%', //播放器高度
+    width: '400px', //播放器高度
+    height: '300px', //播放器高度
     color: "#409eff", //主题色
     title: "", //视频名称
     webFullScreen: false,//网页全屏
