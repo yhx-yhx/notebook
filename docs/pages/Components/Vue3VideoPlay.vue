@@ -29,8 +29,8 @@ if (!import.meta.env.SSR) {
 }
 
 const options = reactive({
-    width: '400px', //播放器高度
-    height: '300px', //播放器高度
+    // width: '400px', //播放器高度
+    // height: '300px', //播放器高度
     color: "#409eff", //主题色
     title: "", //视频名称
     webFullScreen: false,//网页全屏
@@ -108,8 +108,8 @@ const onCanplay = (ev) => {
                     </el-col>
                 </el-row>
             </el-form>
-            <div v-if="temp">true
-                <videoPlay style="height:100px;width:500px" v-bind="options" @play="onPlay" />
+            <div style="height: 100px;width:100px" v-if="temp">true
+                <videoPlay v-bind="options" @play="onPlay" />
             </div>
             <div v-else>false</div>
 
