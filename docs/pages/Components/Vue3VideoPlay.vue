@@ -21,7 +21,7 @@ if (!import.meta.env.SSR) {
         console.log('module', module)
         const { videoPlay } = module
         console.log('videoPlay', videoPlay)
-        temp.value = videoPlay
+        temp.value = true
     })
 
 
