@@ -2,9 +2,16 @@
 <br/>
 
 <script setup>
-  import Vue3VideoPlay from "../../pages/Components/Vue3VideoPlay.vue"
+//   import Vue3VideoPlay from "../../pages/Components/Vue3VideoPlay.vue"
+  import { defineClientComponent } from 'vitepress'
+
+const Vue3VideoPlay = defineClientComponent(() => {
+  return import('../../pages/Components/Vue3VideoPlay.vue')
+})
+
 </script>
 <Vue3VideoPlay/>
+
 <br/>
 
 # Component
