@@ -4,9 +4,7 @@
 <script setup>
   import Vue3VideoPlay from "../../pages/Components/Vue3VideoPlay.vue"
 </script>
-<client-only>
 <Vue3VideoPlay/>
-</client-only>
 <br/>
 
 # Component
