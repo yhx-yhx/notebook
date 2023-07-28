@@ -2,118 +2,163 @@
 <script setup>
 import 'element-plus/dist/index.css'
 import { ElButton, ElSelect, ElForm, ElFormItem, ElInput, ElOption, ElRow, ElCol, ElCard } from 'element-plus'
-import { onMounted, reactive, ref } from 'vue';
-import 'vue3-video-play/dist/style.css' // 引入css
-// if (!import.meta.env.SSR) {
-//     const { videoPlay } = await import('vue3-video-play')
-//     // var videoPlay = () => import('vue3-video-play')
-//     // const pkg = defineClientComponent(() => {
-//     //     return import('vue3-video-play')
-//     // })
-//     app.use(plugin)
-//     console.log('videoPlay', videoPlay)
-// }
-const temp = ref()
-if (!import.meta.env.SSR) {
-    // const pkg = () => import('vue3-video-play')
-    import('vue3-video-play').then((module) => {
-        // use code
-        console.log('module', module)
-        const { videoPlay } = module
-        console.log('videoPlay', videoPlay)
-        temp.value = true
-    })
-
-
-
-}
-
-const options = reactive({
-    // width: '400px', //播放器高度
-    // height: '300px', //播放器高度
-    color: "#409eff", //主题色
-    title: "", //视频名称
-    webFullScreen: false,//网页全屏
-    speed: true,//是否支持快进快退
-    currentTime: 0,//跳转到固定播放时间(s)
-    muted: false,//静音
-    autoPlay: false, //自动播放
-    loop: false,//循环播放
-    mirror: false,//镜像画面
-    control: true, //是否显示控制器
-    ligthOff: false,//关灯模式
-    volume: 0.3,//默认音量0-1
-    src: 'https://vip.lz-cdn5.com/20220401/3315_dbd60bc0/index.m3u8', //视频源
-    poster: '', //封面
-    type: 'm3u8',
-    speedRate: [1.0, 1.25, 1.5, 2.0], // 可选的播放速度
-    controlBtns: [
-        "audioTrack",//音轨切换按钮
-        "quality",//视频质量切换按钮
-        "speedRate",//速率切换按钮
-        "volume",//音量
-        "setting",//设置
-        "pip",//画中画按钮
-        "pageFullScreen",//网页全屏按钮
-        "fullScreen",//全屏按钮
-    ], //显示所有按钮,
-
-})
+import { onMounted, reactive, ref, watch } from 'vue';
+import Player from 'xgplayer';
+import 'xgplayer/dist/index.min.css'
+import "xgplayer"
+import HlsPlayer from "xgplayer-hls"
+import FlvPlayer from 'xgplayer-flv';
+import Mp4Player from 'xgplayer-mp4';
 
 // 配置选项
 const Form = reactive({
     type: null,
 })
 const dicts = reactive({
-    type: [{ value: 'video/mp4', label: 'mp4' }, {
-        value: 'm3u8', label: 'm3u8'
-    }]
+    url: [
+        { value: 'https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4', label: 'mp4测试用例' },
+        { value: 'https://vip.lz-cdn5.com/20220401/3315_dbd60bc0/index.m3u8', label: 'm3u8测试用例' },
+        { value: 'https://sf1-hscdn-tos.pstatp.com/obj/media-fe/xgplayer_doc_video/flv/xgplayer-demo-360p.flv', label: 'flv测试用例' }
+    ]
 })
 
+// xgplayer
 
 
-const onPlay = (ev) => {
-    console.log('播放')
-}
-const onPause = (ev) => {
-    console.log(ev, '暂停')
-}
+const options = reactive({
+    "id": "mse",
+    "url": "https://vip.lz-cdn5.com/20220401/3315_dbd60bc0/index.m3u8",
+    // 尺寸
+    "height": "300",
+    "width": "400",
+    // 流式布局
+    "fluid": true,
+    // 自适应视频内容宽高
+    "fitVideoSize": 'auto',
+    // 音量
+    "volume": 0.6,
+    // 自动播放
+    "autoplay": false,
+    // 循环播放
+    "loop": false,
+    // 初始化显示视频首帧
+    "videoInit": true,
+    // 封面图
+    "poster": "",
+    // 倍速播放
+    "playbackRate": [0.5, 0.75, 1, 1.5, 2],
+    // 默认播放速度
+    "defaultPlaybackRate": 1.5,
+    // 记忆播放
+    // 离开时存下 上次播放时间
+    //  lastPlayTime: 20, //视频起播时间（单位：秒）
+    // lastPlayTimeHideDelay: 5, //提示文字展示时长（单位：秒）
+    // 视频旋转
+    "rotate": {
+        "clockwise": true,
+        "innerRotate": true
+    },
 
-const onTimeupdate = (ev) => {
-    console.log(ev, '时间更新')
-}
-const onCanplay = (ev) => {
-    console.log(ev, '可以播放')
+    "playsinline": true,
+
+    "plugins": [],
+    "playsinline": true,
+    "whitelist": [
+        ""
+    ],
+    "keyShortcut": "on",
+    "closeVideoClick": true,
+    "closeVideoDblclick": true,
+    "closeVideoTouch": true,
+    "playbackRate": [
+        null
+    ],
+    "pip": true,
+    "download": true,
+    "thumbnail": {
+        "pic_num": 44,
+        "width": 160,
+        "height": 90,
+        "col": 10,
+        "row": 10,
+        "urls": [
+            ""
+        ]
+    },
+    // 预览本地视频
+    // preview: {
+    //     uploadEl: uploadDom
+    // }
+    progressDot: [
+        {
+            time: 10, //展示标记的时间
+            text: '标记文字', //鼠标hover在标记时展示的文字
+            duration: 8, //标记段长度（以时长计算）
+            style: { //标记样式
+                background: 'blue'
+            }
+        }, {
+            time: 22,
+            text: '标记文字'
+        }, {
+            time: 56,
+            duration: 8,
+        }, {
+            time: 76,
+        }
+    ],
+})
+let player = ref()
+onMounted(() => {
+    options.plugins.push(HlsPlayer)
+    player.value = new Player(options)
+})
+const change = () => {
+    player.value.destroy()
+    if (options.url) {
+        let type = options.url.split('.').at(-1)
+                
+        console.log(type);
+        switch (type) {
+            case 'm3u8':
+                options.plugins = [HlsPlayer]
+                break;
+            case 'flv':
+                options.plugins = [FlvPlayer]
+                break
+            case 'mp4':
+                options.plugins = [Mp4Player]
+                break
+            default:
+                options.plugins = []
+        }
+        player.value = new Player(options)
+    }
+
 }
 </script>
 
 <template>
-    <client-only>
-        <ElCard>
-            <el-form label-width="100px">
-                <el-row>
-                    <el-col :span="11" :offset="0">
+    <ElCard>
+        <el-form label-width="100px">
+            <el-row>
+                <el-col :span="11" :offset="0">
                         <el-form-item label="视频源src">
-                            <el-input v-model="options.src" placeholder="请输入视频源（src）" clearable></el-input>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="11" :offset="0">
-                        <el-form-item label="视频格式">
-                            <el-select v-model="options.type" value-key="" placeholder="" clearable>
-                                <el-option v-for="item in dicts.type" :key="item.value" :label="item.label"
-                                    :value="item.value">
+                            <el-select v-model="options.url" placeholder="请输入视频源（src）" @change="change" clearable>
+                                <el-option v-for="item in dicts.url" :key="item.value" :label="item.label" :value="item.value">
                                 </el-option>
                             </el-select>
                         </el-form-item>
                     </el-col>
-                </el-row>
-            </el-form>
-            <div style="height: 100px;width:100px" v-if="temp">true
-                <videoPlay v-bind="options" @play="onPlay" />
-            </div>
-            <div v-else>false</div>
-
-        </ElCard>
-    </client-only>
+                <el-col :span="11" :offset="0">
+                        <el-form-item label="视频源src">
+                            <el-input v-model="options.url" placeholder="请输入视频源（src）" @change="change" clearable></el-input>
+                        </el-form-item>
+                    </el-col>
+            </el-row>
+        </el-form>
+        <div id="mse"></div>
+    </ElCard>
 </template>
 
+<style lang="scss" scoped></style>

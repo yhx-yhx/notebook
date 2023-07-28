@@ -76,6 +76,7 @@ export default defineConfig({
         items: [
           { text: 'Vue3VideoPlay', link: '/pages/ComponentsExample/Vue3VideoPlay' },
           { text: 'Vue3Echarts', link: '/pages/ComponentsExample/Vue3Echarts' },
+          { text: 'Vue3Perview', link: '/pages/ComponentsExample/Vue3Perview' },
         ]
       },
       {
@@ -135,8 +136,9 @@ export default defineConfig({
       {
         text: 'Components',
         items: [
-          { text: 'Vue3VideoPlay', link: '/pages/Components/Vue3VideoPlay' },
-          { text: 'Vue3Echarts', link: '/pages/Components/Vue3Echarts' },
+          { text: 'Vue3VideoPlay', link: '/pages/ComponentsExample/Vue3VideoPlay' },
+          { text: 'Vue3Echarts', link: '/pages/ComponentsExample/Vue3Echarts' },
+          { text: 'Vue3Perview', link: '/pages/ComponentsExample/Vue3Perview' },
         ]
       },
       {
