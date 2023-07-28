@@ -1,1 +1,0 @@
-import{_ as a,o as e,c as r,V as t}from"./chunks/framework.b0d887d5.js";const f=JSON.parse('{"title":"组件库","description":"","frontmatter":{},"headers":[],"relativePath":"pages/Other/Link/Docs/index.md"}'),h={name:"pages/Other/Link/Docs/index.md"},o=t("",32),n=[o];function l(s,i,p,c,d,u){return e(),r("div",null,n)}const b=a(h,[["render",l]]);export{f as __pageData,b as default};
