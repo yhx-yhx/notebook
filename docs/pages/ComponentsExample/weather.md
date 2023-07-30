@@ -32,7 +32,7 @@ import {dayjs} from "element-plus"
             console.warn(error)
         }
     }
-    getnowWeather()
+    // getnowWeather()
     
 
 //         if (navigator.geolocation) {
@@ -76,6 +76,7 @@ function error(err) {
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
+getnowWeather()
 })
 
 </script>
