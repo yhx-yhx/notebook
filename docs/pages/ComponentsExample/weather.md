@@ -14,7 +14,7 @@
 <script setup>
     import axios from 'axios'
     import weather from '../../pages/Components/message/weather.vue'
-    import {ref } from "vue"
+    import {ref,onMounted } from "vue"
 import {dayjs} from "element-plus"
     const temp = ref(null) // now temp
     const time  = ref(null) // now time
@@ -54,7 +54,8 @@ import {dayjs} from "element-plus"
 
 // mdn
 
-
+onMounted(() => {
+    
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -75,6 +76,8 @@ function error(err) {
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
+})
+
 </script>
 
 <br/>

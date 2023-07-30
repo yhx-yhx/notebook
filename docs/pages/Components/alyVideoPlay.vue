@@ -25,15 +25,25 @@
 import { onMounted, reactive, ref } from "vue";
 import { ElButton, ElSelect, ElForm, ElFormItem, ElInput, ElOption, ElRow, ElCol, ElCard } from 'element-plus'
 
+onMounted(() => {
 
-const script = document.createElement('script');
-const link = document.createElement('link');
-link.href = 'https://g.alicdn.com/apsara-media-box/imp-web-player/2.16.3/skins/default/aliplayer-min.css'
-link.setAttribute('rel', 'stylesheet')
-script.src = 'https://g.alicdn.com/apsara-media-box/imp-web-player/2.16.3/aliplayer-min.js';
-script.setAttribute('type', 'text/javascript')
-document.body.appendChild(script);
-document.body.appendChild(link);
+    const script = document.createElement('script');
+    const link = document.createElement('link');
+    link.href = 'https://g.alicdn.com/apsara-media-box/imp-web-player/2.16.3/skins/default/aliplayer-min.css'
+    link.setAttribute('rel', 'stylesheet')
+    script.src = 'https://g.alicdn.com/apsara-media-box/imp-web-player/2.16.3/aliplayer-min.js';
+    script.setAttribute('type', 'text/javascript')
+    document.body.appendChild(script);
+    document.body.appendChild(link);
+
+    script.onload = () => {
+        console.log('Aliplayer', window.Aliplayer);
+        player.value = new Aliplayer(options, function (player) {
+            console.log(player);
+        })
+    }
+})
+
 
 
 const options = reactive({
@@ -59,12 +69,7 @@ const dicts = reactive({
 })
 const player = ref(null)
 
-script.onload = () => {
-    console.log('Aliplayer', window.Aliplayer);
-    player.value = new Aliplayer(options, function (player) {
-        console.log(player);
-    })
-}
+
 
 
 const change = () => {
