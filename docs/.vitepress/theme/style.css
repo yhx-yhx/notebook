@@ -4937,7 +4937,7 @@ svg.DocSearch-Hit-Select-Icon {
   --vp-home-hero-image-filter: blur(72px)
 }
 
-.beian {
+/* .beian {
   background: url(../beian.png);
   background-repeat: no-repeat;
   display: inline-block;
@@ -4946,7 +4946,7 @@ svg.DocSearch-Hit-Select-Icon {
   margin-top: -2px;
   vertical-align: middle;
   background-size: 100% 100%
-}
+} */
 
 .VPDocAside .outline-link.active {
   color: var(--vp-c-brand) !important
