@@ -1,5 +1,5 @@
 <script setup >
-import { ref, watchPostEffect } from "vue"
+import { computed, ref, watchPostEffect } from "vue"
 import { v4 } from 'uuid'
 import PDFObject from "pdfobject"
 const props = defineProps({
@@ -37,12 +37,14 @@ watchPostEffect(() => {
 // const urlString = import.meta.url
 // const url = new URL(urlString)
 // const urlOrigin = url.origin
-
+const type = computed(() => {
+    return props.src.split('.').at(-1)
+})
 </script>
 
 <template>
-    <div class="previews_ctn" :style="{ width: props.width }">
-        <template v-if="props.mime.includes('pdf')">
+    <div class="previews_ctn" :style="{ width: props.width, height: props.height }">
+        <template v-if="type === 'pdf'">
             <div :id="'pdf' + uuid" ref="pdfViewDom" class="previews_view"></div>
         </template>
         <!-- <template v-else-if="props.mime.includes('mp4')">
@@ -51,7 +53,7 @@ watchPostEffect(() => {
         <template v-else>
             <img class="previews_img" :src="$props.src" alt="">
         </template>
-        <div class="name">{{ $props.name }} </div>
+        <div class="name">{{ type }} </div>
 
     </div>
 </template>
@@ -62,7 +64,7 @@ watchPostEffect(() => {
     flex-direction: column;
 
     .previews_view {
-        height: calc(var(--hc-dialog-height) - 30px);
+        height: 100%;
         width: 100%;
         overflow: hidden;
         border: 1px solid #ccc;

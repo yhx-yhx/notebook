@@ -2429,7 +2429,7 @@ svg.DocSearch-Hit-Select-Icon {
   background-color: var(--vp-c-bg-mute)
 }
 
-/* .icon[data-v-3c355974] {
+.icon[data-v-3c355974] {
   display: inline-block;
   margin-top: -1px;
   margin-left: 4px;
@@ -4969,4 +4969,9 @@ svg.DocSearch-Hit-Select-Icon {
 
 .line-numbers-mode {
   margin: 0 !important;
-} */
+}
+
+.icon[data-v-549c013f] {
+  background-color: transparent;
+  width: fit-content;
+}

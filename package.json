@@ -10,9 +10,11 @@
     "preview": "vitepress preview docs"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "echarts": "^5.4.3",
     "element-plus": "^2.3.8",
     "pdfobject": "^2.2.12",
+    "qweather-icons": "^1.4.0",
     "sass": "^1.64.1",
     "uuid": "^9.0.0",
     "vue": "^3.3.4",

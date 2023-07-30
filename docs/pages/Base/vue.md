@@ -1,70 +1,104 @@
-# Vue3.0
 
-## 生命周期钩子函数
+# Vue 3 详细教程
 
-setup 创建实例前
+## 目录
 
-onBeforeMount 挂载DOM前
+- [基础概念](#基础概念)
+- [数据绑定](#数据绑定) 
+- [计算属性](#计算属性)
+- [条件渲染](#条件渲染)
+- [列表渲染](#列表渲染)
+- [事件处理](#事件处理)
+- [组件](#组件)
+- [自定义组件](#自定义组件)
 
-onMount 挂载DOM后
+## 基础概念
 
-onBeforeUpdate 更新组件前
+- 模板语法:`{{ }}` 用于绑定数据
+- `setup()` 组件选项,返回数据和方法
+- `ref()` 和 `reactive()` 管理响应式状态
+- `computed` 计算属性
+- `watch` 监听数据变化
 
-onUpdated 更新组件后
+## 数据绑定 
 
-onBeforeUnmount 卸载销毁前
+使用 Mustache 语法 `{{ }}` 绑定数据。
 
-onUnmounted 现在销毁后
-
-## 组合API-reactive函数
-
-将**复杂类型数据**包装成一个**响应式数据**
-
-## 组合API-toRef函数
-
-将复杂数据类型的数据 解构成 单个**响应式数据**；
-
-PS：解构语法 解构出来的数据 不具有响应式；
-
-```
-const obj =reactive({name:'xxx',age:23})
-const name =toRef(obj,'name')
+```html
+<div>{{ message }}</div>
 ```
 
-**使用场景**：有一个响应式对象数据，在模板中仅需要其中一个数据；
+```js
+// setup()
+const message = ref('Hello Vue!') 
 
-## 组合API-toRefs函数
-
-将整个对象变成响应式数据对象
-
-**使用场景**:将数据解构展开，使用对象中的多个或所有属性作为**响应式数据**
-
-## 组合API-ref函数
-
-将**简单数据类型** 包装成 响应式数据
-
-PS：**修改时** 必须使用**.value**; **模板中** 省略 **.value**
-
-## 组合式API-computed 函数
-
-**支持双向绑定**
-
+return {
+  message  
+}
 ```
-const newAge=computed(()=>{
-  	get(){
-  	return age.value+2
-  	}
-  	set(value){
-  	age.value=value
-  	}
+
+## 计算属性
+
+计算属性会根据依赖进行缓存。
+
+```js
+const count = ref(1)
+
+const double = computed(() => count.value * 2)
+```
+
+## 条件渲染 
+
+`v-if` / `v-else` 进行条件渲染。
+
+```html
+<div v-if="score >= 90">优秀</div>
+<div v-else-if="score >= 80">良好</div> 
+<div v-else>加油</div>
+```
+
+## 列表渲染
+
+`v-for` 渲染列表数据。
+
+```html
+<ul>
+  <li v-for="item in list">
+    {{ item }}  
+  </li>
+</ul>
+```
+
+## 事件处理
+
+`v-on` 或 `@` 绑定事件处理器。
+
+```html
+<button @click="handleClick">提交</button>
+```
+
+## 组件
+
+`app.component()` 定义组件。
+
+```js
+const TodoItem = {
+  // ...
+}
+
+app.component('todo-item', TodoItem)
+```
+
+## 自定义组件
+
+`defineComponent()` 定义可复用组件。
+
+```js
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  // 组件选项  
 })
 ```
 
-## 组合式API-watch函数
-
-
-
-
-
-
-
+后续可以继续补充组合API、router、Pinia等内容。也欢迎提出宝贵意见。

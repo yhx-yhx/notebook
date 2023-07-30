@@ -13,7 +13,7 @@ export default defineConfig({
   //   })]
   // },
   lang: 'zh-CN',
-  title: "My Awesome Code",
+  title: "Yhx Code",
   description: "A Random And Illogical Site",
   titleTemplate: 'Jottings', // 网站标题后缀- “VitePress | Blog”
   base: '/notebook/', //base url 
@@ -58,138 +58,127 @@ export default defineConfig({
       next: '下一节'
     },
     nav: [
-      { text: 'Home', link: '/' },
-      {
-        text: 'Base',
-        items: [
-          { text: 'JavaScript', link: '/pages/Base/javascript' },
-          { text: 'CSS', link: '/pages/Base/css' },
-          { text: 'Html', link: '/pages/Base/html' },
-          { text: 'Vue', link: '/pages/Base/vue' },
-          { text: 'VueRouter', link: '/pages/Base/vuerouter' },
-          { text: 'TypeScriptT', link: '/pages/Base/typescript' },
-          { text: 'git', link: '/pages/Base/git' },
-        ]
-      },
-      {
-        text: 'Components',
-        items: [
-          { text: 'Vue3VideoPlay', link: '/pages/ComponentsExample/Vue3VideoPlay' },
-          { text: 'Vue3Echarts', link: '/pages/ComponentsExample/Vue3Echarts' },
-          { text: 'Vue3Perview', link: '/pages/ComponentsExample/Vue3Perview' },
-        ]
-      },
-      {
-        text: 'Notes',
-        items: [
-          { text: 'min_title', link: '/pages/Notes/2023/title' },
-          { text: '2023/4', link: '/pages/Notes/2023/4' },
-          { text: 'learn_vue3_doc', link: '/pages/Notes/2023/learn_vue3_doc' },
-          { text: 'learn_vue3_coderwhy', link: '/pages/Notes/2023/learn_vue3_coderwhy' },
-          { text: 'default', link: '/pages/Notes/2023/Others/Nodes/default' },
-          { text: 'third_party_warehouse', link: '/pages/Notes/2023/Others/Nodes/third_party_warehouse' },
-        ]
-      },
-      {
+      { text: '首页', link: '/' },
+      { text: '基础', link: '/pages/Base/javascript' },
+      { text: '组件', link: '/pages/ComponentsExample/xgVideoPlay' },
+      { text: 'Notes', link: '/pages/Notes/2023/title' },
+      { text: '方案', link: ' /pages/Other/Plan/hooks' },
+      { text: '配置', link: '/pages/Config/nvm' },
+      { text: 'Live', link: '/pages/Other/Live/noisy' },
+      { text: 'Link', link: '/pages/Other/Link/Docs/index' }
+    ],
+
+    sidebar: {
+      '/pages/Base/': [
+        {
+          text: '基础',
+          items: [
+            { text: 'JavaScript', link: '/pages/Base/javascript' },
+            { text: 'CSS', link: '/pages/Base/css' },
+            { text: 'Html', link: '/pages/Base/html' },
+            { text: 'scss', link: '/pages/Base/scss' },
+            { text: 'Vue', link: '/pages/Base/vue' },
+            { text: 'VueRouter', link: '/pages/Base/vuerouter' },
+            { text: 'TypeScript', link: '/pages/Base/typescript' },
+            { text: 'git', link: '/pages/Base/git' },
+          ]
+        }
+      ],
+      '/pages/ComponentsExample/': [
+        {
+          text: '组件',
+          items: [
+            { text: '西瓜视频播放器', link: '/pages/ComponentsExample/xgVideoPlay' },
+            { text: '阿里云视频播放器', link: '/pages/ComponentsExample/alyVideoPlay' },
+            { text: 'Vue3Echarts', link: '/pages/ComponentsExample/Vue3Echarts' },
+            { text: 'Vue3Perview', link: '/pages/ComponentsExample/Vue3Perview' },
+            { text: 'weather', link: '/pages/ComponentsExample/weather' },
+          ]
+        }
+      ],
+      "/pages/Notes": [
+        {
+          text: 'Notes',
+          items: [
+            { text: 'min_title', link: '/pages/Notes/2023/title' },
+            { text: '2023/4', link: '/pages/Notes/2023/4' },
+            { text: 'learn_vue3_doc', link: '/pages/Notes/2023/learn_vue3_doc' },
+            { text: 'learn_vue3_coderwhy', link: '/pages/Notes/2023/learn_vue3_coderwhy' },
+            { text: 'default', link: '/pages/Notes/2023/Others/Nodes/default' },
+            { text: 'third_party_warehouse', link: '/pages/Notes/2023/Others/Nodes/third_party_warehouse' },
+          ]
+        }
+      ],
+      "/pages/Other/Plan": [{
         text: 'Plan',
         items: [
           { text: 'hooks', link: '/pages/Other/Plan/hooks' },
           { text: '大屏可视化响应式', link: '/pages/Other/Plan/screen' },
           { text: 'router 处理方案', link: '/pages/Other/Plan/router' },
           { text: 'axios封装', link: '/pages/Other/Plan/axios_request' },
-          { text: 'hls 解决方案', link: '/pages/Other/Plan/hls' },
           { text: 'pdf预览', link: '/pages/Other/Plan/pdf' },
           { text: 'xlsx', link: '/pages/Other/Plan/xlsx' },
           { text: 'download', link: '/pages/Other/Plan/download' },
           { text: 'xgplayer', link: '/pages/Other/Plan/xgplayer' },
         ]
       },
-      {
-        text: 'Config',
-        items: [
-          { text: 'nvm', link: '/pages/Config/nvm' }
-        ]
-      },
-      {
-        text: 'Live',
-        items: [
-          { text: 'noisy', link: '/pages/Other/Live/noisy' },
-          { text: 'trivial', link: '/pages/Other/Live/trivial' },
-          // { text: 'axios封装', link: '/pages/Other/Live/axios_request' },
-          // { text: 'hls 解决方案', link: '/pages/Other/Live/hls' },
-        ]
-      },
-      {
-        text: 'Link',
-        items: [
-          { text: 'Docs', link: '/pages/Other/Link/Docs/index' },
-          { text: 'Live', link: '/pages/Other/Link/Live/index' },
-          { text: 'Tools', link: '/pages/Other/Link/Tools/index' },
-          // { text: 'Docs', link: '/pages/Other/Link/Docs/index' },
-          { text: 'Live', link: '/pages/Other/Link/Live/index' },
-          // { text: 'Tools', link: '/pages/Other/Link/Tools/index' },
-        ]
-      }
-    ],
+      ],
+      "pages/Config/": [
+        {
+          text: 'Config',
+          items: [
+            { text: 'nvm', link: '/pages/Config/nvm' }
+          ]
+        },
+      ],
+      "/pages/Other/Live": [
+        {
+          text: 'Live',
+          items: [
+            { text: 'noisy', link: '/pages/Other/Live/noisy' },
+            { text: 'trivial', link: '/pages/Other/Live/trivial' },
+            // { text: 'axios封装', link: '/pages/Other/Live/axios_request' },
+            // { text: 'hls 解决方案', link: '/pages/Other/Live/hls' },
+          ]
+        },
+      ],
+      "/pages/Other/Link": [
+        {
+          text: 'Link',
+          items: [
+            { text: 'Docs', link: '/pages/Other/Link/Docs/index' },
+            { text: 'Live', link: '/pages/Other/Link/Live/index' },
+            { text: 'Tools', link: '/pages/Other/Link/Tools/index' },
+            // { text: 'Docs', link: '/pages/Other/Link/Docs/index' },
+            { text: 'Live', link: '/pages/Other/Link/Live/index' },
+            // { text: 'Tools', link: '/pages/Other/Link/Tools/index' },
+          ]
+        }
+      ]
 
-    sidebar: [
-      {
-        text: 'Components',
-        items: [
-          { text: 'Vue3VideoPlay', link: '/pages/ComponentsExample/Vue3VideoPlay' },
-          { text: 'Vue3Echarts', link: '/pages/ComponentsExample/Vue3Echarts' },
-          { text: 'Vue3Perview', link: '/pages/ComponentsExample/Vue3Perview' },
-        ]
-      },
-      {
-        text: 'Notes',
-        items: [
-          { text: '2023/4', link: '/pages/Notes/2023/4' },
-        ]
-      },
-      {
-        text: 'Plan',
-        items: [
-          { text: '大屏可视化响应式', link: '/pages/Other/Plan/screen' },
-          { text: 'router 处理方案', link: '/pages/Other/Plan/router' },
-          { text: 'axios封装', link: '/pages/Other/Plan/axios_request' },
-          { text: 'hls 解决方案', link: '/pages/Other/Plan/hls' },
-          { text: 'pdf预览', link: '/pages/Other/Plan/pdf' },
-          { text: 'xlsx', link: '/pages/Other/Plan/xlsx' },
-        ]
-      },
-      {
-        text: 'Live',
-        items: [
-          { text: 'noisy', link: '/pages/Other/Live/noisy' },
-          { text: 'trivial', link: '/pages/Other/Live/trivial' },
-          // { text: 'axios封装', link: '/pages/Other/Live/axios_request' },
-          // { text: 'hls 解决方案', link: '/pages/Other/Live/hls' },
-        ]
-      },
-    ],
+    },
     search: {
-      provider: 'local'
-      // options: {
-      //   locales: {
-      //     root: { //这里是个大坑，zh是不生效的，改为root即可
-      //       translations: {
-      //         button: {
-      //           buttonText: '搜索文档',
-      //           buttonAriaLabel: '搜索文档'
-      //         },
-      //         modal: {
-      //           noResultsText: '无法找到相关结果',
-      //           resetButtonTitle: '清除查询条件',
-      //           footer: {
-      //             selectText: '选择',
-      //             navigateText: '切换'
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
+      provider: 'local',
+      options: {
+        locales: {
+          root: { //这里是个大坑，zh是不生效的，改为root即可
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换'
+                }
+              }
+            }
+          }
+        }
+      }
     },
     carbonAds: {
       // code: 'yhx',

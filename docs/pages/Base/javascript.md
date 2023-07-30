@@ -1,3 +1,229 @@
+
+# JavaScript笔记
+
+## 目录
+
+- [基础语法](#基础语法)
+- [数据类型](#数据类型)  
+- [运算符](#运算符)
+- [函数](#函数)
+- [数组](#数组)
+- [对象](#对象)
+- [模块](#模块)
+- [面向对象编程](#面向对象编程)
+- [作用域](#作用域)
+- [异步编程](#异步编程)
+
+## 基础语法
+
+### 变量
+
+使用 `let` 和 `const` 声明变量
+
+```js
+let name = 'John';
+const age = 20;
+```
+
+### 数据类型
+
+number、string、boolean、null、undefined 等
+
+```js
+let count = 10; // number
+let name = 'John'; // string
+let isDone = false; // boolean
+```
+
+### 条件语句
+
+使用 `if...else` 和 `switch` 进行条件判断
+
+```js 
+if (age > 18) {
+  console.log('adult');
+} else {
+  console.log('minor'); 
+}
+
+switch(fruit) {
+  case 'apple':
+    // ...
+    break;
+  default:
+    // ...
+}
+```
+
+### 循环语句
+
+`for`、`while`、`do...while`、`forEach`
+
+```js
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+array.forEach(item => {
+  // ...  
+});
+```
+
+### 函数
+
+使用 `function` 关键字定义函数
+
+```js
+function sum(a, b) {
+  return a + b;
+}
+```
+
+### 作用域
+
+变量有函数作用域和块级作用域
+
+```js
+function foo() {
+  let a = 1; 
+}
+
+if (true) {
+  let b = 2;
+}
+```
+
+## 数据类型
+
+- 基本类型:Number、String、Boolean、Null、Undefined
+- 引用类型:Object、Array、Function
+
+引用类型传递和赋值时要注意是引用关系
+
+## 数组
+
+```js
+let fruits = ['Apple', 'Banana'];
+
+// 访问和修改
+fruits[0]; 
+fruits[1] = 'Pear';
+
+// 添加和删除
+fruits.push('Orange');
+fruits.pop();
+
+// 遍历
+fruits.forEach(fruit => {
+  console.log(fruit);  
+});
+```
+
+## 函数
+
+- 函数声明与表达式
+
+```js
+// 声明
+function sum(a, b) {
+  return a + b;
+}
+
+// 表达式
+const sum = function(a, b) {
+  return a + b;
+}
+```
+
+- 默认参数和剩余参数
+
+```js
+function sum(a, b = 2) {
+  return a + b; 
+}
+
+function sum(...numbers) {
+  return numbers.reduce((a, b) => a + b);
+}
+```
+
+- 箭头函数:`(params) => expression`
+
+- 闭包:函数内部可以访问外部的变量
+
+## 对象
+
+键值对的集合,使用 `.` 或 `[]` 访问属性
+
+```js
+let person = {
+  name: 'John',
+  age: 20 
+};
+
+person.name; 
+person['name'];
+
+// 遍历
+for (let key in person) {
+  console.log(key, person[key]);
+}
+```
+
+## 类
+
+ES6 引入了 class,可以面向对象编程
+
+```js
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  sayHi() {
+    console.log(`Hi ${this.name}`); 
+  }
+}
+
+let p = new Person('John', 20);
+p.sayHi();
+```
+
+## 模块
+
+使用 `export` 和 `import` 进行模块化开发
+
+```js
+// utils.js
+export function sum(a, b) {
+  return a + b;
+}
+
+// main.js 
+import { sum } from './utils.js';
+```
+
+## 异步编程
+
+- 回调函数
+- Promise
+- async/await
+
+```js
+fetch(url)
+  .then(res => res.json())
+  .then(data => {});
+
+async function getData() {
+  let res = await fetch(url);
+  let data = await res.json();
+  return data;
+}
+```
+
+以上内容对JavaScript做了概览介绍,还有很多知识点需要进一步学习,比如DOM操作、BOM、AJAX等。欢迎指正错误以及补充。
+以上主要介绍了JavaScript的一些基础知识点,欢迎补充和修改。
 # javaScript
 
 > > **PS： 渐进式的编写，至逻辑性不强，简单基础能想到的问题，罗列在上面；**

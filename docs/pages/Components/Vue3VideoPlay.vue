@@ -48,7 +48,7 @@ const options = reactive({
     // 倍速播放
     "playbackRate": [0.5, 0.75, 1, 1.5, 2],
     // 默认播放速度
-    "defaultPlaybackRate": 1.5,
+    "defaultPlaybackRate": 1,
     // 记忆播放
     // 离开时存下 上次播放时间
     //  lastPlayTime: 20, //视频起播时间（单位：秒）
