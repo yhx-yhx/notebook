@@ -1,6 +1,6 @@
 # 阿里云播放器测试用例
 <script  setup>
-    import alyVideoPlay from "../../pages/components/alyVideoPlay.vue"
+    import alyVideoPlay from "../../pages/Components/alyVideoPlay.vue"
 </script>
 
 ::: warning
