@@ -1,24 +1,58 @@
 <script setup>
-import { ref, defineProps, computed } from 'vue';
+import axios from 'axios';
+import { ElMessage } from 'element-plus';
+import { ref, defineProps, computed, watchEffect } from 'vue';
 const props = defineProps({
-    icon: String,
+    icon: { type: String, default: '304' },
     temp: String,
     time: String,
+    position: Array,
+    text: String,
+    // county: String,
     // icon: String,
     // iconColor: String,
     // iconSize: String,
     // iconPosition: String,
 })
 
+
 const iconClass = computed(() => {
-    return `qi-${props.icon}`
+    return `qi-${props.icon}-fill`
 })
+// const iconSrc = computed(() => `https://a.hecdn.net/img/common/icon/202106d/${props.icon}.png`)
+
+const cityClick = ref(!1)
+const countyClick = ref(!1)
+// 获取更多信息
+const getMoreInfo = () => {
+    ElMessage.warning('无法获取更多信息了')
+}
+
+// 聚焦
+
+const focus = (className) => {
+    setTimeout(() => {
+        const el = document.querySelector(className)
+        el.focus()
+    })
+        , 10
+}
+
+
+// position
+
+const emits = defineEmits(['update:position'])
+
+
 </script>
 <template>
     <div class="card">
         <div class="container">
-            <i :class="iconClass"></i>
-            <i class="qi-307"></i>
+            <!-- img -->
+            <!-- <img ref="imgQiRef" :src="iconSrc" alt=""> -->
+            <!-- icon -->
+            <i class="qi-common" :class="iconClass"></i>
+            <div>{{ text }}</div>
             <!-- <div class="cloud front">
                 <span class="left-front"></span>
                 <span class="right-front"></span>
@@ -32,13 +66,19 @@ const iconClass = computed(() => {
         </div>
 
         <div class="card-header">
-            <span>Messadine, Susah<br>Tunisia</span>
+            <!-- 选择城市 -->
+            <div title="点我选择城市" @click="cityClick = !cityClick; focus('.input-city')"><span v-if="!cityClick">{{ position[0]
+                ? position[0] : '--' }}</span><input v-else class="input-city" type="text" placeholder="请输入"
+                    @blur="cityClick = !cityClick"></div>
+            <div title="点我选择城市" @click="countyClick = !countyClick; focus('.input-county')"><span v-if="!countyClick">{{
+                position[1] ? position[1] : '--' }}</span><input v-else class="input-county" type="text"
+                    placeholder="请输入" @blur="countyClick = !countyClick"></div>
             <span>{{ time }}</span>
         </div>
 
-        <span class="temp">{{ temp }}℃ </span>
+        <span class="temp">{{ temp ? temp : '--' }}℃ </span>
 
-        <div class="temp-scale">
+        <div class="temp-scale" @click="getMoreInfo">
             <span>获取更多信息</span>
         </div>
     </div>
@@ -63,6 +103,33 @@ const iconClass = computed(() => {
     transform: scale(1.05);
 }
 
+
+@keyframes sunshines {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+@keyframes clouds {
+    0% {
+        transform: translateX(15px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(15px);
+    }
+}
+
 .container {
     width: 250px;
     height: 250px;
@@ -73,12 +140,26 @@ const iconClass = computed(() => {
     align-items: center;
     justify-content: center;
     transform: scale(0.7);
+    flex-direction: column;
 
     i {
         height: 50px;
         width: 50px;
     }
+
+    .qi-common {
+        height: 100px;
+        width: 100px;
+        font-size: 6em;
+        transition: all 1s linear;
+        // animation: clouds 2s infinite;
+
+        &:hover {
+            color: #0085ff;
+        }
+    }
 }
+
 
 .cloud {
     width: 250px;
@@ -154,31 +235,6 @@ const iconClass = computed(() => {
     animation: sunshines 2s infinite;
 }
 
-@keyframes sunshines {
-    0% {
-        transform: scale(1);
-        opacity: 0.6;
-    }
-
-    100% {
-        transform: scale(1.4);
-        opacity: 0;
-    }
-}
-
-@keyframes clouds {
-    0% {
-        transform: translateX(15px);
-    }
-
-    50% {
-        transform: translateX(0px);
-    }
-
-    100% {
-        transform: translateX(15px);
-    }
-}
 
 .card-header {
     display: flex;

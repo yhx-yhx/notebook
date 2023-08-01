@@ -8,4 +8,6 @@
  原因 未找到 卸载实例方法 更新实例source 的方式
 :::
 
+[ Web播放器 ](https://help.aliyun.com/zh/vod/developer-reference/apsaravideo-player-sdk-for-web/?spm=a2c4g.11186623.0.0.6694799bBJMPju)
+
 <alyVideoPlay/>

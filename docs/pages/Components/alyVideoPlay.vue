@@ -28,13 +28,13 @@ import { ElButton, ElSelect, ElForm, ElFormItem, ElInput, ElOption, ElRow, ElCol
 onMounted(() => {
 
     const script = document.createElement('script');
-    const link = document.createElement('link');
-    link.href = 'https://g.alicdn.com/apsara-media-box/imp-web-player/2.16.3/skins/default/aliplayer-min.css'
-    link.setAttribute('rel', 'stylesheet')
+    // const link = document.createElement('link');
+    // link.href = 'https://g.alicdn.com/apsara-media-box/imp-web-player/2.16.3/skins/default/aliplayer-min.css'
+    // link.setAttribute('rel', 'stylesheet')
     script.src = 'https://g.alicdn.com/apsara-media-box/imp-web-player/2.16.3/aliplayer-min.js';
     script.setAttribute('type', 'text/javascript')
     document.body.appendChild(script);
-    document.body.appendChild(link);
+    // document.body.appendChild(link);
 
     script.onload = () => {
         console.log('Aliplayer', window.Aliplayer);

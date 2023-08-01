@@ -16,9 +16,20 @@ export default defineConfig({
   title: "Yhx Code",
   description: "A Random And Illogical Site",
   titleTemplate: 'Jottings', // 网站标题后缀- “VitePress | Blog”
-  base: '/notebook/', //base url 
+  base: '/notebook/', //base url
+  // head: [
+  //   ['link', { rel: 'icon', href: '/logo.png' }]
+  // ],
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }]
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    // 阿里播放器
+    ['link', { rel: 'stylesheet', href: 'https://g.alicdn.com/de/prismplayer/2.13.2/skins/default/aliplayer-min.css' }],
+    // 和风天气 
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/qweather-icons@1.4.0/font/qweather-icons.css' }],
+    ['script', { src:'//unpkg.com/@element-plus/icons-vue'}]
+    // ['script', { type: 'text/javascript', src: 'https://g.alicdn.com/de/prismplayer/2.13.2/aliplayer-h5-min.js' }]
+    // ['script', { type: 'text/javascript', src: 'https://api.map.baidu.com/api?v=2.0&ak=92SYeuzlwp9T8tRNYbHAnvub792IOZcx' }],
+    // ['script', { type: 'text/javascript', src: 'https://api.map.baidu.com/getscript?v=2.0&amp;ak=92SYeuzlwp9T8tRNYbHAnvub792IOZcx&amp;services=&amp;t=20230614151255' }]
   ],
   // locales: {
   //   root: {
@@ -93,6 +104,7 @@ export default defineConfig({
             { text: 'Vue3Echarts', link: '/pages/ComponentsExample/Vue3Echarts' },
             { text: 'Vue3Perview', link: '/pages/ComponentsExample/Vue3Perview' },
             { text: 'weather', link: '/pages/ComponentsExample/weather' },
+            { text: 'VideoCamera', link: '/pages/ComponentsExample/VideoCamera' },
           ]
         }
       ],
