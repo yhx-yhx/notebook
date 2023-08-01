@@ -1,16 +1,16 @@
-# Vue3VideoPlay Demo
+# xgVideoPlay Demo
 
 <br/>
 
 ## 西瓜视频播放器测试用例
 
 <script setup>
-import Vue3VideoPlay from "../../pages/Components/Vue3VideoPlay.vue"
+import xgVideoPlay from "../../pages/Components/xgVideoPlay.vue"
 
 </script>
 
 <client-only>
-<Vue3VideoPlay/>
+<xgVideoPlay/>
 </client-only>
 
 ::: warning 视频格式支持

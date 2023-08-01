@@ -2,7 +2,6 @@
 
 <script setup>
 import {ref} from "vue"
-import {ElCard} from "element-plus"
 import VideoCamera from "../../pages/Components/VideoCamera.vue"
 
 </script>
@@ -10,6 +9,4 @@ import VideoCamera from "../../pages/Components/VideoCamera.vue"
 
 <br/>
 
-<el-card>
 <VideoCamera />
-</el-card>

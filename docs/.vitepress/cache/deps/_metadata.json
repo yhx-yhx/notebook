@@ -1,83 +1,71 @@
 {
-  "hash": "4dca4a4b",
-  "browserHash": "eca87142",
+  "hash": "28030b74",
+  "browserHash": "4a0d9cb2",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "45ab0317",
+      "fileHash": "97439920",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "549f17e2",
+      "fileHash": "b6c9efbc",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "b21c96a3",
+      "fileHash": "53c28969",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "a8c00cfe",
+      "fileHash": "096bb3d7",
       "needsInterop": false
     },
     "xgplayer": {
       "src": "../../../../node_modules/xgplayer/es/index.js",
       "file": "xgplayer.js",
-      "fileHash": "131904d9",
+      "fileHash": "111ea5af",
       "needsInterop": false
     },
     "xgplayer-hls": {
       "src": "../../../../node_modules/xgplayer-hls/es/index.js",
       "file": "xgplayer-hls.js",
-      "fileHash": "ab8de1ad",
+      "fileHash": "dc2187dc",
       "needsInterop": false
     },
     "xgplayer-flv": {
       "src": "../../../../node_modules/xgplayer-flv/es/index.js",
       "file": "xgplayer-flv.js",
-      "fileHash": "50e5a8f0",
+      "fileHash": "8d509012",
       "needsInterop": false
     },
     "xgplayer-mp4": {
       "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
       "file": "xgplayer-mp4.js",
-      "fileHash": "23f0a794",
-      "needsInterop": false
-    },
-    "axios": {
-      "src": "../../../../node_modules/axios/index.js",
-      "file": "axios.js",
-      "fileHash": "3c4dd6bc",
-      "needsInterop": false
-    },
-    "uuid": {
-      "src": "../../../../node_modules/uuid/dist/esm-browser/index.js",
-      "file": "uuid.js",
-      "fileHash": "9a527640",
-      "needsInterop": false
-    },
-    "pdfobject": {
-      "src": "../../../../node_modules/pdfobject/pdfobject.js",
-      "file": "pdfobject.js",
-      "fileHash": "0d321a53",
-      "needsInterop": true
-    },
-    "echarts": {
-      "src": "../../../../node_modules/echarts/index.js",
-      "file": "echarts.js",
-      "fileHash": "39ec4eb3",
+      "fileHash": "90068357",
       "needsInterop": false
     },
     "@element-plus/icons-vue": {
       "src": "../../../../node_modules/@element-plus/icons-vue/dist/index.js",
       "file": "@element-plus_icons-vue.js",
-      "fileHash": "4c84a515",
+      "fileHash": "56b777ae",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "8f1eb911",
+      "needsInterop": false
+    },
+    "echarts": {
+      "src": "../../../../node_modules/echarts/index.js",
+      "file": "echarts.js",
+      "fileHash": "820500c4",
       "needsInterop": false
     }
   },
