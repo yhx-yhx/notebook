@@ -8,28 +8,85 @@
 </head>
 
 <body>
+    <canvas id="canvas"></canvas>
     <script>
-        var options = {
-            enableHighAccuracy: true,
-            timeout: 5000,
-            maximumAge: 0,
-        };
+        'use strict';
+        class Draw {
+            constructor(
+                width,
+                height,
+            ) {
+                this.el = document.querySelector('#canvas')
+                this.app = this.el.getContext('2d')
+                this.btns = this.el.insertAdjacentElement('afterend', document.createElement('div'))
+                this.el.width = width
+                this.el.height = height
+                this.setBackground()
+                this.event()
+            }
 
-        function success(pos) {
-            var crd = pos.coords;
+            //事件绑定
+            event() {
+                //bind会返回新函数，addEventListener与removeEventListener要使用相同函数
+                const callback = this.drawEventCallback.bind(this)
 
-            console.log("Your current position is:");
-            console.log("Latitude : " + crd.latitude);
-            console.log("Longitude: " + crd.longitude);
-            console.log("More or less " + crd.accuracy + " meters.");
+                this.el.addEventListener('mousedown', () => {
+                    //重新画线
+                    this.app.beginPath()
+                    //鼠标移动事件
+                    this.el.addEventListener('mousemove', callback)
+                })
+
+                //鼠标抬起时移除事件
+                this.el.addEventListener('mouseup', () => this.el.removeEventListener('mousemove', callback))
+                return this
+            }
+
+            //黑板写字的事件回调函数
+            drawEventCallback(event) {
+                this.app.lineTo(event.offsetX, event.offsetY)
+                this.app.strokeStyle = 'white'
+                this.app.stroke()
+            }
+
+            //截图
+            short() {
+                const bt = document.createElement('button')
+                bt.innerText = '截图'
+                this.btns.insertAdjacentElement('beforeend', bt)
+                const img = new Image()
+                this.el.insertAdjacentElement('afterend', img)
+
+                bt.addEventListener('click', () => {
+                    //使用canval标签的toDataURL方法，获取图片数据内容
+                    img.src = this.el.toDataURL('image/jpeg')
+                    img.style.cssText = 'width:300px;position:absolute;bottom:50px;right:0;border:solid 10px white;left:50%;transform:translateX(-50%);'
+                })
+                return this
+            }
+
+            //清屏
+            clear() {
+                const bt = document.createElement('button')
+                bt.innerText = '清屏'
+                this.btns.insertAdjacentElement('beforeend', bt)
+                bt.addEventListener('click', () => {
+                    this.app.fillStyle = '#000'
+                    this.app.fillRect(0, 0, this.el.width, this.el.height)
+                })
+            }
+
+            //初始背景为黑色
+            setBackground() {
+                this.app.fillStyle = '#000'
+                this.app.fillRect(0, 0, this.el.width, this.el.height)
+            }
         }
 
-        function error(err) {
-            console.log(err);
-            // console.warn("ERROR(" + err.code + "): " + err.message);
-        }
+        const blackboard = new Draw(800, 300)
+        blackboard.short()
+        blackboard.clear()
 
-        navigator.geolocation.getCurrentPosition(success, error, options);
     </script>
 </body>
 

@@ -26,7 +26,7 @@ export default defineConfig({
     ['link', { rel: 'stylesheet', href: 'https://g.alicdn.com/de/prismplayer/2.13.2/skins/default/aliplayer-min.css' }],
     // 和风天气 
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/qweather-icons@1.4.0/font/qweather-icons.css' }],
-    ['script', { src:'//unpkg.com/@element-plus/icons-vue'}]
+    ['script', { src: '//unpkg.com/@element-plus/icons-vue' }]
     // ['script', { type: 'text/javascript', src: 'https://g.alicdn.com/de/prismplayer/2.13.2/aliplayer-h5-min.js' }]
     // ['script', { type: 'text/javascript', src: 'https://api.map.baidu.com/api?v=2.0&ak=92SYeuzlwp9T8tRNYbHAnvub792IOZcx' }],
     // ['script', { type: 'text/javascript', src: 'https://api.map.baidu.com/getscript?v=2.0&amp;ak=92SYeuzlwp9T8tRNYbHAnvub792IOZcx&amp;services=&amp;t=20230614151255' }]
@@ -70,7 +70,20 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
-      { text: '基础', link: '/pages/Base/javascript' },
+      {
+        text: '基础', items: [
+          { text: 'JavaScript', link: '/pages/Base/javascript' },
+          { text: 'CSS', link: '/pages/Base/css' },
+          { text: 'Html', link: '/pages/Base/html' },
+          { text: 'axios', link: '/pages/Base/axios/index' },
+          { text: 'scss', link: '/pages/Base/scss' },
+          { text: 'Vue', link: '/pages/Base/vue' },
+          { text: 'VueRouter', link: '/pages/Base/vuerouter' },
+          { text: 'vite', link: '/pages/Base/vite' },
+          { text: 'TypeScript', link: '/pages/Base/typescript' },
+          { text: 'git', link: '/pages/Base/git' },
+        ]
+      },
       { text: '组件', link: '/pages/ComponentsExample/xgVideoPlay' },
       { text: 'Notes', link: '/pages/Notes/2023/title' },
       { text: '方案', link: ' /pages/Other/Plan/hooks' },
@@ -80,20 +93,14 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/pages/Base/': [
-        {
-          text: '基础',
-          items: [
-            { text: 'JavaScript', link: '/pages/Base/javascript' },
-            { text: 'CSS', link: '/pages/Base/css' },
-            { text: 'Html', link: '/pages/Base/html' },
-            { text: 'scss', link: '/pages/Base/scss' },
-            { text: 'Vue', link: '/pages/Base/vue' },
-            { text: 'VueRouter', link: '/pages/Base/vuerouter' },
-            { text: 'TypeScript', link: '/pages/Base/typescript' },
-            { text: 'git', link: '/pages/Base/git' },
-          ]
-        }
+      '/pages/Base/axios': [
+        { text: '基础', link: '/pages/Base/axios/index' },
+        { text: '状态码', link: '/pages/Base/axios/状态码' },
+      ],
+      '/pages/Base/vite': [
+        { text: '基础', link: '/pages/Base/vite/index' },
+        { text: '部署静态站点', link: '/pages/Base/vite/部署静态站点' },
+        { text: '环境变量', link: '/pages/Base/vite/环境变量' },
       ],
       '/pages/ComponentsExample/': [
         {
