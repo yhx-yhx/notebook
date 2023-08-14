@@ -3,6 +3,7 @@
 <script setup>
 import {ref} from "vue"
 import VideoCamera from "../../pages/Components/VideoCamera.vue"
+import BackTop from "../../pages/Components/common/BackTop.vue"
 
 </script>
 
@@ -10,3 +11,5 @@ import VideoCamera from "../../pages/Components/VideoCamera.vue"
 <br/>
 
 <VideoCamera />
+<BackTop />
+

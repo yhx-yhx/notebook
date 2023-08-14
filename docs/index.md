@@ -3,11 +3,11 @@
 layout: home
 hero:
   name: "Yhx Code"
-  text: "前端技术爱好者"
-  # tagline: My great project tagline
+  text: "no care"
+  tagline: My great project tagline
   image:
     src: /logo.png
-    alt: 
+    alt: 'image'
   actions:
     - theme: brand
       text: Progress
@@ -32,9 +32,9 @@ features:
     title: Echarts.js
     link: https://echarts.apache.org/zh/index.html
     # details: 一个基于 JavaScript 的开源可视化图表库
-  - icon: ''
-    title: neumorphism[新拟物风格]
-    link: https://neumorphism.io/#e0e0e0
+  # - icon: ''
+  #   title: neumorphism[新拟物风格]
+  #   link: https://neumorphism.io/#e0e0e0
 
 ---
 

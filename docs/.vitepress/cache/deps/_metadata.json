@@ -1,86 +1,65 @@
 {
-  "hash": "28030b74",
-  "browserHash": "4a0d9cb2",
+  "hash": "4dca4a4b",
+  "browserHash": "6ef76f72",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "97439920",
+      "fileHash": "925940bc",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "b6c9efbc",
+      "fileHash": "3e5bbdef",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "53c28969",
+      "fileHash": "f6fac6a7",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "096bb3d7",
+      "fileHash": "5a5602cc",
       "needsInterop": false
     },
     "xgplayer": {
       "src": "../../../../node_modules/xgplayer/es/index.js",
       "file": "xgplayer.js",
-      "fileHash": "111ea5af",
+      "fileHash": "d8cf1139",
       "needsInterop": false
     },
     "xgplayer-hls": {
       "src": "../../../../node_modules/xgplayer-hls/es/index.js",
       "file": "xgplayer-hls.js",
-      "fileHash": "dc2187dc",
+      "fileHash": "3d994835",
       "needsInterop": false
     },
     "xgplayer-flv": {
       "src": "../../../../node_modules/xgplayer-flv/es/index.js",
       "file": "xgplayer-flv.js",
-      "fileHash": "8d509012",
+      "fileHash": "4ce1ea82",
       "needsInterop": false
     },
     "xgplayer-mp4": {
       "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
       "file": "xgplayer-mp4.js",
-      "fileHash": "90068357",
-      "needsInterop": false
-    },
-    "@element-plus/icons-vue": {
-      "src": "../../../../node_modules/@element-plus/icons-vue/dist/index.js",
-      "file": "@element-plus_icons-vue.js",
-      "fileHash": "56b777ae",
-      "needsInterop": false
-    },
-    "axios": {
-      "src": "../../../../node_modules/axios/index.js",
-      "file": "axios.js",
-      "fileHash": "8f1eb911",
-      "needsInterop": false
-    },
-    "echarts": {
-      "src": "../../../../node_modules/echarts/index.js",
-      "file": "echarts.js",
-      "fileHash": "820500c4",
+      "fileHash": "75c8555f",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-PEZMLLGD": {
-      "file": "chunk-PEZMLLGD.js"
-    },
-    "chunk-IYO332YY": {
-      "file": "chunk-IYO332YY.js"
-    },
     "chunk-S5Q3WY4P": {
       "file": "chunk-S5Q3WY4P.js"
     },
     "chunk-BYX4PHXJ": {
       "file": "chunk-BYX4PHXJ.js"
+    },
+    "chunk-IYO332YY": {
+      "file": "chunk-IYO332YY.js"
     },
     "chunk-5WWUZCGV": {
       "file": "chunk-5WWUZCGV.js"

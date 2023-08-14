@@ -1,6 +1,7 @@
 # 阿里云播放器测试用例
 <script  setup>
     import alyVideoPlay from "../../pages/Components/alyVideoPlay.vue"
+    import BackTop from "../../pages/Components/common/BackTop.vue"
 </script>
 
 ::: warning
@@ -11,3 +12,5 @@
 [ Web播放器 ](https://help.aliyun.com/zh/vod/developer-reference/apsaravideo-player-sdk-for-web/?spm=a2c4g.11186623.0.0.6694799bBJMPju)
 
 <alyVideoPlay/>
+
+<BackTop />

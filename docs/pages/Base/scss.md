@@ -45,21 +45,18 @@ body {
 
 ```scss
 nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  border: {
+    style: solid;
+    width: 1px;
+    color: #ccc;
   }
-  
-  li { 
-    display: inline-block; 
-  }
-  
-  a {
-    display: block;
-    padding: 6px 12px;  
-    text-decoration: none; 
-  }
+}
+
+//编译后
+nav {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
 }
 ```
 
@@ -79,9 +76,62 @@ nav {
 .container {
   @include clearfix;
 }
+
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.notice {
+  background-color: green;
+  border: 2px solid #00aa00;
+  @include rounded-corners;
+}
+
+//编译后
+.notice {
+  background-color: green;
+  border: 2px solid #00aa00;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+//========= 给混合器传递参数
+@mixin link-colors($normal, $hover, $visited) {
+  color: $normal;
+  &:hover { color: $hover; }
+  &:visited { color: $visited; }
+}
+
+a {
+  @include link-colors(blue, red, green);
+}
+// 编译
+a { color: blue; }
+a:hover { color: red; }
+a:visited { color: green; }
+
+
+// 默认参数混合器
+@mixin link-colors(
+    $normal,
+    $hover: $normal,
+    $visited: $normal
+  )
+{
+  color: $normal;
+  &:hover { color: $hover; }
+  &:visited { color: $visited; }
+}
+
+
+//调用时
+
+@include link-colors(red)//$hover和$visited也会被自动赋值为red。
 ```
 
-## 扩展
+## 继承
 
 继承(extend)避免重复选择器。
 
@@ -98,6 +148,12 @@ nav {
 }
 ```
 
+**继承细节**
+```scss
+  混合器与 继承相比 继承生成的css代码更少 ；如果你非常关心站点速度，请牢记这一点
+```
+
+
 ## 运算 
 
 支持运算符 `+`、`-`、`*`、`/`等。
@@ -108,6 +164,57 @@ nav {
 }
 ```
 
+
+
 SCSS提供了很多CSS不具备的额外功能,可以让我们更优雅地组织样式代码,值得学习使用。
 
 后续可以继续补充更多SCSS知识点和示例,也欢迎提出宝贵意见。
+## 补充
+**好处**
+- 嵌套写法 减轻了繁重的 css 代码 ；
+- 代码混入 提高了复用性；
+- 属性嵌套 减轻了繁杂的 css属性
+
+**当用户在使用IE浏览器时，你会通过JavaScript在body标签上添加一个ie的类名，为这种情况编写特殊的样式如下：**
+
+```scss
+#content aside {
+  color: red;
+  body.ie & { color: green }
+}
+
+/*编译后*/
+#content aside {color: red};
+body.ie #content aside { color: green }
+
+```
+
+
+```scss
+
+article {
+  ~ article { border-top: 1px dashed #ccc }
+  > section { background: #eee }
+  dl > {
+    dt { color: #333 }
+    dd { color: #555 }
+  }
+  nav + & { margin-top: 0 }
+}
+
+//编译后
+article ~ article { border-top: 1px dashed #ccc }
+article > footer { background: #eee }
+article dl > dt { color: #333 }
+article dl > dd { color: #555 }
+nav + article { margin-top: 0 }
+
+```
+
+**静默注释**
+```scss
+body {
+  color: #333; // 这种注释内容不会出现在生成的css文件中
+  padding: 0; /* 这种注释内容会出现在生成的css文件中 */
+}
+```

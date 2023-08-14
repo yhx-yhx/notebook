@@ -1,4 +1,5 @@
 # Vue3Preview 组件
+
 <br/>
 
 <script setup>
@@ -10,6 +11,7 @@ const mime = ref()
 const fileChange = (e) => {
     let file = e.target.files[0]
     mime.value = file.type
+    console.log(file.type)
     let type = file.type.split('/')[1]
    var reader = new FileReader()
             reader.onload = () => {
@@ -22,6 +24,15 @@ const fileChange = (e) => {
 }
 
 </script>
+
+::: warning 支持的预览预览格式
+
+- 近乎所有的 图片格式
+- txt
+- json
+- pdf
+  :::
+
 
 <div class="file">
 <input class="file-input" type="file" @change="fileChange" />
@@ -87,12 +98,3 @@ const fileChange = (e) => {
 </style>
 
 <!-- <Vue3Preview src="https://img0.baidu.com/it/u=530426417,2082848644&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500.jpg" height="77vh" /> -->
-
-
-::: warning 支持的预览预览格式
-- 近乎所有的 图片格式 
-- txt
-- json
-:::
-
-
