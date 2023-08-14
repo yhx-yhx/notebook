@@ -2,7 +2,7 @@
 import { computed, ref, watchEffect, onMounted, watchPostEffect } from "vue"
 // import { v4 } from 'uuid'
 // import PDFObject from "pdfobject"
-import JsonViewer from 'vue-json-viewer'
+// import JsonViewer from 'vue-json-viewer'
 const props = defineProps({
     height: {
         type: String,
@@ -40,11 +40,11 @@ const props = defineProps({
 
 const jsonData = {
     total: 25,
-        limit: 10,
-            skip: 0,
-                links: {
+    limit: 10,
+    skip: 0,
+    links: {
         previous: undefined,
-            next: function () { },
+        next: function () { },
     },
     data: [
         {
@@ -104,10 +104,10 @@ const jsonData = {
 //     console.dir(previews_view);
 // })
 
-watchPostEffect(() => { 
+watchPostEffect(() => {
     if (props.mime === 'application/pdf' || props.mime === 'text/plain' || props.mime === 'application/json') {
-            let previews_view = document.querySelector('.previews_view')
-            console.dir(previews_view);
+        let previews_view = document.querySelector('.previews_view')
+        console.dir(previews_view);
     }
 })
 
@@ -128,7 +128,8 @@ watchPostEffect(() => {
             </div>
         </div>
         <template v-if="props.src">
-            <template v-if="props.mime === 'application/pdf'|| props.mime === 'application/json' || props.mime.includes('text')">
+            <template
+                v-if="props.mime === 'application/pdf' || props.mime === 'application/json' || props.mime.includes('text')">
                 <object class="pd-5  previews_view" :data="props.src" :type="props.mime" style="color: aqua;"></object>
             </template>
             <template v-else-if="props.mime.includes('mp4')">
@@ -179,6 +180,7 @@ watchPostEffect(() => {
     .previews_view_video {
         object-fit: fill;
     }
+
     pre {
         color: #fff !important;
     }
@@ -187,6 +189,7 @@ watchPostEffect(() => {
 .pd-5 {
     padding: 5px;
 }
+
 .empty_views {
     min-height: 500px;
     height: 100%;
@@ -233,5 +236,4 @@ watchPostEffect(() => {
 
 // .green {
 //     background-color: #00ca4e;
-// }
-</style>
+// }</style>
