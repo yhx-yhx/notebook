@@ -4,7 +4,7 @@
 import {ref} from "vue"
 import {ElCard} from "element-plus"
 import Vue3Echarts from "../../pages/Components/Vue3Echarts.vue"
-import BackTop from "../../pages/Components/common/BackTop.vue"
+// import BackTop from "../../pages/Components/common/BackTop.vue"
 const options = ref({
   xAxis: {
     type: 'category',
@@ -26,7 +26,7 @@ const options = ref({
 <el-card>
 <Vue3Echarts id="echart_1029" :options="options" />
 </el-card>
-<BackTop />
+<!-- <BackTop /> -->
 
 ### 属性
 

@@ -1,7 +1,7 @@
 # 阿里云播放器测试用例
 <script  setup>
     import alyVideoPlay from "../../pages/Components/alyVideoPlay.vue"
-    import BackTop from "../../pages/Components/common/BackTop.vue"
+    // import BackTop from "../../pages/Components/common/BackTop.vue"
 </script>
 
 ::: warning
@@ -13,4 +13,4 @@
 
 <alyVideoPlay/>
 
-<BackTop />
+<!-- <BackTop /> -->
