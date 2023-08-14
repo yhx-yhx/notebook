@@ -10,6 +10,7 @@
 - [盒模型](#盒模型) 
 - [定位与浮动](#定位与浮动)
 - [CSS3样式](#css3样式)
+- [动画](#动画)
 
 ## 权重与继承
 
@@ -32,6 +33,8 @@
 - 类选择器:.class名  
 - 属性选择器:[attr=value]
 - 后代选择器:div p
+- 下一个兄弟选择器 +
+- 后面的兄弟选择器 ~
 
 ```css
 /* 元素选择器 */
@@ -63,6 +66,47 @@ div p {
 div + p {
     border:1px soild blue;
 }
+
+
+/* 后面的兄弟选择器 */
+div ~ p {
+    border:1px soild blue;
+}
+/* 结构为类选择器*/
+div:first-child 匹配父元素的第一个子元素div。
+
+div:last-child 匹配父元素的最后一个子元素div。
+
+div:nth-child(n) 匹配父元素的第n个子元素div。注意，盒子的编号是从1开始算起，不是从0开始算起。
+
+div:nth-child(odd) 匹配奇数
+
+div:nth-child(even) 匹配偶数
+
+div:nth-last-child(n) 匹配父元素的倒数第n个子元素div。
+
+div:first-of-type 匹配同类型中的第一个同级兄弟元素div。
+
+div:last-of-type 匹配同类型中的最后一个同级兄弟元素div。
+
+div:nth-of-type(n) 匹配同类型中的第n个同级兄弟元素div。
+
+div:nth-last-of-type(n) 匹配同类型中的倒数第n个同级兄弟元素div。
+div:empty 匹配没有任何子节点（包括空格等text节点）的元素div。
+
+div:target 匹配相关URL指向的div元素。要配合锚点使用。
+
+
+/*伪元素选择器 */
+div::before 设置在 元素div 前面（依据对象树的逻辑结构）的内容，配合content属性一起使用。
+
+div::after 设置在 元素div 后面（依据对象树的逻辑结构）的内容，配合content属性一起使用。
+
+div::first-letter 设置div的第一个字符样式
+
+div::fist-line 设置div 的第一行元素的样式
+div::selection 设置div被鼠标选中的区域样式
+
 
 /* 静态伪类 :link :visited */
 
@@ -135,6 +179,10 @@ CSS3带来了圆角、阴影、动画等样式。
 - box-shadow 设置阴影
 - @keyframes 定义动画
 - transform 进行元素转换
+
+## 动画
+
+- 过渡
 
 ## 更多内容
 
