@@ -162,6 +162,7 @@ export default defineConfig({
               text: "VideoCamera",
               link: "/pages/ComponentsExample/VideoCamera",
             },
+            { text: "Details", link: "/pages/ComponentsExample/details" },
           ],
         },
       ],

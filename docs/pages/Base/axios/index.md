@@ -22,6 +22,7 @@ export const http = (options) => {
             baseURL: baseURL ? baseURL : '/svc',
         });
         request.baseURL = baseURL
+        // withCredentials 表示跨域请求时是否 需要凭证 默认是 false
         // request.defaults.withCredentials = true
         request.interceptors.request.use(
             (config) => {
