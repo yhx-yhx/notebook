@@ -44,7 +44,7 @@ summary {
     padding: 0.5em;
     cursor: pointer;
       &::marker {
-        content: attr(data-showArrow);
+        // content: attr(data-showArrow);
     }
 }
 

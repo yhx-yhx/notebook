@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3909776 */
+  src: url('iconfont.eot?t=1679886410959'); /* IE9 */
+  src: url('iconfont.eot?t=1679886410959#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('iconfont.woff2?t=1679886410959') format('woff2'),
+       url('iconfont.woff?t=1679886410959') format('woff'),
+       url('iconfont.ttf?t=1679886410959') format('truetype'),
+       url('iconfont.svg?t=1679886410959#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-line:before {
+  content: "\ec1f";
+}
+
+.icon-polyline:before {
+  content: "\e6bb";
+}
+
+.icon-marker_none:before {
+  content: "\e600";
+}
+
+.icon-marker_focus:before {
+  content: "\e71e";
+}
+
+.icon-polygon:before {
+  content: "\e605";
+}
+
+.icon-space_query:before {
+  content: "\e89f";
+}
+
+.icon-point:before {
+  content: "\ec1e";
+}
+
+.icon-jiaodian:before {
+  content: "\e618";
+}
+
+.icon-wancheng:before {
+  content: "\e60a";
+}
+
+.icon-cuowu:before {
+  content: "\e65b";
+}
+
+.icon-full-screen:before {
+  content: "\e607";
+}
+

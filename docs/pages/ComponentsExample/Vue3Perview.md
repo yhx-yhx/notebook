@@ -1,10 +1,22 @@
 # Vue3Preview 组件
 
+::: warning 支持的预览格式
+
+- 近乎所有的 图片格式
+- txt
+- json
+- pdf
+- 不支持 office 全家桶
+:::
+
+
 <br/>
 
 <script setup>
 import {ref} from "vue"
 import Vue3Preview from "../../pages/Components/Vue3Preview.vue"
+// 引入 vue-office-preview
+import editDoc from "../../pages/Components/editDoc.vue"
 const src = ref()
 const mime = ref()
 
@@ -25,13 +37,6 @@ const fileChange = (e) => {
 
 </script>
 
-::: warning 支持的预览预览格式
-
-- 近乎所有的 图片格式
-- txt
-- json
-- pdf
-  :::
 
 
 <div class="file">
@@ -41,6 +46,7 @@ const fileChange = (e) => {
 <br/>
 <Vue3Preview :src="src" :mime="mime" />
 
+<editDoc/>
 <br/>
 
 <style lang="scss">

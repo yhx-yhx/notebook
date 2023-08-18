@@ -89,15 +89,19 @@ export default defineConfig({
           { text: "JavaScript", link: "/pages/Base/javascript/index" },
           { text: "CSS", link: "/pages/Base/Css/index" },
           { text: "Html", link: "/pages/Base/html" },
-          { text: 'axios', link: '/pages/Base/axios/index' },
+          { text: "axios", link: "/pages/Base/axios/index" },
           {
-            text: "Vue", items: [
-              { text: 'vue', link: "/pages/Base/vue全家桶/vue/index" },
-              { text: 'vue-router', link: "/pages/Base/vue全家桶/vue-router/index" },
-              { text: 'pinia', link: "/pages/Base/vue全家桶/pinia/index" },
-            ]
+            text: "Vue",
+            items: [
+              { text: "vue", link: "/pages/Base/vue全家桶/vue/index" },
+              {
+                text: "vue-router",
+                link: "/pages/Base/vue全家桶/vue-router/index",
+              },
+              { text: "pinia", link: "/pages/Base/vue全家桶/pinia/index" },
+            ],
           },
-          { text: 'vite', link: '/pages/Base/vite' },
+          { text: "vite", link: "/pages/Base/vite" },
           { text: "git", link: "/pages/Base/git" },
           { text: "scss", link: "/pages/Base/scss" },
           { text: "TypeScript", link: "/pages/Base/typescript" },
@@ -105,21 +109,57 @@ export default defineConfig({
       },
       { text: "组件", link: "/pages/ComponentsExample/xgVideoPlay" },
       { text: "Notes", link: "/pages/Notes/2023/title" },
-      { text: "方案", link: " /pages/Other/Plan/hooks" },
-      { text: "配置", link: "/pages/Config/nvm" },
-      { text: "Live", link: "/pages/Other/Live/noisy" },
-      { text: "Link", link: "/pages/Other/Link/Docs/index" },
+      {
+        text: "方案", items: [
+          { text: "hooks", link: "/pages/Other/Plan/hooks" },
+          { text: "大屏可视化响应式", link: "/pages/Other/Plan/screen" },
+          { text: "router 处理方案", link: "/pages/Other/Plan/router" },
+          { text: "pdf预览", link: "/pages/Other/Plan/pdf" },
+          { text: "xlsx", link: "/pages/Other/Plan/xlsx" },
+          { text: "download", link: "/pages/Other/Plan/download" },
+          { text: "xgplayer", link: "/pages/Other/Plan/xgplayer" },
+        ], },
+      {
+        text: "配置", items: [
+          { text: "nvm", link: "/pages/Config/nvm" },
+          { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
+          { text: "nginx配置", link: "/pages/Config/nginx配置" },
+        ], },
+      {
+        text: "经验帖",
+        items: [
+          {
+            text: "经验花裤衩Element-admin",
+            link: "/pages/Other/经验帖/花裤衩Element-admin",
+          },
+        ],
+      },
+      {
+        text: "Live",
+        items: [
+          { text: "noisy", link: "/pages/Other/Live/noisy" },
+          { text: "trivial", link: "/pages/Other/Live/trivial" },
+        ],
+      },
+      {
+        text: "Link",
+        items: [
+          { text: "Docs", link: "/pages/Other/Link/Docs/index" },
+          { text: "Live", link: "/pages/Other/Link/Live/index" },
+          { text: "Tools", link: "/pages/Other/Link/Tools/index" },
+        ],
+      },
     ],
 
     sidebar: {
-      '/pages/Base/axios': [
-        { text: '基础', link: '/pages/Base/axios/index' },
-        { text: '状态码', link: '/pages/Base/axios/状态码' },
+      "/pages/Base/axios": [
+        { text: "基础", link: "/pages/Base/axios/index" },
+        { text: "状态码", link: "/pages/Base/axios/状态码" },
       ],
-      '/pages/Base/vite': [
-        { text: '基础', link: '/pages/Base/vite/index' },
+      "/pages/Base/vite": [
+        { text: "基础", link: "/pages/Base/vite/index" },
         // { text: '部署静态站点', link: '/pages/Base/vite/部署静态站点' },
-        { text: '环境变量', link: '/pages/Base/vite/环境变量' },
+        { text: "环境变量", link: "/pages/Base/vite/环境变量" },
       ],
       // /pages/Base/ 基础
       "/pages/Base/javascript": [
@@ -163,6 +203,8 @@ export default defineConfig({
               link: "/pages/ComponentsExample/VideoCamera",
             },
             { text: "Details", link: "/pages/ComponentsExample/details" },
+            { text: "Icon", link: "/pages/ComponentsExample/icon" },
+            { text: "个人中心", link: "/pages/ComponentsExample/个人中心" },
           ],
         },
       ],
@@ -189,29 +231,28 @@ export default defineConfig({
         },
       ],
       "/pages/Other/Plan": [
-        {
-          text: "Plan",
-          items: [
-            { text: "hooks", link: "/pages/Other/Plan/hooks" },
-            { text: "大屏可视化响应式", link: "/pages/Other/Plan/screen" },
-            { text: "router 处理方案", link: "/pages/Other/Plan/router" },
-            { text: "axios封装", link: "/pages/Other/Plan/axios_request" },
-            { text: "pdf预览", link: "/pages/Other/Plan/pdf" },
-            { text: "xlsx", link: "/pages/Other/Plan/xlsx" },
-            { text: "download", link: "/pages/Other/Plan/download" },
-            { text: "xgplayer", link: "/pages/Other/Plan/xgplayer" },
-          ],
-        },
+        // {
+        //   text: "Plan",
+        //   items: [
+        //     { text: "hooks", link: "/pages/Other/Plan/hooks" },
+        //     { text: "大屏可视化响应式", link: "/pages/Other/Plan/screen" },
+        //     { text: "router 处理方案", link: "/pages/Other/Plan/router" },
+        //     { text: "pdf预览", link: "/pages/Other/Plan/pdf" },
+        //     { text: "xlsx", link: "/pages/Other/Plan/xlsx" },
+        //     { text: "download", link: "/pages/Other/Plan/download" },
+        //     { text: "xgplayer", link: "/pages/Other/Plan/xgplayer" },
+        //   ],
+        // },
       ],
       "pages/Config/": [
-        {
-          text: "Config",
-          items: [
-            { text: "nvm", link: "/pages/Config/nvm" },
-            { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
-            { text: "nginx配置", link: "/pages/Config/nginx配置" },
-          ],
-        },
+        // {
+        //   text: "Config",
+        //   items: [
+        //     { text: "nvm", link: "/pages/Config/nvm" },
+        //     { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
+        //     { text: "nginx配置", link: "/pages/Config/nginx配置" },
+        //   ],
+        // },
       ],
       "/pages/Other/Live": [
         {
@@ -219,23 +260,18 @@ export default defineConfig({
           items: [
             { text: "noisy", link: "/pages/Other/Live/noisy" },
             { text: "trivial", link: "/pages/Other/Live/trivial" },
-            // { text: 'axios封装', link: '/pages/Other/Live/axios_request' },
-            // { text: 'hls 解决方案', link: '/pages/Other/Live/hls' },
           ],
         },
       ],
       "/pages/Other/Link": [
-        {
-          text: "Link",
-          items: [
-            { text: "Docs", link: "/pages/Other/Link/Docs/index" },
-            { text: "Live", link: "/pages/Other/Link/Live/index" },
-            { text: "Tools", link: "/pages/Other/Link/Tools/index" },
-            // { text: 'Docs', link: '/pages/Other/Link/Docs/index' },
-            { text: "Live", link: "/pages/Other/Link/Live/index" },
-            // { text: 'Tools', link: '/pages/Other/Link/Tools/index' },
-          ],
-        },
+        // {
+        //   text: "Link",
+        //   items: [
+        //     { text: "Docs", link: "/pages/Other/Link/Docs/index" },
+        //     { text: "Live", link: "/pages/Other/Link/Live/index" },
+        //     { text: "Tools", link: "/pages/Other/Link/Tools/index" },
+        //   ],
+        // },
       ],
     },
     search: {
