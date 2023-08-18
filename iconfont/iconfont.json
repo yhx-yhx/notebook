@@ -1,0 +1,86 @@
+{
+  "id": "3909776",
+  "name": "cim",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "34765973",
+      "name": "线段-copy",
+      "font_class": "line",
+      "unicode": "ec1f",
+      "unicode_decimal": 60447
+    },
+    {
+      "icon_id": "26525861",
+      "name": "线段",
+      "font_class": "polyline",
+      "unicode": "e6bb",
+      "unicode_decimal": 59067
+    },
+    {
+      "icon_id": "82753",
+      "name": "未选中圆圈",
+      "font_class": "marker_none",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "792472",
+      "name": "circle-圆圈",
+      "font_class": "marker_focus",
+      "unicode": "e71e",
+      "unicode_decimal": 59166
+    },
+    {
+      "icon_id": "1314634",
+      "name": "点击选多边形",
+      "font_class": "polygon",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "1727368",
+      "name": "28体积、空间-线性",
+      "font_class": "space_query",
+      "unicode": "e89f",
+      "unicode_decimal": 59551
+    },
+    {
+      "icon_id": "4933869",
+      "name": "点",
+      "font_class": "point",
+      "unicode": "ec1e",
+      "unicode_decimal": 60446
+    },
+    {
+      "icon_id": "6850809",
+      "name": "焦点",
+      "font_class": "jiaodian",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "7674533",
+      "name": "完成",
+      "font_class": "wancheng",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "8180208",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "3108162",
+      "name": "全屏",
+      "font_class": "full-screen",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    }
+  ]
+}
