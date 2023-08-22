@@ -1,4 +1,5 @@
 ## [axios文档](https://www.axios-http.cn/docs/intro)
+> 也可以直接将 baseURL 进行封装 可以在 配置里面 传入 baseURl 直接可以将 出初始值 仅在本次进行覆盖；
 
 <br/>
 

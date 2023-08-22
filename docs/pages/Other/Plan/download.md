@@ -72,7 +72,7 @@ function  Download(url, title="文件名字"){
 ```
 <br/>
 
-##下载本地资源文件
+## 下载本地资源文件
 
 ```javascript
 fetch(url,{method:'get'}).then(res=>res.json()).then(res=>console.log(res))

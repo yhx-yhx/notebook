@@ -93,7 +93,7 @@ export default defineConfig({
           {
             text: "Vue",
             items: [
-              { text: "vue", link: "/pages/Base/vue全家桶/vue/index" },
+              { text: "vue", link: "/pages/Base/vue全家桶/vue/" },
               {
                 text: "vue-router",
                 link: "/pages/Base/vue全家桶/vue-router/index",
@@ -107,24 +107,74 @@ export default defineConfig({
           { text: "TypeScript", link: "/pages/Base/typescript" },
         ],
       },
-      { text: "组件", link: "/pages/ComponentsExample/xgVideoPlay" },
-      { text: "Notes", link: "/pages/Notes/2023/title" },
+      {
+        text: "组件",
+        items: [
+          {
+            text: "西瓜视频播放器",
+            link: "/pages/ComponentsExample/xgVideoPlay",
+          },
+          {
+            text: "阿里云视频播放器",
+            link: "/pages/ComponentsExample/alyVideoPlay",
+          },
+          {
+            text: "Vue3Echarts",
+            link: "/pages/ComponentsExample/Vue3Echarts",
+          },
+          {
+            text: "Vue3Perview",
+            link: "/pages/ComponentsExample/Vue3Perview",
+          },
+          { text: "weather", link: "/pages/ComponentsExample/weather" },
+          {
+            text: "VideoCamera",
+            link: "/pages/ComponentsExample/VideoCamera",
+          },
+          { text: "Details", link: "/pages/ComponentsExample/details" },
+          { text: "Icon", link: "/pages/ComponentsExample/icon" },
+          { text: "引导页", link: "/pages/ComponentsExample/引导页" },
+          { text: "vue-count-to", link: "/pages/ComponentsExample/vueCountTo" },
+        ],
+      }, 
+      {
+        text: "Notes",
+        items: [
+          { text: "min_title", link: "/pages/Notes/2023/title" },
+          { text: "2023/4", link: "/pages/Notes/2023/4" },
+          {
+            text: "learn_vue3_doc",
+            link: "/pages/Notes/2023/learn_vue3_doc",
+          },
+          {
+            text: "learn_vue3_coderwhy",
+            link: "/pages/Notes/2023/learn_vue3_coderwhy",
+          },
+          { text: "default", link: "/pages/Notes/2023/Others/Nodes/default" },
+          {
+            text: "third_party_warehouse",
+            link: "/pages/Notes/2023/Others/Nodes/third_party_warehouse",
+          },
+        ],
+      },
       {
         text: "方案", items: [
           { text: "hooks", link: "/pages/Other/Plan/hooks" },
           { text: "大屏可视化响应式", link: "/pages/Other/Plan/screen" },
-          { text: "router 处理方案", link: "/pages/Other/Plan/router" },
-          { text: "pdf预览", link: "/pages/Other/Plan/pdf" },
           { text: "xlsx", link: "/pages/Other/Plan/xlsx" },
           { text: "download", link: "/pages/Other/Plan/download" },
           { text: "xgplayer", link: "/pages/Other/Plan/xgplayer" },
-        ], },
+          { text: "导出zip", link: "/pages/Other/Plan/导出zip" },
+          { text: "国际化", link: "/pages/Other/Plan/国际化" },
+        ],
+      },
       {
         text: "配置", items: [
           { text: "nvm", link: "/pages/Config/nvm" },
           { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
           { text: "nginx配置", link: "/pages/Config/nginx配置" },
-        ], },
+        ],
+      },
       {
         text: "经验帖",
         items: [
@@ -177,58 +227,68 @@ export default defineConfig({
           ],
         },
       ],
+      "/pages/Base/vue全家桶/vue": [
+        { text: "index", link: "/pages/Base/vue全家桶/vue/" },
+        { text: "安全", link: "/pages/Base/vue全家桶/vue/学习vue文档/安全" },
+        // { text: "对象", link: "/pages/Base/javascript/对象" },
+        // { text: "函数", link: "/pages/Base/javascript/函数" },
+        // { text: "数组", link: "/pages/Base/javascript/数组" },
+        // { text: "异步编程", link: "/pages/Base/javascript/异步编程" },
+        // { text: "正则表达式", link: "/pages/Base/javascript/RegExp" },
+        // { text: "WebSocket", link: "/pages/Base/javascript/WebSocket" },
+      ],
       "/pages/ComponentsExample/": [
-        {
-          text: "组件",
-          items: [
-            {
-              text: "西瓜视频播放器",
-              link: "/pages/ComponentsExample/xgVideoPlay",
-            },
-            {
-              text: "阿里云视频播放器",
-              link: "/pages/ComponentsExample/alyVideoPlay",
-            },
-            {
-              text: "Vue3Echarts",
-              link: "/pages/ComponentsExample/Vue3Echarts",
-            },
-            {
-              text: "Vue3Perview",
-              link: "/pages/ComponentsExample/Vue3Perview",
-            },
-            { text: "weather", link: "/pages/ComponentsExample/weather" },
-            {
-              text: "VideoCamera",
-              link: "/pages/ComponentsExample/VideoCamera",
-            },
-            { text: "Details", link: "/pages/ComponentsExample/details" },
-            { text: "Icon", link: "/pages/ComponentsExample/icon" },
-            { text: "个人中心", link: "/pages/ComponentsExample/个人中心" },
-          ],
-        },
+        // {
+        //   text: "组件",
+        //   items: [
+        //     {
+        //       text: "西瓜视频播放器",
+        //       link: "/pages/ComponentsExample/xgVideoPlay",
+        //     },
+        //     {
+        //       text: "阿里云视频播放器",
+        //       link: "/pages/ComponentsExample/alyVideoPlay",
+        //     },
+        //     {
+        //       text: "Vue3Echarts",
+        //       link: "/pages/ComponentsExample/Vue3Echarts",
+        //     },
+        //     {
+        //       text: "Vue3Perview",
+        //       link: "/pages/ComponentsExample/Vue3Perview",
+        //     },
+        //     { text: "weather", link: "/pages/ComponentsExample/weather" },
+        //     {
+        //       text: "VideoCamera",
+        //       link: "/pages/ComponentsExample/VideoCamera",
+        //     },
+        //     { text: "Details", link: "/pages/ComponentsExample/details" },
+        //     { text: "Icon", link: "/pages/ComponentsExample/icon" },
+        //     { text: "引导页", link: "/pages/ComponentsExample/引导页" },
+        //   ],
+        // },
       ],
       "/pages/Notes": [
-        {
-          text: "Notes",
-          items: [
-            { text: "min_title", link: "/pages/Notes/2023/title" },
-            { text: "2023/4", link: "/pages/Notes/2023/4" },
-            {
-              text: "learn_vue3_doc",
-              link: "/pages/Notes/2023/learn_vue3_doc",
-            },
-            {
-              text: "learn_vue3_coderwhy",
-              link: "/pages/Notes/2023/learn_vue3_coderwhy",
-            },
-            { text: "default", link: "/pages/Notes/2023/Others/Nodes/default" },
-            {
-              text: "third_party_warehouse",
-              link: "/pages/Notes/2023/Others/Nodes/third_party_warehouse",
-            },
-          ],
-        },
+        // {
+        //   text: "Notes",
+        //   items: [
+        //     { text: "min_title", link: "/pages/Notes/2023/title" },
+        //     { text: "2023/4", link: "/pages/Notes/2023/4" },
+        //     {
+        //       text: "learn_vue3_doc",
+        //       link: "/pages/Notes/2023/learn_vue3_doc",
+        //     },
+        //     {
+        //       text: "learn_vue3_coderwhy",
+        //       link: "/pages/Notes/2023/learn_vue3_coderwhy",
+        //     },
+        //     { text: "default", link: "/pages/Notes/2023/Others/Nodes/default" },
+        //     {
+        //       text: "third_party_warehouse",
+        //       link: "/pages/Notes/2023/Others/Nodes/third_party_warehouse",
+        //     },
+        //   ],
+        // },
       ],
       "/pages/Other/Plan": [
         // {
