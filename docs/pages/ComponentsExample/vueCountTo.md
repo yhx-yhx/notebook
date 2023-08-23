@@ -4,18 +4,18 @@
 
 
 <script setup>
-import vueCountTo from "../../pages/Components/common/vue-count-to.vue"
-import { ElCard } from "element-plus"
+// import vueCountTo from "../../pages/Components/common/vue-count-to.vue"
+// import { ElCard } from "element-plus"
 </script>
 
-<el-card header="vue3-count-to">
+<!-- <el-card header="vue3-count-to">
     <div class="box-common">
         <vueCountTo :startVal='100' :endVal='5054' :duration='2000'/>
     </div>
      <div class="box-common">
         <vueCountTo :startVal='100' :endVal='9090' :duration='2000'/>
     </div>
-</el-card>
+</el-card> -->
 
 
 <style scoped lang="scss">
