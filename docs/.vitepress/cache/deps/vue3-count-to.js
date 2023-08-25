@@ -1,4 +1,4 @@
-import "./chunk-UXIASGQL.js";
+import "./chunk-5WWUZCGV.js";
 
 // node_modules/vue3-count-to/dist/vue3-count-to.esm.js
 import Component from "D:/cangku/2023/notebook/node_modules/vue-count-to/src/vue-countTo.vue";

@@ -1,9 +1,11 @@
-# 图片预览 readAsDataURL实现
+## 图片预览 readAsDataURL实现
+<br>
 
 ```html
 <input type="file" onchange="changPicture(this)" accept="image/*"/>
 <img src="" alt="预览文件" />
 ```
+<br>
 
 ```javascript
 let changPicture = (dom) => {
@@ -19,12 +21,14 @@ let changPicture = (dom) => {
 }
 ```
 
-# 图片预览  createObjectURL实现
+## 图片预览  createObjectURL实现
+<br/>
 
 ```html
 <input type="file" onchange="changPicture(this)" accept="image/*"/>
 <img src="" alt="预览文件" />
 ```
+<br>
 
 ```javascript
 let changPicture = (dom) => {
@@ -43,15 +47,17 @@ let changPicture = (dom) => {
 }
 ```
 
-# 预览 createObjectURL+iframe 实现
+## 预览 createObjectURL+iframe 实现
+<br/>
 
-**PS** 图片，txt，pdf，excel（下载文件？？？），
+> 图片，txt，pdf，excel（下载文件？？？），
 
 ```html
 <input type="file" onchange="changPdf(this)" />
 <!-- 需注入样式 -->
 <iframe id="viewer" src="" frameborder="0"></iframe>  
 ```
+<br>
 
 ```javascript
 const viewer = document.getElementById('viewer')
@@ -65,19 +71,23 @@ function changPdf(dom) {
 }
 ```
 
-# 预览视频 createObjectURL+video
+## 预览视频 createObjectURL+video
+<br>
 
-**思路与上面相同**
-
-
-
+> **思路与上面相同**
 
 
-# json 导出Excel
+
+
+
+## json 导出Excel
+<br>
 
 ```html
 <button onclick="toExcel()">导出</button>
 ```
+
+<br>
 
 ```javascript
             const demoJson = [
@@ -171,11 +181,13 @@ function changPdf(dom) {
             }
 ```
 
-# excel 转 json 导入
+## excel 转 json 导入
 
 ```html
     <input id="inputName" onchange="changeFile(this)" type="file" />
 ```
+
+<br/>
 
 ```javascript
 let json = null
@@ -189,5 +201,5 @@ function changeFile(dom) {
 }
 ```
 
-# tree 转成 array 
+## tree 转成 array 
 
