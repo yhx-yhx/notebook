@@ -136,7 +136,8 @@ export default defineConfig({
           { text: "引导页", link: "/pages/ComponentsExample/引导页" },
           { text: "vue-count-to", link: "/pages/ComponentsExample/vueCountTo" },
         ],
-      }, 
+      },
+      { text: "interview", link: "/pages/Interview/自检100题" },
       {
         text: "Notes",
         items: [
@@ -161,7 +162,7 @@ export default defineConfig({
         text: "方案", items: [
           { text: "hooks", link: "/pages/Other/Plan/hooks" },
           { text: "大屏可视化响应式", link: "/pages/Other/Plan/screen" },
-          { text: "xlsx", link: "/pages/Other/Plan/xlsx" },
+          { text: "xlsx", link: "/pages/Other/Plan/xlsx/index" },
           { text: "download", link: "/pages/Other/Plan/download" },
           { text: "xgplayer", link: "/pages/Other/Plan/xgplayer" },
           { text: "导出zip", link: "/pages/Other/Plan/导出zip" },

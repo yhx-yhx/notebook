@@ -25,6 +25,8 @@
     "xgplayer": "^3.0.7",
     "xgplayer-flv": "^3.0.7",
     "xgplayer-hls": "^3.0.7",
-    "xgplayer-mp4": "^3.0.7"
+    "xgplayer-mp4": "^3.0.7",
+    "xlsx": "^0.18.5",
+    "xlsx-js-style": "^1.2.0"
   }
 }
