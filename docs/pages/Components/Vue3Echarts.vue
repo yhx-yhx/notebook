@@ -1,5 +1,5 @@
 <script setup >
-import { onMounted, ref, watch, watchEffect } from "vue"
+import { nextTick, onMounted, ref, watch, watchEffect, onBeforeUnmount } from "vue"
 import { markRaw } from 'vue'
 import * as echarts from 'echarts';
 const props = defineProps({
@@ -22,13 +22,15 @@ const props = defineProps({
 })
 const echartsDom = ref(null)
 const chartInit = ref(null)
-
+let echartsLister = null
 onMounted(() => {
-    echartsDom.value = document.getElementById(props.id)
-    chartInit.value = markRaw(echarts.init(echartsDom.value));
-    window.addEventListener("resize", function () {
-        chartInit.value.resize();
-    });
+    nextTick(() => {
+        echartsDom.value = document.getElementById(props.id)
+        chartInit.value = markRaw(echarts.init(echartsDom.value));
+        echartsLister = () => { chartInit.value.resize() }
+        window.addEventListener("resize", echartsLister);
+        chartInit.value.setOption(props.options, true)
+    })
 })
 watchEffect(() => {
     if (chartInit.value) {
@@ -42,6 +44,10 @@ watch(() => props.options, () => {
 },
     { deep: true }
 )
+// 销毁resize事件
+onBeforeUnmount(() => {
+    echartsLister && window.removeEventListener('resize', echartsLister)
+})
 
 
 </script>

@@ -7,7 +7,7 @@ import { ref } from "vue"
 </template>
 
 <style scoped lang="scss">
-div{
+div {
     color: rgb(255, 0, 0);
 }
 </style>

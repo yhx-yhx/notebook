@@ -9,7 +9,6 @@
 - 不支持 office 全家桶
 :::
 
-
 <br/>
 
 <script setup>
@@ -36,8 +35,6 @@ const fileChange = (e) => {
 }
 
 </script>
-
-
 
 <div class="file">
 <input class="file-input" type="file" @change="fileChange" />

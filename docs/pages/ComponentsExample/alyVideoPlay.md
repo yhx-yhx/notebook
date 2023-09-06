@@ -13,4 +13,8 @@
 
 <alyVideoPlay/>
 
+::: details 代码实现
+ <<< @/pages/Components/alyVideoPlay.vue
+:::
+
 <!-- <BackTop /> -->

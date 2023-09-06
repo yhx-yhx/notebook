@@ -77,9 +77,11 @@ getnowWeather()
 
 <br />
 
-::: details 具体实现代码
+::: code-group 代码实现
 
-``` vue
+<<< @/pages/Components/message/weather.vue
+
+``` vue 
   <script setup>
 import axios from 'axios'
 import weather from '../../pages/Components/message/weather.vue'

@@ -48,3 +48,6 @@ https://www.runoob.com/
 
 ### mdn
 https://developer.mozilla.org/zh-CN/
+
+### emojis
+ [emojis](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json)

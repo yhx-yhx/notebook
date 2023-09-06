@@ -1,13 +1,120 @@
 ## XLSX
-> XLSX 用起来似乎并不难
+
+[[toc]]
+
+> 写在开头 ：XLSX 用起来似乎并不难
 > 样式 这块的问题 很闹心 直接用 xlsx-js-style 样式
 > 样式问题直接搞死我 我搞了大半天 
-
+##  为了解决如下问题
 - 怎么实现多级（多表头实现）excel导出？
 - 如何mergeCell 合并单元格？
-- 
+- 如何设置单元格样式？
+:green_circle:
 
-### utils 工具类
+## [**xlsx-js-style**](https://www.npmjs.com/package/xlsx-js-style)
+
+## [sheet 社区文档](https://docs.sheetjs.com/docs/)
+
+##  json_to_sheet
+
+::: details 代码实现
+```javascript
+function json2Excel(fileName = "json2Excel file", sheetName) {
+                const excel = XLSX.utils.book_new();
+                const data = XLSX.utils.json_to_sheet(demoJson);
+                if (!sheetName) {
+                    sheetName = 'sheet1'
+                    XLSX.utils.book_append_sheet(excel, data, sheetName);
+                } else if (sheetName instanceof Array) {
+                    if (sheetName.length > 0) {
+                        sheetName.forEach(el => {
+                            XLSX.utils.book_append_sheet(excel, data, el);
+                        })
+                    } else {
+                        alert('sheetName must be a string or an array')
+                        return
+                    }
+                } else if (sheetName instanceof String) {
+                    XLSX.utils.book_append_sheet(excel, data, sheetName);
+                } else {
+                    alert('sheetName must be a string or an array')
+                    return
+                }
+                XLSX.writeFile(excel, fileName);
+            }
+```
+:::
+
+##  sheet_to_json
+
+::: details 代码实现
+
+```javascript
+let json = null
+function changeFile(e) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        const workbook = XLSX.read(e.target.result, { type: 'binary' })
+        json = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]])
+    }
+    reader.readAsArrayBuffer(e.target.files[0])
+}
+```
+:::
+
+##  aoa to sheet 
+::: details 代码实现 涵盖style
+
+```javascript
+
+const aoa2excel = (data, merges, filename, sheetName) => {
+    let wb = XLSXS.utils.book_new() //创建一个wb工作薄
+    let ws = XLSXS.utils.aoa_to_sheet(data)
+    ws['!merges'] = merges //合并单元格
+    ws['!rows'] = [{ hpx: 100 }, { hpx: 100 }, { hpx: 100 }] //定义行高
+    ws['!cols'] = [{ hpx: 100 }, { hpx: 100 }] //定义列宽
+    // https://gitbrent.github.io/xlsx-js-style/ 样式
+    ws['A1'].s = { //自定义样式
+          font: {
+            name: '宋体',
+            sz: 16,
+            bold: true,
+            color: {
+                rgb: '00000000',
+            },
+            italic: true,//斜体
+            strike: true,//删除线
+            underline: true,//字体下划线
+            shadow:true
+        },
+        alignment: {
+            horizontal: "center",
+            vertical: "center",
+            wrapText: true , //开启自动换行
+            textRotation: 45//文字偏移
+            
+        },
+        border: {
+            top: { style: 'thin' },
+            bottom: { style: 'thin' },
+            left: { style: 'thin' },
+            right: { style: 'thin' }
+        },
+        // fill: { //填充颜色
+        //     fgColor:"#cccc"
+        // }
+    }
+    XLSXS.utils.book_append_sheet(wb, ws, sheetName)
+    XLSXS.writeFile(wb, filename + '.xlsx')
+}
+let merges = [{ s: { r: 0, c: 0 }, e: {r:0,c:3} }]//从0行0列 开始 合并到 0行是列
+aoa2excel([['我是测试的标题',undefined,undefined],[12,23,34],[34,'sds','erer']], merges, 'test', 'sheet1')
+
+```
+
+:::
+
+##  utils 工具类
 
 - aoa_to_sheet 实现的将二维数组转换成 sheet 会自动处理 string number Date boolean 等类型
 - book_append_sheet 向 workbook 中添加 sheet 参数 workbook 必填 sheet （ws） 
@@ -107,59 +214,14 @@ function sheet_to_csv(sheet/*:Worksheet*/, opts/*:?Sheet2CSVOpts*/)/*:string*/ {
 - table_to_book 转换成 workbook 对象
 - table_to_sheet 将table 转换成 sheet 对象
 
+
+##   CFB 
+> 用于在CFB（Compound File Binary）文件中查找指定的路径,CFB是Microsoft Office二进制文件格式的一种，用于存储如Excel、Word等文档的数据。
+
+
 <script setup>
 
 import XlsxDemo from "./xlsx.vue"
 </script>
 
 <XlsxDemo />
-
-
-### 封装 json2excel
-
-<br/>
-
-```javascript
-function json2Excel(fileName = "json2Excel file", sheetName) {
-                const excel = XLSX.utils.book_new();
-                const data = XLSX.utils.json_to_sheet(demoJson);
-                if (!sheetName) {
-                    sheetName = 'sheet1'
-                    XLSX.utils.book_append_sheet(excel, data, sheetName);
-                } else if (sheetName instanceof Array) {
-                    if (sheetName.length > 0) {
-                        sheetName.forEach(el => {
-                            XLSX.utils.book_append_sheet(excel, data, el);
-                        })
-                    } else {
-                        alert('sheetName must be a string or an array')
-                        return
-                    }
-                } else if (sheetName instanceof String) {
-                    XLSX.utils.book_append_sheet(excel, data, sheetName);
-                } else {
-                    alert('sheetName must be a string or an array')
-                    return
-                }
-                XLSX.writeFile(excel, fileName);
-            }
-```
-
-<br/>
-
-### excel转json
-
-<br/>
-
-```javascript
-let json = null
-function changeFile(e) {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-        const workbook = XLSX.read(e.target.result, { type: 'binary' })
-        json = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]])
-    }
-    reader.readAsArrayBuffer(e.target.files[0])
-}
-```
-
