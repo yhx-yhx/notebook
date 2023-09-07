@@ -117,8 +117,7 @@ event事件 target其属性是 XHR
 - 中断请求 
   ```javascript
   let abortController = new AbortController()
-  
-fetch('xx/xxx/',{method:'POST',signal:abortController,{page:1}).then(res=>res.json()).then(res=>console.log(res))
+  fetch('xx/xxx/',{method:'POST',signal:abortController,    {page:1}).then(res=>res.json()).then(res=>console.log(res))
   setTimeout(()=>abortController.abort(),5000)
   ```
   
@@ -134,3 +133,86 @@ fetch('xx/xxx/',{method:'POST',signal:abortController,{page:1}).then(res=>res.js
 ### 14DOM
 
 - 节点
+
+
+### 25 客户端存储
+#### cookies
+##### 限制
+- cookies 与特定的域绑定  这个限制保证了 只能被认可的接受者接受 **不可以被其他域访问**
+- 不要超过300个cookie
+- 每个域的cookie总数不超过20个
+- 每个cookie不能超过4096字节
+- 每个域不能超过81920字节
+:walking: 不同浏览器存在差异 例如:
+- 最新的IE 与 Edge 限制每个域不超过 50个cookie
+- 最新的fireFox 限制每个域不超过 150个cookie
+- 最新的Opera 限制每个域不超过 180个cookie
+- Safari 和 Chrome 对每个域的cookie数没有限制
+:fu: 如果cookie 总数超过单个域 上限 浏览器会删除之前设置的cookie。浏览器之间会存在差异，避免不确定性，**不要超出限制。**
+
+##### cookies的构成
+
+- **名称：** 唯一标识cookie 的名称，不区分大小写；
+- **值：** 存储 字符串值，值必须经过URL 编码。
+- **过期时间：** 何时删除cookie值 ；时间到了立即删除 未设置时间 **会话结束删除 cookie**
+- **安全标志：** 设置之后 只使用SSL安全连接的情况下 才会把cookie 发送到服务器。例如请求 https:// xxx 会携带 cookie http:xx则不会携带
+- cookie 设置了secure 只能在SSL连接上发送
+
+##### JavaScript中的 cookie
+
+- 通过 **document.cookie** 设置； 例如：document.cookie ="name=value"
+- 所有的**值与名必须是URI编码**； 必须使用decodeURIComponent() 解码;
+- 简化繁杂操作 可以使用**cookie.js**
+
+##### 子cookie
+
+- 一个键的值 对应多组键值关系的结构；例如：**name=name1=value1&name2=value2&name3=value3;**
+
+- 实际开发中注意**不要超出单个cookie大小**
+
+##### 使用cookie 的注意事项
+
+- HTTP-only 的cookie ；可以在**服务器或浏览器**进行设置；**只能在服务器读取**
+
+- cookie **存储大量的信息 可能会影响 浏览器的性能**；保存cookie越大 请求耗费时间越长；
+- cookie**不要存放敏感数据** 不安全 任何人都可以获取
+
+####  web Storage
+
+> 规范中的两个目标
+>
+> - 提供在cookie 之外的存储会话数据途径
+> - 提供跨会话持久化存储大量数据机制
+> - 定义了两个对象：localStorage 和 sessionStorage
+> - localStorage 是永久的存储机制；sessionStorage 是跨会话的存储机制
+
+###### storage类型
+
+增加了如下方法
+
+- **clear**():删除所有值；
+- **getItem**(name):获取name的值；
+- **key**(index):取得给定位置的名称；
+- **removeItem**(name):删除给定name的名值对；
+- **setItem**(name,value);设置给定name的value
+
+##### sessionStorage 对象
+
+- 只存储会话数据，**只能保存数据到浏览器（当前页面）关闭**；
+- 存储的sessionStorage **不受页面刷新**的影响；
+- sessionStorage 对象 与服务器会话紧密相关 **运行本地文件不能使用**；
+- 存储在sessionStorage对象的数据 **只能在最初的页面使用** 再多页面程序用处有限；
+- 添加数据 两种方式：
+  - sessionStorage.setItem("name","value") //使用setItem实现
+  - sessionStorage.name = value // 使用属性存储数据
+- 所有现代浏览器实现存储写入 都是使用**同步阻塞**方式，因此数据会立即提交到存储；
+
+- 获取属性 两种方式：
+  - sessionStorage.getItem('name')//通过 getItem实现
+  - sessionStorage.name //使用对象属性方式 获取
+- 遍历所有值可以通过 for循环与 key()方法实现
+- 删除属性
+  - sessionStorage.removeItem(name) 实现
+  - delete  sessionStorage.name //对象方法实现
+
+##### localStorage 对象
