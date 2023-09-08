@@ -216,3 +216,59 @@ event事件 target其属性是 XHR
   - delete  sessionStorage.name //对象方法实现
 
 ##### localStorage 对象
+
+> H5规范里localStorage对象取代了 globalStorage 作为浏览器持久化的存储数据的机制
+>
+> 想要访问同一个localStorage 对象 页面**必须是同一个域（子域不可以）**
+>
+> - localStorage 也是 storage 的实例 所以同样可以使用 Storage 上的方法
+
+**localStorage 与 sessionStorage 区别**
+
+- localStorage 会保留数据 失效方式：只能用户**主动清除缓存**或通过**JavaScript删除**
+- localStorage 数据 不受 **重启浏览器 关闭标签**的的影响
+
+##### 存储事件
+
+- 每当 storage对象发生变化时就会触发 ‘storage’事件
+
+- 触发方式 
+
+  - 设置属性
+  - 删除属性
+  - 清除所有 数据clear()
+
+- 事件对象 有如下四个属性：
+
+  - domain：存储变化对应的域
+  - key：被设置或者删除的键
+  - newVal：键被设置的的新值，若删除则为null
+  - oldValue：键变化之前的值
+
+- 具体**监听storage事件**如下
+
+  ```javascript
+  window.addEventListener('storage',(event)=>{
+      console.log(event.domain)
+  })
+  ```
+
+- storage 事件 不会对 s**essionStorage 与 localStorage 对象作区分** 任何一个改变都会触发
+
+##### 限制
+
+- 不同浏览器 给localStorage 和sessionStorage 设置了不同的空间限制
+- 大多数会限制每个源**5MB**
+
+#### IndexedDB
+
+- IndexedDB 是现代浏览器中存储数据化结构的方案
+- 创建一套API 方便对象的**存储与获取**
+- IndexedDB 几乎是完全异步的
+- 绝大多数的IndexedDB 操作要求添加 **onerror 和 onsuccess** 事件处理程序 来确定输出
+- 数据库
+  - 使用IndexedDB 
+    - 调用 indexedDB.open()方法 ，并传入名称，名称存在则打开；不存在则创建并打开；
+
+
+
