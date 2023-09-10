@@ -1,5 +1,3 @@
-import "./chunk-HM4MQYWN.js";
-
 // node_modules/minisearch/dist/es/index.js
 var __assign = function() {
   __assign = Object.assign || function __assign2(t) {

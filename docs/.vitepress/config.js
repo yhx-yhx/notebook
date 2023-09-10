@@ -90,6 +90,7 @@ export default defineConfig({
           { text: "CSS", link: "/pages/Base/Css/index" },
           { text: "Html", link: "/pages/Base/html" },
           { text: "axios", link: "/pages/Base/axios/index" },
+          { text: "红宝书", link: "/pages/Base/javascript/红宝书/index" },
           {
             text: "Vue",
             items: [

@@ -260,7 +260,7 @@ event事件 target其属性是 XHR
 - 不同浏览器 给localStorage 和sessionStorage 设置了不同的空间限制
 - 大多数会限制每个源**5MB**
 
-#### IndexedDB
+#### IndexedDB【目前我并没有在实际应用中用到过该技术】
 
 - IndexedDB 是现代浏览器中存储数据化结构的方案
 - 创建一套API 方便对象的**存储与获取**
@@ -268,7 +268,30 @@ event事件 target其属性是 XHR
 - 绝大多数的IndexedDB 操作要求添加 **onerror 和 onsuccess** 事件处理程序 来确定输出
 - 数据库
   - 使用IndexedDB 
-    - 调用 indexedDB.open()方法 ，并传入名称，名称存在则打开；不存在则创建并打开；
+    - 调用 indexedDB.open()方法 ，并传入名称，名称存在则打开；不存在则创建并打开；并返回一个IDBRequest实例
+    - 实例上添加onsuccess 监听成功的回调函数
+    - 实例上添加onerror 监听失败的回调
+    - 可以通过event.target.result 得到当前的db对象 
+    - event.target.errrorCode 来存储出现问题的状态码
+- 对象存储
+  - 数据库不存在 open会创建一个数据库 然后触发 upgradeneeded事件
+  - 如果数据库存在 升级了版本号 也会触发upgradeneeded事件
+  - 可以在事件处理程序中更新数据库模式
+- 事务
+  - 事务是通过带哦用数据库的transaction方法创建。例如：let transaction=db.transaction() 
+  - transaction 不指定参数 数据库所有对象仅有只读权限
+  - bd.transaction('xx') 参数可以是一个**字符串** 或者字符串型**数组**，实现访问一个或多个对象存储
+  - 当 传入第二个参数 可以是**‘readonly’**，**‘readwrite’**，**‘versionchange’**；可读 、可写
+  - 有了事务引用 可以使用 objectStore()方法，传入对象存储名称来实现访问特定存储对象
+  - 可以使用 add put 添加或修改对象 ，get获取对象，delete删除，clear清除所有对象
+  - 事务的事件处理 **onerror** 和 **oncompute**
+  - 不可以在 oncompute中访问 get（）请求返回的任何数据 仍需通过onsuccess 获取数据
 
-
-
+- 插入对象
+  - add
+  - 事件变化都会触发 onsuccess onerror 其中一个事件
+- 通过游标查询
+  - 可以实现获取多条数据
+  - 游标是 指向结果集的指针 ，与传统数据库查询方式不同 游标指向第一个结果后 并在接受指令前 不会主动查找下一条数据
+  - 需要在对象上 调用 openCursor（）方法创建游标，同样创建完成会返回一个request 可以监听其onsuccess 和onerror 事件
+  - 

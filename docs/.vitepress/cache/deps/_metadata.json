@@ -1,92 +1,25 @@
 {
-  "hash": "00f555f9",
-  "browserHash": "d63629fb",
+  "hash": "b6076401",
+  "browserHash": "f192b000",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "b9efb7ac",
+      "fileHash": "7c9bab86",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "2d888049",
+      "fileHash": "8bfafc60",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "818950b8",
-      "needsInterop": false
-    },
-    "xlsx": {
-      "src": "../../../../node_modules/xlsx/xlsx.mjs",
-      "file": "xlsx.js",
-      "fileHash": "d8c957b9",
-      "needsInterop": false
-    },
-    "xlsx-js-style": {
-      "src": "../../../../node_modules/xlsx-js-style/dist/xlsx.min.js",
-      "file": "xlsx-js-style.js",
-      "fileHash": "e93a14c9",
-      "needsInterop": true
-    },
-    "axios": {
-      "src": "../../../../node_modules/axios/index.js",
-      "file": "axios.js",
-      "fileHash": "70751718",
-      "needsInterop": false
-    },
-    "element-plus": {
-      "src": "../../../../node_modules/element-plus/es/index.mjs",
-      "file": "element-plus.js",
-      "fileHash": "59accb56",
-      "needsInterop": false
-    },
-    "xgplayer": {
-      "src": "../../../../node_modules/xgplayer/es/index.js",
-      "file": "xgplayer.js",
-      "fileHash": "e7c66be3",
-      "needsInterop": false
-    },
-    "xgplayer-hls": {
-      "src": "../../../../node_modules/xgplayer-hls/es/index.js",
-      "file": "xgplayer-hls.js",
-      "fileHash": "8bf8ef06",
-      "needsInterop": false
-    },
-    "xgplayer-flv": {
-      "src": "../../../../node_modules/xgplayer-flv/es/index.js",
-      "file": "xgplayer-flv.js",
-      "fileHash": "031d908d",
-      "needsInterop": false
-    },
-    "xgplayer-mp4": {
-      "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
-      "file": "xgplayer-mp4.js",
-      "fileHash": "b014eb2c",
-      "needsInterop": false
-    },
-    "echarts": {
-      "src": "../../../../node_modules/echarts/index.js",
-      "file": "echarts.js",
-      "fileHash": "0977e6a2",
+      "fileHash": "add70c20",
       "needsInterop": false
     }
   },
-  "chunks": {
-    "chunk-AA3UUEYT": {
-      "file": "chunk-AA3UUEYT.js"
-    },
-    "chunk-IYO332YY": {
-      "file": "chunk-IYO332YY.js"
-    },
-    "chunk-5Y5CA5XL": {
-      "file": "chunk-5Y5CA5XL.js"
-    },
-    "chunk-HM4MQYWN": {
-      "file": "chunk-HM4MQYWN.js"
-    }
-  }
+  "chunks": {}
 }
