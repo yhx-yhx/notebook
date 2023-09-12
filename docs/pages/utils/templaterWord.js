@@ -5,7 +5,7 @@
 import Docxtemplater from 'docxtemplater'
 import PizZip from 'pizzip'
 import JSZipUtils from 'jszip-utils'
-import { saveAs } from 'file-saver'
+import * as fileSaver from 'file-saver'
 import * as ImageModule from 'docxtemplater-image-module-free'
 import expressionParser from 'docxtemplater/expressions.js'
 
@@ -113,7 +113,7 @@ export const ExportBriefDataDocx = (tempDocxPath, data, fileName, imgSize = {}) 
             type: 'blob',
             mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
         })
-        saveAs(out, fileName)
+        fileSaver.saveAs(out, fileName)
     })
 }
 /**

@@ -1,6 +1,6 @@
 <script setup >
 import { ref, onMounted } from "vue"
-import { ElLink, ElText, ElMessage, ElSelect, ElOption, ElIcon } from "element-plus";
+import { ElLink, ElMessage } from "element-plus";
 import lightweightXgVideo from "../../pages/Components/lightweightXgVideo.vue"
 import baseContent from "../../pages/Components/common/baseContent.vue"
 const isVideoing = ref(!1)

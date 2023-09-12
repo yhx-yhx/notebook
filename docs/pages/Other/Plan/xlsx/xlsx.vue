@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 import * as XLSXS from "xlsx-js-style"
-
 // json to sheet
 const json2excel = (data, merges, filename, sheetName) => {
     let wb = XLSXS.utils.book_new() //创建一个wb工作薄
@@ -58,11 +57,11 @@ const aoa2excel = (data, merges, filename, sheetName) => {
     // XLSXS.writeFile(wb, filename + '.xlsx')
 }
 let merges = [{ s: { r: 0, c: 0 }, e: {r:0,c:3} }]//从0行0列 开始 合并到 0行是列
-aoa2excel([['我是测试的标题',undefined,undefined],[12,23,34],[34,'sds','erer']], merges, 'test', 'sheet1')
+// aoa2excel([['我是测试的标题',undefined,undefined],[12,23,34],[34,'sds','erer']], merges, 'test', 'sheet1')
 
 </script>
 <template>
-    <main>
+    <main>导出 xlsx 服务端 会有问题
     </main>
 </template>
 

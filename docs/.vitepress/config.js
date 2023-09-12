@@ -136,7 +136,7 @@ export default defineConfig({
           { text: "Icon", link: "/pages/ComponentsExample/icon" },
           { text: "引导页", link: "/pages/ComponentsExample/引导页" },
           { text: "vue-count-to", link: "/pages/ComponentsExample/vueCountTo" },
-          { text: "word按模板导出", link: "/pages/ComponentsExample/word按模板导出" },
+          { text: "wordTemplaterDocx", link: "/pages/ComponentsExample/wordTemplaterDocx" },
         ],
       },
       { text: "interview", link: "/pages/Interview/自检100题" },
