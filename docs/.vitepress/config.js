@@ -236,6 +236,7 @@ export default defineConfig({
           text: "红宝书目录",
           items: [
             { text: "基本内容", link: "/pages/Base/javascript/红宝书/index" },
+            { text: "8对象、类与面向对象编程", link: "/pages/Base/javascript/红宝书/8对象、类与面向对象编程" },
             { text: "17事件", link: "/pages/Base/javascript/红宝书/17事件" },
             { text: "21错误处理与调试", link: "/pages/Base/javascript/红宝书/21错误处理与调试" },
             { text: "23JSON", link: "/pages/Base/javascript/红宝书/23JSON" },
