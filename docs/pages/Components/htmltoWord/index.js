@@ -129,7 +129,6 @@ var data = [[1, 3, 5, 7], [2, 4, 6, 8]];//可以组成，thead可选择前n行
 // < !--使用jsFiddle生成Word -->
 	var result = document.getElementById('toWord');
 result.addEventListener('click', function () {
-
     //img类推
     var imgs = [], canvasArr = [myChart1, myChart2];
     // need dataurl

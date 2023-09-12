@@ -1,21 +1,38 @@
 <script setup>
-import { ExportBriefDataDocx, getBase64Sync } from '../../../pages/utils/templateWord.js'
+import { ExportBriefDataDocx, getBase64Sync,getImageSize } from '../../pages/utils/templaterWord.js'
+import {ElButton,ElLink} from "element-plus"
+import Vue3Echarts from "../../pages/Components/Vue3Echarts.vue"
+import {ref,onMounted} from "vue"
+import * as echarts from "echarts"
+const options = {
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      data: [150, 230, 224, 218, 135, 147, 260],
+      type: 'line',
+      animation: false
+    }
+  ]
+}
+
 const listname = '导出的模板'
 const imglist = [
     {
-        imgUrl: "/test.jpg"
+        imgUrl: "/logo.jpg"
     }, {
         imgUrl: "/test.jpg"
     }
 ]
-const imgurl1 = 'https://img0.baidu.com/it/u=1064360734,3641226727&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667'
-const imgurl2 = 'https://img.soogif.com/xfc6Cmri3q0B8B6THVyh3sdcBXLjKWal.jpg'
-const exportWordFile = async () => {
-    // 多个图片遍历转base64
-    // for (let i in imglist) {
-    //     imglist[i].imgUrl = await getBase64Sync(imglist[i].imgUrl)
-    // }
-    let data = {
+const imgurl1 = '/logo.png'
+const imgurl2 = '/logo.png'
+
+ let data = {
         county: '西青区',
         township: "杨柳青镇",
         year: '2023',
@@ -71,55 +88,33 @@ const exportWordFile = async () => {
             },
         ]
     }
-    let imgSize = {
-        //控制导出的word图片大小
-        image1: [596, 300],
-        image2: [435, 193]
-    };
+const exportWordFile = async () => {
     data.image1 = await getBase64Sync(imgurl1)
-    data.image2 = await getBase64Sync(imgurl2)
-
-    ExportBriefDataDocx("/test.docx", data, `${listname}.docx`, imgSize);
+     let imgSize = {
+        //控制导出的word图片大小
+        image1:await getImageSize(data.image1),
+        image2:await getImageSize(data.image2)
+    };
+    
+    ExportBriefDataDocx("/static/testTemplater.docx", data, `${listname}.docx`,imgSize);
 }
+
+onMounted(async ()=>{
+    setTimeout(()=>{
+        let el = document.querySelector('#echart_1020 canvas');
+       el && (data.image2 = el.toDataURL())
+    },500)
+})
 </script>
 
-    <div>
-        <!-- <el-link href="https://docxtemplater.com/docs/tag-types/" target="blank">整不明白就看看我 求求了</el-link> -->
+<div>
+    <el-link href="https://docxtemplater.com/docs/tag-types/" target="blank">DOCXtemplater doc</el-link>
         <ul>
             <li>word模板中模板字符串 中间不要携带空格 无法正常编译过</li>
             <li> Note that it is however not possible to use no delimiters at all, docxtemplater forces you to have some
                 delimiters.
                 请注意，但是根本不可能使用任何分隔符，docxtemplater 强制您使用一些分隔符。</li>
-            <li>普通标签以字母字符开头，其他类型的标签以特殊前缀开头，例如：
-
-                {#loop} and {/loop} to start and close a tag for the data part "loop"
-                {#loop} 并 {/loop} 启动和关闭数据部分“循环”的标记
-                {@input} to insert raw XML data
-                {@input} 插入原始 XML 数据
-                when using the image-module {%src_url} will add an image for the "src_url" data part.
-                使用图像模块 {%src_url} 时，将为“src_url”数据部分添加图像。</li>
-            <li>Conditions 条件
-                条件以#开始，以斜线结束。那就是 {#hasKitty} 开始一个条件并 {/hasKitty} 结束它。 只有 hasKitty 数据部分存在时，才会显示此内容。
-            </li>
-            <li>loops {#products}
-                {name}, {price} € {名称}， {价格} €
-                {/products}
-                <pre>{
-    "products": [
-        { name: "Windows", price: 100 },
-        { name: "Mac OSX", price: 200 },
-        { name: "Ubuntu", price: 0 }
-    ]}</pre>
-            </li>
-            <li>{
-                "products": [
-                "Windows",
-                "Mac OSX",
-                "Ubuntu"
-                ]
-                }
-                <pre>{#products} {.} {/products} 遍历数据 ==> Windows Mac OSX Ubuntu</pre>
-            </li>
         </ul>
         <el-button @click="exportWordFile">exportWordFile</el-button>
+        <Vue3Echarts id="echart_1020" :options="options" />
     </div>

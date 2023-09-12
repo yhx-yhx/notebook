@@ -30,12 +30,8 @@ onMounted(() => {
         echartsLister = () => { chartInit.value.resize() }
         window.addEventListener("resize", echartsLister);
         chartInit.value.setOption(props.options, true)
+        // console.log(chartInit.value.getDataURL());
     })
-})
-watchEffect(() => {
-    if (chartInit.value) {
-        chartInit.value.setOption(props.options, true)
-    }
 })
 watch(() => props.options, () => {
     if (chartInit.value) {
