@@ -1,0 +1,1 @@
+import{a as x}from"./index.410b1e43.js";import{h as d,V as c,g as o,l as u}from"./framework.b431710b.js";const s=d(0),I=2e3,i=Symbol("zIndexContextKey"),Z=r=>{const a=r||c(i,void 0),e=o(()=>{const t=u(a);return x(t)?t:I}),n=o(()=>e.value+s.value);return{initialZIndex:e,currentZIndex:n,nextZIndex:()=>(s.value++,n.value)}};export{I as d,Z as u,i as z};
