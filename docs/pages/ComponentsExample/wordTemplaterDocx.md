@@ -24,13 +24,13 @@ const options = {
 const listname = '导出的模板'
 const imglist = [
     {
-        imgUrl: "/logo.jpg"
+        imgUrl: "/images/logo.jpg"
     }, {
-        imgUrl: "/test.jpg"
+        imgUrl: "/images/test.jpg"
     }
 ]
-const imgurl1 = '/logo.png'
-const imgurl2 = '/logo.png'
+const imgurl1 = './images/logo.png'
+const imgurl2 = './images/logo.png'
 
  let data = {
         county: '西青区',

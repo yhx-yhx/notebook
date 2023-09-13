@@ -17,11 +17,8 @@ export default defineConfig({
   description: "A Random And Illogical Site",
   titleTemplate: "Jottings", // 网站标题后缀- “VitePress | Blog”
   base: "/notebook/", //base url
-  // head: [
-  //   ['link', { rel: 'icon', href: '/logo.png' }]
-  // ],
   head: [
-    ["link", { rel: "icon", href: "/logo.png" }],
+    ["link", { rel: "icon", href: "/notebook/logo.png" }],
     // 阿里播放器
     [
       "link",
@@ -38,24 +35,8 @@ export default defineConfig({
         href: "https://cdn.jsdelivr.net/npm/qweather-icons@1.4.0/font/qweather-icons.css",
       },
     ],
-    ["script", { src: "//unpkg.com/@element-plus/icons-vue" }],
-    // ['script', { type: 'text/javascript', src: 'https://g.alicdn.com/de/prismplayer/2.13.2/aliplayer-h5-min.js' }]
-    // ['script', { type: 'text/javascript', src: 'https://api.map.baidu.com/api?v=2.0&ak=92SYeuzlwp9T8tRNYbHAnvub792IOZcx' }],
-    // ['script', { type: 'text/javascript', src: 'https://api.map.baidu.com/getscript?v=2.0&amp;ak=92SYeuzlwp9T8tRNYbHAnvub792IOZcx&amp;services=&amp;t=20230614151255' }]
+    ["script", { src: "//unpkg.com/@element-plus/icons-vue" }]
   ],
-  // locales: {
-  //   root: {
-  //     label: 'English',
-  //     lang: 'en'
-  //   },
-  //   fr: {
-  //     label: 'French',
-  //     lang: 'fr', // optional, will be added  as `lang` attribute on `html` tag
-  //     link: '/fr/guide' // default /fr/ -- shows on navbar translations menu, can be external
-
-  //     // other locale specific properties...
-  //   }
-  // },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // logo: '../.vitepress/public/green.svg', // 左侧导航栏图标
@@ -65,7 +46,7 @@ export default defineConfig({
     //   pattern: 'https://github.com/yhx-yhx/notebook/tree/main/pages/:path',
     //   text: 'Edit this page on GitHub'
     // },
-    cleanUrls: "without-subfolders", // 删除路径中的.html后缀
+    cleanUrls: true, // 删除路径中的.html后缀
     lastUpdated: {
       text: "上次更新",
       formatOptions: {
@@ -169,6 +150,7 @@ export default defineConfig({
           { text: "xgplayer", link: "/pages/Other/Plan/xgplayer" },
           { text: "导出zip", link: "/pages/Other/Plan/导出zip" },
           { text: "国际化", link: "/pages/Other/Plan/国际化" },
+          { text: "tesseract.js实现读取图片文字的tool", link: "/pages/Other/Plan/OCRTesseract/index" },
         ],
       },
       {
@@ -211,7 +193,6 @@ export default defineConfig({
       ],
       "/pages/Base/vite": [
         { text: "基础", link: "/pages/Base/vite/index" },
-        // { text: '部署静态站点', link: '/pages/Base/vite/部署静态站点' },
         { text: "环境变量", link: "/pages/Base/vite/环境变量" },
       ],
       // /pages/Base/ 基础
@@ -242,12 +223,6 @@ export default defineConfig({
             { text: "23JSON", link: "/pages/Base/javascript/红宝书/23JSON" },
             { text: "24网络请求", link: "/pages/Base/javascript/红宝书/24网络请求" },
             { text: "25客户端存储", link: "/pages/Base/javascript/红宝书/25客户端存储" },
-            // { text: "函数", link: "/pages/Base/javascript/函数" },
-            // { text: "数组", link: "/pages/Base/javascript/数组" },
-            // { text: "异步编程", link: "/pages/Base/javascript/异步编程" },
-            // { text: "正则表达式", link: "/pages/Base/javascript/RegExp" },
-            // { text: "WebSocket", link: "/pages/Base/javascript/WebSocket" },
-            // { text: "git", link: "/pages/Base/git" },
           ],
         },
       ],

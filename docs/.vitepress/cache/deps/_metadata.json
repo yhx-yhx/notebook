@@ -1,0 +1,59 @@
+{
+  "hash": "6790f741",
+  "browserHash": "9bb27aed",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "7ae1c0b5",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "1c360acf",
+      "needsInterop": false
+    },
+    "vitepress > minisearch": {
+      "src": "../../../../node_modules/minisearch/dist/es/index.js",
+      "file": "vitepress___minisearch.js",
+      "fileHash": "67d6c730",
+      "needsInterop": false
+    },
+    "tesseract.js": {
+      "src": "../../../../node_modules/tesseract.js/src/index.js",
+      "file": "tesseract__js.js",
+      "fileHash": "3b19128c",
+      "needsInterop": true
+    },
+    "xlsx-js-style": {
+      "src": "../../../../node_modules/xlsx-js-style/dist/xlsx.min.js",
+      "file": "xlsx-js-style.js",
+      "fileHash": "287d3bd4",
+      "needsInterop": true
+    },
+    "element-plus": {
+      "src": "../../../../node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "20ea2d76",
+      "needsInterop": false
+    },
+    "@element-plus/icons-vue": {
+      "src": "../../../../node_modules/@element-plus/icons-vue/dist/index.js",
+      "file": "@element-plus_icons-vue.js",
+      "fileHash": "c960e0cd",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-PEZMLLGD": {
+      "file": "chunk-PEZMLLGD.js"
+    },
+    "chunk-IYO332YY": {
+      "file": "chunk-IYO332YY.js"
+    },
+    "chunk-WNKWOKNR": {
+      "file": "chunk-WNKWOKNR.js"
+    }
+  }
+}

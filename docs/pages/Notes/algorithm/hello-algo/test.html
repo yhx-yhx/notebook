@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 斐波那契数列
+        // 给定一个斐波那契数列 \(0, 1, 1, 2, 3, 5, 8, 13, \dots\) ，求该数列的第 \(n\) 个数字。
+        function fibonacciSeries(n) {
+            let result
+            if (n > 1) {
+                return fibonacciSeries(n - 2) + fibonacciSeries(n - 1)
+            } else {
+                return n
+            }
+        }
+        console.log(fibonacciSeries(1));
+
+    </script>
+</body>
+
+</html>
