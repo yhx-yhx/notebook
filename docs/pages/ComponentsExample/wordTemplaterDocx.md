@@ -96,7 +96,7 @@ const exportWordFile = async () => {
         image2:await getImageSize(data.image2)
     };
     
-    ExportBriefDataDocx("/static/testTemplater.docx", data, `${listname}.docx`,imgSize);
+    ExportBriefDataDocx("/notebook/static/testTemplater.docx", data, `${listname}.docx`,imgSize);
 }
 
 onMounted(async ()=>{

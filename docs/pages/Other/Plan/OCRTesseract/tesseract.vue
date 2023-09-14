@@ -32,10 +32,13 @@ const filetoBase64 = (file) => {
 
     })
 }
-const extractingState = ref(false)//导出状态
+//  1 正在解析；2 解析完成 
+const extractingState = ref(null)//导出状态
 const handleChange = async (event) => {
     let file = event.raw
+    extractingState.value = 1
     generateText(file)
+     value.value && (extractingState.value = 2)
     extractingImagesSrc.value && (extractingImagesSrc.value = null)
     extractingImagesSrc.value = await filetoBase64(file)
 }
@@ -44,6 +47,7 @@ const handleChange = async (event) => {
 <template>
     <div class="container">
         <div class="tesseract">
+            <!-- <span style="color: red;">{{ extractingState? extractingState ==='1'?"正在解析...":"解析完成":"" }}</span> -->
             <el-upload :auto-upload="false" action="" list-type="picture-card" :on-change="handleChange" accept="image/*">
                 <el-icon>
                     <Plus />
