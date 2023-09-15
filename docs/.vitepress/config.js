@@ -87,6 +87,7 @@ export default defineConfig({
           { text: "git", link: "/pages/Base/git" },
           { text: "scss", link: "/pages/Base/scss" },
           { text: "TypeScript", link: "/pages/Base/typescript" },
+          { text: "Node.js", link: "/pages/Base/NodeJs/index" },
         ],
       },
       {

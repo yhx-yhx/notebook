@@ -133,9 +133,9 @@
 
 -  export 与 import 结合使用
 
-  - export {name,xx,xxx} from "pathxxx"   
+  - `export {name,xx,xxx} from "pathxxx"  `
 
-  - 先从pathxxx import  {name,xx,xxx} 然后导出 {name,xx,xxx}
+  - `先从pathxxx import  {name,xx,xxx} 然后导出 {name,xx,xxx}`
   - 封装统一入口 比如 n多个 api.js 所有都在index.js 中做统一导出
 
 ###### import函数
