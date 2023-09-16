@@ -18,7 +18,7 @@ export default defineConfig({
   titleTemplate: "Jottings", // 网站标题后缀- “VitePress | Blog”
   base: "/notebook/", //base url
   head: [
-    ["link", { rel: "icon", href: "/notebook/logo.png" }],
+    ["link", { rel: "icon", href: "/images/logo.png" }],
     // 阿里播放器
     [
       "link",

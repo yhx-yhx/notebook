@@ -1,6 +1,10 @@
-### node.js 
 
-#### REPL  read-eval-print-Loop
+
+### NodeJS 
+
+#### REPL 
+
+> read-eval-print-Loop
 
 #### Node程序传递参数
 
@@ -138,6 +142,62 @@
   - `先从pathxxx import  {name,xx,xxx} 然后导出 {name,xx,xxx}`
   - 封装统一入口 比如 n多个 api.js 所有都在index.js 中做统一导出
 
-###### import函数
+- import函数
+  - import函数 传递path ，返回值是一个promise then catch
+  - 例如：```import('./xxx') .then(res=>{consloe.log(res)}).catch(error=>console.log(res))```
+- ESModule加载过程
+  - 解析是加载
+  - 异步  
 
--  
+##### ESModule 和 CommonJS交互【互相加载】
+
+- 通常情况CommonJS不能加载 ESModules；CommonJS同步加载 ESModule 异步加载
+- ESModule 可以加载 CommonJS
+
+### 内置模块
+
+#### path
+
+
+
+<<<@/pages/Base/NodeJs/内置解析模块/path/index.js
+
+
+
+#### fs[file System 文件系统]
+
+##### fs三种文件的获取
+
+<<<@/pages/Base/NodeJs/内置解析模块/fs/index.js
+
+##### 文件描述符
+
+> 简单的数字标识符
+
+##### 文件的读写
+
+###### flag
+
+![image-20230916215106793](.\images\writeFile.png)
+
+<<<@/pages/Base/NodeJs/内置解析模块/fs/文件的读写.js
+
+###### encoding 选项
+
+##### 文件夹操作
+
+<<<@/pages/Base/NodeJs/内置解析模块/fs/文件夹操作.js
+
+#### events 模块
+
+##### 常用方法
+
+<<<@/pages/Base/NodeJs/内置解析模块/events/常用方法.js
+
+##### 获取信息
+
+<<<@/pages/Base/NodeJs/内置解析模块/events/events获取信息.js
+
+##### 不常用方法
+
+<<<@/pages/Base/NodeJs/内置解析模块/events/events不常用方法.js
