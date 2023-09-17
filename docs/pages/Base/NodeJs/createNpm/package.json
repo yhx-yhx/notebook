@@ -1,0 +1,22 @@
+{
+  "name": "yhx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "yhx": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "pinia"
+  ],
+  "author": "yhx",
+  "license": "ISC",
+  "dependencies": {
+    "download-git-repo": "^3.0.2",
+    "open": "^9.1.0"
+  }
+}

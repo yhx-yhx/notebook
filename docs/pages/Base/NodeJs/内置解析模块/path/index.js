@@ -19,3 +19,6 @@ const path3 = path.join(path1, path2)
 console.log('路径拼接', path3) // 路径拼接 \User\yhx\abc.txt
 // 与 path.resolve 与 path.join 区别
 // 1以 '/' './','../' 开头 resolve 会携带 父级到根目录
+
+// 获取当前文件目录
+console.log('__dirname', __dirname)

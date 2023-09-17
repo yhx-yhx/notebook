@@ -201,3 +201,68 @@
 ##### 不常用方法
 
 <<<@/pages/Base/NodeJs/内置解析模块/events/events不常用方法.js
+
+#### 包管理工具
+
+##### 常见属性
+
+###### script属性
+
+- 键值对形式存在
+
+###### dependencies属性
+
+- 无论生产环境和开发环境都需要的依赖包
+
+###### devDependencies属性
+
+- 仅在开发环境下使用的依赖 -S ```-save```
+
+###### 版本号规则
+
+- ```^x.y.z```或 ```~x.y.z```
+- ```^x.y.z```:表示x不变 ，y、z永远安装最新的
+- ```~x.y.z```：表示x、y不变， z永远是最新的
+
+###### engines属性
+
+- 用于指定 Node 与NPM 版本
+
+###### browserList属性
+
+- 兼容浏览器 添加补丁
+
+###### npm install 命令
+
+- -g 全局安装
+- 缓存策略
+
+###### npx
+
+- 调用项目中的某个模块指令
+- npx axios -V
+
+#### 实现脚手架
+
+##### 指令生效
+
+- 1.【index.js】*#!/usr/bin/env node*
+
+  *//自动执行 配置node路径 shebang*
+
+- 2.【package.json】 "bin": {
+
+    "yhx": "index.js"//全局指令名称 执行文件名称
+
+   }
+
+- 3.终端运行 npm link ，配置到环境变量中 
+
+- 4.Commander.js 指令开发 --version --help 等
+  
+  - ```javascript
+    	
+    ```
+  
+  - 
+
