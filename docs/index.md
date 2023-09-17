@@ -6,7 +6,7 @@ hero:
   text: "no care"
   tagline: My great project tagline
   image:
-    src: /logo.png
+    src: /images/logo.png
     alt: 'image'
   actions:
     - theme: brand
