@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-// console.log('Hello world');
 //自动执行 配置node路径 shebang
-
 const program = require('commander')
 const getHelp = require('./lib/core/help')
 const createCommand = require('./lib/core/create')
@@ -14,7 +12,6 @@ getHelp();
 // 创建其他指令
 createCommand()
 
-program.parse(process.argv)
 // console.log('dest', program.dest);
 
 // 监听某一指令
@@ -24,3 +21,5 @@ program.parse(process.argv)
 
 // 获取 -p 结果
 // console.log('process.port', process.port)
+// 解析终端指令
+program.parse(process.argv);

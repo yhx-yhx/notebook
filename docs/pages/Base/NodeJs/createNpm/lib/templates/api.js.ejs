@@ -1,0 +1,16 @@
+import { request } from "@/utils/request.js";
+
+/**
+ * @description <%= data.description %>
+ * @export
+ * @param 
+ * @return {*} 
+ */
+
+export function <%= data.name %>(data) {
+    return request({
+      url: '<%= data.url %>',
+      method: 'post',
+      data
+    })
+}
