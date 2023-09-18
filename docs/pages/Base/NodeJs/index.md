@@ -264,5 +264,13 @@
     	
     ```
   
-  - 
+
+
+
+### Buffer 和 二进制
+
+<br/>
+
+<<<@/pages\Base\NodeJs\Buffer和二进制/index.js
+
 
