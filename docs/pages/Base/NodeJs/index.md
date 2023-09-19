@@ -263,13 +263,21 @@
   - ```javascript
     	
     ```
+##### 脚手架上传
+- 1 npm 注册
+- 2 npm login 【登录 按提示操作】
+- 3 编辑 package.json [keywords],homepage repository :{
+  type :'git',
+  url:'地址'
+}
+- 4 npm publish
   
 
 
 
 ### Buffer 和 二进制
 
-<br/>
+
 
 <<<@/pages\Base\NodeJs\Buffer和二进制/index.js
 

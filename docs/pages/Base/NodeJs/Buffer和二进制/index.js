@@ -29,7 +29,9 @@ fs.readFile('./png.png', function (err, data) {
 
 // 实现 图片的截取 
 // sharp 使用
-const sharp = require("sharp");
+/**
+ * 不要在浏览器环境使用
+ * const sharp = require("sharp");
 sharp('./png.png').resize(200, 200).toBuffer().then(function (data) {
     fs.writeFile('./pngsharp.png', data, (err) => {
         if (err) {
@@ -37,5 +39,6 @@ sharp('./png.png').resize(200, 200).toBuffer().then(function (data) {
         }
     });
 })
+*/
 
 // 创建buffer 申请内存时 默认大小8kb(内存池) 并不会频繁地申请内存 直到耗光 8kb，申请下一次内存
