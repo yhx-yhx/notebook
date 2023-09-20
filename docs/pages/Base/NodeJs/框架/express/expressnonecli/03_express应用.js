@@ -1,4 +1,6 @@
 const express = require('express')
+const multer = require('multer')
+const path = require('path')
 
 const app = express()
 
@@ -13,20 +15,20 @@ const app = express()
 //             let info = { ...req.body, ...json }
 //             req.body = info
 //             console.log(info);
-            
+
 //         })
 //     }
 //     req.on('end', () => {
 //         next()
 //     })
-    
+
 // })
 
 /**
  * body-parser express 3.x 内置
  * body-pasers express 4.x 移出
  * body-pasers express 4.16.x 内置成函数 类似功能
-*/ 
+*/
 
 app.use(express.json())
 
@@ -39,20 +41,62 @@ app.use(express.json())
 
 app.use(express.urlencoded({ extended: true }))
 
+/**
+ * formData
+ * 安装multer
+ * 调用 any方法 //解析非文件
+ */
 
-app.post('/login', (req, res, next) => {
-    // 获取json
-    // req.on('data', (data) => {
-    //     console.log(data.toString());
-    // })
-    // req.on('end', () => { 
-    //     res.end('Welcome')
-    // })
-    // express
-    res.end(JSON.stringify(req.body))
-    
+// const upload = multer()
+
+// app.use(upload.any())
+
+
+// app.post('/login', (req, res, next) => {
+//     // 获取json
+//     // req.on('data', (data) => {
+//     //     console.log(data.toString());
+//     // })
+//     // req.on('end', () => { 
+//     //     res.end('Welcome')
+//     // })
+//     // express
+//     console.log('', req.body);
+//     res.end('Welcome')
+
+// })
+
+/**
+ * formdata
+ * 上传文件 单文件
+ * */
+const uploads = multer({
+    dest: './uploads/'
 })
 
-app.listen(8080, () => { 
+app.post('/uploads', uploads.single('file'), (req, res, next) => {
+    res.end('上传文件 成功')
+})
+
+
+const upload = multer({
+    storage: multer.diskStorage({
+        destination: (req, file, cb) => {
+            cb(null, './uploads/')
+        },
+        filename: (req, file, cb) => {
+            // 原始文件扩展名称
+            cb(null, +new Date() + path.extname(file.originalname));
+        }
+    })
+})
+
+app.post('/upload', upload.single('file'), (req, res, next) => {
+    console.log('获取文件信息', req.file)
+    res.end('上传文件 成功')
+})
+
+
+app.listen(8080, () => {
     console.log('应用 8080');
 })
