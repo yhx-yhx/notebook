@@ -15,7 +15,7 @@
 
 #### 创建数据库
 
-- create databse xxxx;
+- create database warehouse_name;
 
 
 #### 查看正在使用 哪个是数据库
