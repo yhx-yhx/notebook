@@ -75,7 +75,8 @@ const uploads = multer({
 })
 
 app.post('/uploads', uploads.single('file'), (req, res, next) => {
-    res.end('上传文件 成功')
+    console.log('获取文件信息', req.file)
+    res.end('上传文件成功uploads')
 })
 
 
@@ -91,12 +92,45 @@ const upload = multer({
     })
 })
 
-app.post('/upload', upload.single('file'), (req, res, next) => {
-    console.log('获取文件信息', req.file)
-    res.end('上传文件 成功')
+app.post('/upload', upload.array('file'), (req, res, next) => {
+    console.log('获取文件信息', req.files)
+    res.end('上传文件成功 upload')
+})
+
+/**
+ * 保存日志信息
+ * log morganWriteStream
+*/
+const morgan = require('morgan')
+const fs = require('fs')
+
+// 路径需要手动创建
+const writeStream = fs.createWriteStream('./logs/access.log', { flags: "a+" })
+
+// app.use(morgan("combined", { stream: writeStream }))
+
+app.get('/log', morgan("combined", { stream: writeStream }),(req, res, next) => {
+    res.end('输出日志')
 })
 
 
+/**
+ * 数据传输query
+ * 
+*/
+app.get('/query', (req, res, next) => {
+    console.log(req.query);
+    res.end('query')
+})
+
+/**
+ * 数据传输params
+*/
+
+app.get('/parmas/:id', (req, res, next) => { 
+    console.log(req.params);
+    res.end('params')
+})
 app.listen(8080, () => {
     console.log('应用 8080');
 })
