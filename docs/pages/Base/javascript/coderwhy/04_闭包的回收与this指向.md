@@ -1,7 +1,7 @@
 ### 闭包的内存泄漏
 
 
-<<<@/pages/Base/javascript/coderwhy/04_闭包的内存引用.js
+<<<@/pages/Base/javascript/coderwhy/04_闭包的内存泄漏.js
 
 
 ### this作用
