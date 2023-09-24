@@ -1,19 +1,56 @@
-/* .image-bg[data-v-72cc4481] {
+.image-bg[data-v-72cc4481] {
     border-radius: 121px;
     background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
     box-shadow: 18px 18px 37px #5a5a5a,
         -18px -18px 37px #ffffff;
-} */
+}
 
 /* 搜索框 */
-/* #local-search {
-    color: #8707ff;
-    border: 2px solid #8707ff;
-    border-radius: 10px; */
-/* padding: 10px 25px; */
-/* background: transparent;
+#local-search {
+    border-radius: 10px;
+    /* padding: 10px 25px; */
+    background: transparent;
+    border: 2px solid transparent;
 }
 
 #local-search:active {
     box-shadow: 2px 2px 15px #8707ff inset;
-} */
+}
+
+#local-search:hover {
+    color: #8707ff;
+    border: 2px solid #8707ff;
+}
+
+.VPHero.has-image .clip[data-v-72cc4481] {
+    background: -webkit-linear-gradient(315deg,
+            rgb(210, 86, 53) 10%,
+            #647eff 50%,
+            rgb(238, 224, 112) 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.Layout {
+    background: url(/images/wallImage/bz_008.png) no-repeat;
+    background-size: 100% 100vh;
+    background-attachment: fixed;
+}

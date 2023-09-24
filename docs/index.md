@@ -2,15 +2,14 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 hero:
-  name: "Yhx Code"
-  text: "no care"
-  tagline: My great project tagline
+  name: coder Yang
+  tagline: 并不是非常专注的前端开发，两年半练习生，喜欢折腾，喜欢折腾前端，喜欢折腾代码，喜欢折腾自己，喜欢折腾生活，喜欢折腾一切。
   image:
-    src: /images/logo.png
+    src: /images/logo.svg
     alt: 'image'
   actions:
     - theme: brand
-      text: Progress
+      text: Link
       link: /pages/Other/HistoricalProjectProgress
     - theme: alt
       text: Go Away

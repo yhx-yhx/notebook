@@ -262,7 +262,8 @@
 :root {
   --vp-nav-height: var(--vp-nav-height-mobile);
   --vp-nav-height-mobile: 56px;
-  --vp-nav-height-desktop: 72px
+  --vp-nav-height-desktop: 72px;
+  --vp-nav-logo-height: 40px;
 }
 
 @media (min-width: 960px) {
@@ -1467,7 +1468,11 @@ html:not(.dark) .VPImage.dark[data-v-6db2186b] {
 
 .VPNavBarTitle[data-v-d5925166] {
   flex-shrink: 0;
-  border-bottom: 1px solid transparent
+  border-bottom: 1px solid transparent;
+}
+
+.VPNavBarTitle[data-v-d5925166] a {
+  font-family: Lucida Handwriting;
 }
 
 @media (min-width: 960px) {
@@ -4937,16 +4942,6 @@ svg.DocSearch-Hit-Select-Icon {
   --vp-home-hero-image-filter: blur(72px)
 }
 
-/* .beian {
-  background: url(../beian.png);
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-top: -2px;
-  vertical-align: middle;
-  background-size: 100% 100%
-} */
 
 .VPDocAside .outline-link.active {
   color: var(--vp-c-brand) !important

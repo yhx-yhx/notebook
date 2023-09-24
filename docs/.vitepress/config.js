@@ -13,7 +13,7 @@ export default defineConfig({
   //   })]
   // },
   lang: "zh-CN",
-  title: "Yhx Code",
+  title: "前端Yhx",
   description: "A Random And Illogical Site",
   titleTemplate: "Jottings", // 网站标题后缀- “VitePress | Blog”
   base: "/notebook/", //base url
@@ -39,13 +39,15 @@ export default defineConfig({
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    // logo: '../.vitepress/public/green.svg', // 左侧导航栏图标
+    logo: '/logo.svg', // 左侧导航栏图标
     // siteTitle: 'Hello World', // 左侧导航栏标题
     outline: "deep", // 在大纲中显示的标题级别
     // editLink: { // 提供编辑页面的连接
     //   pattern: 'https://github.com/yhx-yhx/notebook/tree/main/pages/:path',
     //   text: 'Edit this page on GitHub'
     // },
+    aside: true,
+    // editLink: true,
     cleanUrls: true, // 删除路径中的.html后缀
     lastUpdated: {
       text: "上次更新",
@@ -54,14 +56,13 @@ export default defineConfig({
         timeStyle: "medium",
       },
     },
-    // lastUpdated: true,
-    // lastUpdatedText: '上次更新', // 上次更新时间显示文本
     outlineTitle: "快速导航", // 大纲的标题
     docFooter: {
       // 文档底部文本
       prev: "上一节",
       next: "下一节",
     },
+    returnToTopLabel: '返回顶部',
     nav: [
       { text: "首页", link: "/" },
       {
@@ -71,7 +72,6 @@ export default defineConfig({
           { text: "CSS", link: "/pages/Base/Css/index" },
           { text: "Html", link: "/pages/Base/html" },
           { text: "axios", link: "/pages/Base/axios/index" },
-          { text: "红宝书", link: "/pages/Base/javascript/红宝书/index" },
           {
             text: "Vue",
             items: [
@@ -199,23 +199,8 @@ export default defineConfig({
       // /pages/Base/ 基础
       "/pages/Base/javascript": [
         {
-          text: "基础",
-          items: [
-            { text: "基本内容", link: "/pages/Base/javascript/index" },
-            { text: "对象", link: "/pages/Base/javascript/对象" },
-            { text: "函数", link: "/pages/Base/javascript/函数" },
-            { text: "数组", link: "/pages/Base/javascript/数组" },
-            { text: "异步编程", link: "/pages/Base/javascript/异步编程" },
-            { text: "正则表达式", link: "/pages/Base/javascript/RegExp" },
-            { text: "WebSocket", link: "/pages/Base/javascript/WebSocket" },
-            // { text: "git", link: "/pages/Base/git" },
-          ],
-        },
-      ],
-      // 红宝书
-      "/pages/Base/javascript/红宝书": [
-        {
-          text: "红宝书目录",
+          text: "红宝书",
+          collapsed: true,
           items: [
             { text: "基本内容", link: "/pages/Base/javascript/红宝书/index" },
             { text: "8对象、类与面向对象编程", link: "/pages/Base/javascript/红宝书/8对象、类与面向对象编程" },
@@ -226,16 +211,75 @@ export default defineConfig({
             { text: "25客户端存储", link: "/pages/Base/javascript/红宝书/25客户端存储" },
           ],
         },
+        {
+          text: "coderwhy js 高级",
+          collapsed: true,
+          items: [
+            { text: "浏览器工作原理与v8引擎", link: "/pages/Base/javascript/coderwhy/01_浏览器工作原理与v8引擎" },
+            { text: "函数作用域", link: "/pages/Base/javascript/coderwhy/02_函数作用域" },
+            { text: "闭包的内存泄漏", link: "/pages/Base/javascript/coderwhy/03_闭包的内存泄漏" },
+            { text: "闭包的回收与this指向", link: "/pages/Base/javascript/coderwhy/04_闭包的回收与this指向" },
+          ],
+        },
+        { text: "基本内容", link: "/pages/Base/javascript/index" },
+        { text: "对象", link: "/pages/Base/javascript/对象" },
+        { text: "函数", link: "/pages/Base/javascript/函数" },
+        { text: "数组", link: "/pages/Base/javascript/数组" },
+        { text: "异步编程", link: "/pages/Base/javascript/异步编程" },
+        { text: "正则表达式", link: "/pages/Base/javascript/RegExp" },
+        { text: "WebSocket", link: "/pages/Base/javascript/WebSocket" },
+      ],
+
+      "/pages/Base/NodeJs": [
+        {
+          text: "基础", link: "/pages/Base/NodeJs/index"
+        },
+        {
+          text: "事件循环和异步IO",
+          link: "/pages/Base/NodeJs/事件循环和异步IO/index"
+        },
+        {
+          text: "Buffer和二进制",
+          link: "/pages/Base/NodeJs/Buffer和二进制/index"
+        },
+        { text: "内置解析模块 events", link: "/pages/Base/NodeJs/内置解析模块/events/index" },
+        { text: "内置解析模块 fs", link: "/pages/Base/NodeJs/内置解析模块/fs/index" },
+        { text: "内置解析模块 path", link: "/pages/Base/NodeJs/内置解析模块/path/index" },
+        { text: 'Stream流', link: "/pages/Base/NodeJs/Stream流/index.md" },
+        {
+          text: "创建npm脚手架",
+          link: "/pages/Base/NodeJs/createNpm/index"
+        },
+        {
+          text: "http服务器",
+          items: [
+            { text: "http创建服务器方式", link: "/pages/Base/NodeJs/http服务器/http创建服务器方式" },
+            { text: "请求头 header", link: "/pages/Base/NodeJs/http服务器/headers" },
+            { text: "request对象", link: "/pages/Base/NodeJs/http服务器/request对象" },
+            { text: "response 对象", link: "/pages/Base/NodeJs/http服务器/response" },
+            { text: "statusCode 状态码", link: "/pages/Base/NodeJs/http服务器/statusCode" },
+            { text: "http中发送网络请求", link: "/pages/Base/NodeJs/http服务器/http中发送网络请求" },
+            { text: "http开发web服务器", link: "/pages/Base/NodeJs/http服务器/http开发web服务器" },
+          ],
+        },
+
+        {
+          text: "模块化",
+          items: [
+            // { text: "http创建服务器方式", link: "/pages/Base/NodeJs/http服务器/http创建服务器方式" },
+          ],
+        },
+        {
+          text: "框架",
+          items: [
+            { text: "express", link: "/pages/Base/NodeJs/框架/express/index" },
+            { text: "koa", link: "/pages/Base/NodeJs/框架/koa/index" }
+          ],
+        }
       ],
       "/pages/Base/vue全家桶/vue": [
         { text: "index", link: "/pages/Base/vue全家桶/vue/" },
         { text: "安全", link: "/pages/Base/vue全家桶/vue/学习vue文档/安全" },
-        // { text: "对象", link: "/pages/Base/javascript/对象" },
-        // { text: "函数", link: "/pages/Base/javascript/函数" },
-        // { text: "数组", link: "/pages/Base/javascript/数组" },
-        // { text: "异步编程", link: "/pages/Base/javascript/异步编程" },
-        // { text: "正则表达式", link: "/pages/Base/javascript/RegExp" },
-        // { text: "WebSocket", link: "/pages/Base/javascript/WebSocket" },
       ],
       "/pages/ComponentsExample/": [
         // {
@@ -376,4 +420,8 @@ export default defineConfig({
     // theme: 'material-palenight', // 主体配色
     lineNumbers: true, // 显示行号
   },
+  sitemap: {
+    hostname: 'https://example.com',
+    lastmodDateOnly: false
+  }
 });
