@@ -195,3 +195,144 @@ const fooArrowInfo = {
 }
 
 fooArrowInfo.foo.call('fooArrowInfo.foo') //window
+
+console.log("%c================ 测试题目一 ================", consoleStyle);
+let name = 'fooArrow'
+
+let person = {
+    name: "Person",
+    sayHello: function () { 
+        console.log(this);
+    }
+}
+
+function sayHello() { 
+    let er = person.sayHello
+    er();//window
+    person.sayHello();//person
+    (person.sayHello)();//person
+    (p = person.sayHello)()//window
+}
+
+sayHello()
+
+
+console.log("%c================ 测试题目二 ================", consoleStyle);
+
+let person2 = {
+    name: "person2",
+    foo1: function () { 
+        console.log(this);
+    },
+    foo2: () => { 
+        console.log(this);
+    },
+    foo3: function () { 
+        return function () { 
+            console.log(this);
+        }
+    },
+    foo4: function () { 
+        return () => { 
+            console.log(this);
+        }
+    }
+}
+
+person2.foo1();//person2
+person2.foo1.call('person1')//person1
+
+person2.foo2()//window
+person2.foo2.call('2323') //window
+
+person2.foo3()()//window
+person2.foo3.call('person')()//window(独立函数调用)
+person2.foo3().call('person')//person
+
+person2.foo4()() //person2
+person2.foo4.call('12')() //12
+person2.foo4().call('12') //person2
+
+
+console.log("%c================ 测试题目三 ================", consoleStyle);
+
+function Person3(name) { 
+    this.name = name
+    this.foo1 = function () { 
+        console.log(this);
+    }
+    this.foo2 = () => { 
+        console.log(this);
+    }
+    this.foo3 = function () { 
+        return function () { 
+            console.log(this);
+        }
+    }
+    this.foo4 = function () { 
+        return () => { 
+            console.log(this);
+        }
+    }
+}
+
+let p13 = new Person3('p13')
+let p23 = new Person3('p23') 
+
+p13.foo1()//p13
+p13.foo1.call(p23) //p23
+
+p13.foo2() //p13
+p13.foo2.call(p23) //p13
+
+
+p13.foo3()() //window
+p13.foo3.call('p23')() //window
+p13.foo3().call('p23') //p23
+
+p13.foo4()() //p13
+p13.foo4.call('p23')() //p23
+p13.foo4().call('p23') //p13
+
+console.log("%c================ 测试题目四 ================", consoleStyle);
+
+
+function Person4(name) {
+    this.name = name
+    this.obj =  {
+        foo1: function () {
+            console.log(this);
+        },
+        foo2: () => {
+            console.log(this);
+        },
+            foo3: function () {
+                return function () {
+                    console.log(this);
+                }
+            },
+        foo4: function () {
+            return () => {
+                console.log(this);
+            }
+        }
+    }
+}
+
+let p14 = new Person4('p14')
+let p24 = new Person4('p24')
+
+p14.obj.foo1()//obj
+p14.obj.foo1.call("p24") //p24
+
+p14.obj.foo2()//p14
+p14.obj.foo2.call("p24") //p14
+
+p14.obj.foo3()() //window
+p14.obj.foo3.call('p24')() //window
+p14.obj.foo3().call('p24') //p24
+
+
+p14.obj.foo4()() //obj
+p14.obj.foo4.call('p24')() //p24
+p14.obj.foo4().call('p24') //obj

@@ -1,68 +1,38 @@
 {
-  "hash": "d7513191",
-  "browserHash": "dc3fdf2f",
+  "hash": "fe737320",
+  "browserHash": "98df4810",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "aa5f9ce9",
+      "fileHash": "f6669f09",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "2e23858a",
+      "fileHash": "1654fe05",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "215a0623",
+      "fileHash": "f6a6f2fc",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "e71531f0",
-      "needsInterop": false
-    },
-    "xgplayer": {
-      "src": "../../../../node_modules/xgplayer/es/index.js",
-      "file": "xgplayer.js",
-      "fileHash": "cd04314e",
-      "needsInterop": false
-    },
-    "xgplayer-hls": {
-      "src": "../../../../node_modules/xgplayer-hls/es/index.js",
-      "file": "xgplayer-hls.js",
-      "fileHash": "91b546f0",
-      "needsInterop": false
-    },
-    "xgplayer-flv": {
-      "src": "../../../../node_modules/xgplayer-flv/es/index.js",
-      "file": "xgplayer-flv.js",
-      "fileHash": "21396226",
-      "needsInterop": false
-    },
-    "xgplayer-mp4": {
-      "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
-      "file": "xgplayer-mp4.js",
-      "fileHash": "6516ccf2",
+      "fileHash": "7fbb949e",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-S5Q3WY4P": {
-      "file": "chunk-S5Q3WY4P.js"
-    },
-    "chunk-BYX4PHXJ": {
-      "file": "chunk-BYX4PHXJ.js"
-    },
     "chunk-IYO332YY": {
       "file": "chunk-IYO332YY.js"
     },
-    "chunk-5WWUZCGV": {
-      "file": "chunk-5WWUZCGV.js"
+    "chunk-UXIASGQL": {
+      "file": "chunk-UXIASGQL.js"
     }
   }
 }
