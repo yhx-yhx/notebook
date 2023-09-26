@@ -1,29 +1,59 @@
 {
-  "hash": "fe737320",
-  "browserHash": "98df4810",
+  "hash": "3e6cfda5",
+  "browserHash": "d5ab7f61",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "f6669f09",
+      "fileHash": "c1a98bfc",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "1654fe05",
+      "fileHash": "10186951",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "f6a6f2fc",
+      "fileHash": "297f6a18",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "7fbb949e",
+      "fileHash": "b50c9764",
+      "needsInterop": false
+    },
+    "xgplayer": {
+      "src": "../../../../node_modules/xgplayer/es/index.js",
+      "file": "xgplayer.js",
+      "fileHash": "96bb12cc",
+      "needsInterop": false
+    },
+    "xgplayer-hls": {
+      "src": "../../../../node_modules/xgplayer-hls/es/index.js",
+      "file": "xgplayer-hls.js",
+      "fileHash": "e0376d8d",
+      "needsInterop": false
+    },
+    "xgplayer-flv": {
+      "src": "../../../../node_modules/xgplayer-flv/es/index.js",
+      "file": "xgplayer-flv.js",
+      "fileHash": "9747b247",
+      "needsInterop": false
+    },
+    "xgplayer-mp4": {
+      "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
+      "file": "xgplayer-mp4.js",
+      "fileHash": "3d584347",
+      "needsInterop": false
+    },
+    "xgplayer-music": {
+      "src": "../../../../node_modules/xgplayer-music/es/index.js",
+      "file": "xgplayer-music.js",
+      "fileHash": "628d1de2",
       "needsInterop": false
     }
   },
@@ -31,8 +61,14 @@
     "chunk-IYO332YY": {
       "file": "chunk-IYO332YY.js"
     },
-    "chunk-UXIASGQL": {
-      "file": "chunk-UXIASGQL.js"
+    "chunk-V5EGXLXH": {
+      "file": "chunk-V5EGXLXH.js"
+    },
+    "chunk-ARSWWNTN": {
+      "file": "chunk-ARSWWNTN.js"
+    },
+    "chunk-5WWUZCGV": {
+      "file": "chunk-5WWUZCGV.js"
     }
   }
 }

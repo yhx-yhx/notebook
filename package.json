@@ -5,7 +5,7 @@
     "vitepress-plugin-search": "^1.0.4-alpha.20"
   },
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
@@ -34,6 +34,7 @@
     "xgplayer-flv": "^3.0.7",
     "xgplayer-hls": "^3.0.7",
     "xgplayer-mp4": "^3.0.7",
+    "xgplayer-music": "^3.0.9",
     "xlsx": "^0.18.5",
     "xlsx-js-style": "^1.2.0"
   }

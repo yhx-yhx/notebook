@@ -17,7 +17,7 @@
 
 var names = [12, 23, 34, 4556, 45]
 
-console.log('slice 纯函数',names.slice(0, 2)) 
+console.log('slice 纯函数', names.slice(0, 2))
 
 console.log('splice 非纯函数', names.splice(0, 3)) //splice 具有副作用
 
@@ -39,15 +39,15 @@ console.log('splice 非纯函数', names.splice(0, 3)) //splice 具有副作用
 
 //普通函数
 function add(a, b, c) {
-    return a+b+c
+    return a + b + c
 }
 console.log(add(1, 2, 3));
 
 // 科里化函数
 function sum(a) {
-    return function (b) { 
-        return function (c) { 
-            return a+b+c
+    return function (b) {
+        return function (c) {
+            return a + b + c
         }
     }
 }
@@ -67,8 +67,8 @@ console.log(sumArrow(1)(2)(3));
 
 // 科里化 例子1
 
-function adder(num) { 
-    return function (count) { 
+function adder(num) {
+    return function (count) {
         return num + count
     }
 }
@@ -103,7 +103,7 @@ function carraying(fn) {
         // 传递参数大于等于 普通函数参数个数
         if (args.length >= fn.length) {
             return fn.call(this, ...args)
-        // 传递参数小于则处理 回调
+            // 传递参数小于则处理 回调
         } else {
             return function (...args2) {
                 return curried.apply(this, [...args, ...args2])
@@ -118,7 +118,19 @@ console.log(klhAdd(7)(6)(5));
 
 
 /**
- * 应用场景
- * vue3 源码
- * 
- */ 
+ * 组合函数
+ */
+
+function HCompose(...fns) {
+    let length = fns.length
+    function compose(...args) {
+        let index = 0
+        let result = length ? fns[index].apply(this, args) : args
+        while (++index < length) {
+            result = fns[index].call(this, result)
+        }
+        return result
+    }
+    return compose
+}
+

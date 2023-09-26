@@ -21,8 +21,9 @@
   --vp-c-divider-light-2: rgba(60, 60, 60, .12);
   --vp-c-divider-dark-1: rgba(84, 84, 84, .65);
   --vp-c-divider-dark-2: rgba(84, 84, 84, .48);
-  --vp-c-text-light-1: var(--vp-c-indigo);
-  --vp-c-text-light-2: rgba(60, 60, 60, .7);
+  --vp-c-text-light-1: var(--vp-c-indigo-deep);
+  --vp-c-text-light-2: rgb(180, 110, 245);
+  /* --vp-c-text-light-2: rgba(60, 60, 60, .7); */
   --vp-c-text-light-3: rgba(60, 60, 60, .33);
   --vp-c-text-light-4: rgba(60, 60, 60, .18);
   --vp-c-text-dark-1: rgba(255, 255, 255, .87);
@@ -31,6 +32,7 @@
   --vp-c-text-dark-4: rgba(235, 235, 235, .18);
   --vp-c-indigo: #213547;
   --vp-c-indigo-soft: #476582;
+  --vp-c-indigo-deep: rgb(134, 12, 248);
   --vp-c-indigo-light: #aac8e4;
   --vp-c-indigo-lighter: #c9def1;
   --vp-c-indigo-dark: #1d2f3f;
@@ -689,9 +691,9 @@ html:not(.dark) .vp-code-dark {
 
 .vp-code-group .tabs label:after {
   position: absolute;
-  right: 8px;
+  /* right: 8px; */
   bottom: -1px;
-  left: 8px;
+  /* left: 8px; */
   z-index: 10;
   height: 1px;
   content: "";
@@ -961,7 +963,7 @@ html:not(.dark) .vp-code-dark {
   transition: background-color .5s
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .vp-doc div[class*=language-] {
     border-radius: 8px;
     margin: 16px 0
@@ -3521,6 +3523,14 @@ svg.DocSearch-Hit-Select-Icon {
   .VPSidebar[data-v-a186aa16] {
     padding-left: max(32px, calc((100% - (var(--vp-layout-max-width) - 64px)) / 2));
     width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px)
+  }
+
+  .VPNavBar.has-sidebar .content {
+    padding-right: 0 !important;
+  }
+
+  .VPSocialLinks {
+    padding-right: 32px;
   }
 }
 

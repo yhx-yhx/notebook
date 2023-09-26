@@ -1,16 +1,13 @@
-# xgVideoPlay Demo
-
-<br/>
-
 ## 西瓜视频播放器测试用例
 
 <script setup>
 import xgVideoPlay from "../../pages/Components/xgVideoPlay.vue"
-
+import xgMusicPlay from "../../pages/Components/xgMusicPlay.vue"
 </script>
 
 <client-only>
 <xgVideoPlay/>
+<xgMusicPlay/>
 </client-only>
 
 ::: warning 视频格式支持
@@ -23,6 +20,7 @@ import xgVideoPlay from "../../pages/Components/xgVideoPlay.vue"
 <<< @/pages/Components/xgVideoPlay.vue
 :::
 <br/>
+
 
 
 
