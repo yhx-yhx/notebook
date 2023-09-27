@@ -29,8 +29,8 @@ const imglist = [
         imgUrl: "/images/test.jpg"
     }
 ]
-const imgurl1 = './images/logo.png'
-const imgurl2 = './images/logo.png'
+const imgurl1 = '/images/logo.png'
+const imgurl2 = '/images/logo.png'
 
  let data = {
         county: '西青区',
