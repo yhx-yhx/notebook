@@ -18,16 +18,16 @@ import {
   concatUint8Array,
   getVideoPlaybackQuality,
   isMediaPlaying
-} from "./chunk-V5EGXLXH.js";
+} from "./chunk-NVCRVPIB.js";
 import {
   BasePlugin,
   Errors,
   events_exports,
   require_eventemitter3
-} from "./chunk-ARSWWNTN.js";
+} from "./chunk-TPLPVHFF.js";
 import {
   __toESM
-} from "./chunk-5WWUZCGV.js";
+} from "./chunk-HM4MQYWN.js";
 
 // node_modules/xgplayer-flv/es/_virtual/_rollupPluginBabelHelpers.js
 function ownKeys(object, enumerableOnly) {
@@ -528,7 +528,7 @@ function _toPropertyKey(arg) {
 var import_eventemitter3 = __toESM(require_eventemitter3());
 
 // node_modules/xgplayer-flv/es/flv/services/buffer-service.js
-var logger = new Logger("BufferService");
+var logger = new Logger2("BufferService");
 var BufferService = function() {
   function BufferService2(flv, softVideo, opts) {
     _classCallCheck(this, BufferService2);
@@ -1064,7 +1064,7 @@ function searchKeyframeIndex(list, value) {
 }
 
 // node_modules/xgplayer-flv/es/flv/index.js
-var logger2 = new Logger("flv");
+var logger2 = new Logger2("flv");
 var Flv = function(_EventEmitter) {
   _inherits(Flv2, _EventEmitter);
   var _super = _createSuper(Flv2);
@@ -1665,14 +1665,14 @@ var Flv = function(_EventEmitter) {
   }, {
     key: "enableLogger",
     value: function enableLogger() {
-      Logger.enable();
       Logger2.enable();
+      Logger.enable();
     }
   }, {
     key: "disableLogger",
     value: function disableLogger() {
-      Logger.disable();
       Logger2.disable();
+      Logger.disable();
     }
   }]);
   return Flv2;

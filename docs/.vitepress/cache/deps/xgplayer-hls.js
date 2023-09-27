@@ -20,16 +20,16 @@ import {
   concatUint8Array,
   getVideoPlaybackQuality,
   isMediaPlaying
-} from "./chunk-V5EGXLXH.js";
+} from "./chunk-NVCRVPIB.js";
 import {
   BasePlugin,
   Errors,
   events_exports,
   require_eventemitter3
-} from "./chunk-ARSWWNTN.js";
+} from "./chunk-TPLPVHFF.js";
 import {
   __toESM
-} from "./chunk-5WWUZCGV.js";
+} from "./chunk-HM4MQYWN.js";
 
 // node_modules/xgplayer-hls/es/_virtual/_rollupPluginBabelHelpers.js
 function _iterableToArrayLimit(arr, i) {
@@ -739,7 +739,7 @@ var Event = _objectSpread2(_objectSpread2({}, EVENT), {}, {
 });
 
 // node_modules/xgplayer-hls/es/hls/buffer-service/transmuxer/index.js
-var logger = new Logger("Transmuxer");
+var logger = new Logger2("Transmuxer");
 var Transmuxer = function() {
   function Transmuxer2(hls, isMP4, needRemux) {
     _classCallCheck(this, Transmuxer2);
@@ -889,7 +889,7 @@ var Transmuxer = function() {
 }();
 
 // node_modules/xgplayer-hls/es/hls/buffer-service/index.js
-var logger2 = new Logger("BufferService");
+var logger2 = new Logger2("BufferService");
 var BufferService = function() {
   function BufferService2(hls) {
     _classCallCheck(this, BufferService2);
@@ -2812,7 +2812,7 @@ var SegmentLoader = function() {
 }();
 
 // node_modules/xgplayer-hls/es/hls/index.js
-var logger3 = new Logger("hls");
+var logger3 = new Logger2("hls");
 var Hls = function(_EventEmitter) {
   _inherits(Hls2, _EventEmitter);
   var _super = _createSuper(Hls2);
@@ -3986,14 +3986,14 @@ var Hls = function(_EventEmitter) {
   }, {
     key: "enableLogger",
     value: function enableLogger() {
-      Logger.enable();
       Logger2.enable();
+      Logger.enable();
     }
   }, {
     key: "disableLogger",
     value: function disableLogger() {
-      Logger.disable();
       Logger2.disable();
+      Logger.disable();
     }
   }]);
   return Hls2;

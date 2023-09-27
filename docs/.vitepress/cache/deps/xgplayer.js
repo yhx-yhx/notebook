@@ -21,8 +21,8 @@ import {
   sniffer,
   util,
   zhHk
-} from "./chunk-ARSWWNTN.js";
-import "./chunk-5WWUZCGV.js";
+} from "./chunk-TPLPVHFF.js";
+import "./chunk-HM4MQYWN.js";
 export {
   BasePlugin,
   Danmu,

@@ -4,6 +4,9 @@ import createVitePlugins from './vite/plugins';
 console.log(createVitePlugins());
 // https://vitejs.dev/config/
 export default defineConfig({
+    define: {
+        'process.env': {}
+    },
     plugins: createVitePlugins(),
     build: {
         assetsInlineLimit: 0,

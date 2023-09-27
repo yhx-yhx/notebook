@@ -35,11 +35,11 @@ export default defineConfig({
         href: "https://cdn.jsdelivr.net/npm/qweather-icons@1.4.0/font/qweather-icons.css",
       },
     ],
-    ["script", { src: "//unpkg.com/@element-plus/icons-vue" }]
+    ["script", { src: "//unpkg.com/@element-plus/icons-vue" }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/logo.svg', // 左侧导航栏图标
+    logo: "/logo.svg", // 左侧导航栏图标
     // siteTitle: 'Hello World', // 左侧导航栏标题
     outline: "deep", // 在大纲中显示的标题级别
     // editLink: { // 提供编辑页面的连接
@@ -62,7 +62,7 @@ export default defineConfig({
       prev: "上一节",
       next: "下一节",
     },
-    returnToTopLabel: '返回顶部',
+    returnToTopLabel: "返回顶部",
     nav: [
       { text: "首页", link: "/" },
       {
@@ -116,16 +116,27 @@ export default defineConfig({
           },
           { text: "Details", link: "/pages/ComponentsExample/details" },
           { text: "Icon", link: "/pages/ComponentsExample/icon" },
-          { text: "引导页", link: "/pages/ComponentsExample/引导页" },
+          { text: "引导页", link: "/pages/Components/guide/index" },
           { text: "vue-count-to", link: "/pages/ComponentsExample/vueCountTo" },
-          { text: "wordTemplaterDocx", link: "/pages/ComponentsExample/wordTemplaterDocx" },
-           {
+          {
+            text: "wordTemplaterDocx",
+            link: "/pages/ComponentsExample/wordTemplaterDocx",
+          },
+          {
             text: "二维码",
             link: "/pages/ComponentsExample/二维码",
           },
-            {
+          {
             text: "水印",
             link: "/pages/Components/waterMarker/index",
+          },
+          {
+            text: "gsap应用",
+            link: "/pages/Components/gsap/index",
+          },
+          {
+            text: "tesseract.js实现读取图片文字的tool",
+            link: "/pages/Components/OCRTesseract/index",
           },
         ],
       },
@@ -133,49 +144,49 @@ export default defineConfig({
       {
         text: "Notes",
         items: [
-          { text: "min_title", link: "/pages/Notes/2023/title" },
-          { text: "2023/4", link: "/pages/Notes/2023/4" },
+          { text: "min_title", link: "/pages/Notes/title/index" },
+          { text: "bug", link: "/pages/Notes/bug/index" },
           {
             text: "learn_vue3_doc",
-            link: "/pages/Notes/2023/learn_vue3_doc",
+            link: "/pages/Notes/bug/2023/learn_vue3_doc",
           },
           {
             text: "learn_vue3_coderwhy",
-            link: "/pages/Notes/2023/learn_vue3_coderwhy",
+            link: "/pages/Notes/bug/2023/learn_vue3_coderwhy",
           },
-          { text: "default", link: "/pages/Notes/2023/Others/Nodes/default" },
           {
-            text: "third_party_warehouse",
-            link: "/pages/Notes/2023/Others/Nodes/third_party_warehouse",
+            text: "default",
+            link: "/pages/Notes/bug/2023/Others/Nodes/default",
+          },
+
+          {
+            text: "经验帖",
+            items: [
+              {
+                text: "经验花裤衩Element-admin",
+                link: "/pages/Notes/经验帖/花裤衩Element-admin",
+              },
+            ],
           },
         ],
       },
       {
-        text: "方案", items: [
+        text: "方案",
+        items: [
           { text: "hooks", link: "/pages/Other/Plan/hooks" },
           { text: "大屏可视化响应式", link: "/pages/Other/Plan/screen" },
           { text: "xlsx", link: "/pages/Other/Plan/xlsx/index" },
           { text: "download", link: "/pages/Other/Plan/download" },
-          { text: "xgplayer", link: "/pages/Other/Plan/xgplayer" },
           { text: "导出zip", link: "/pages/Other/Plan/导出zip" },
-          { text: "国际化", link: "/pages/Other/Plan/国际化" },
-          { text: "tesseract.js实现读取图片文字的tool", link: "/pages/Other/Plan/OCRTesseract/index" },
+          // { text: "国际化", link: "/pages/Other/Plan/国际化" },
         ],
       },
       {
-        text: "配置", items: [
+        text: "配置",
+        items: [
           { text: "nvm", link: "/pages/Config/nvm" },
           { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
           { text: "nginx配置", link: "/pages/Config/nginx配置" },
-        ],
-      },
-      {
-        text: "经验帖",
-        items: [
-          {
-            text: "经验花裤衩Element-admin",
-            link: "/pages/Other/经验帖/花裤衩Element-admin",
-          },
         ],
       },
       {
@@ -211,22 +222,46 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: "基本内容", link: "/pages/Base/javascript/红宝书/index" },
-            { text: "8对象、类与面向对象编程", link: "/pages/Base/javascript/红宝书/8对象、类与面向对象编程" },
+            {
+              text: "8对象、类与面向对象编程",
+              link: "/pages/Base/javascript/红宝书/8对象、类与面向对象编程",
+            },
             { text: "17事件", link: "/pages/Base/javascript/红宝书/17事件" },
-            { text: "21错误处理与调试", link: "/pages/Base/javascript/红宝书/21错误处理与调试" },
+            {
+              text: "21错误处理与调试",
+              link: "/pages/Base/javascript/红宝书/21错误处理与调试",
+            },
             { text: "23JSON", link: "/pages/Base/javascript/红宝书/23JSON" },
-            { text: "24网络请求", link: "/pages/Base/javascript/红宝书/24网络请求" },
-            { text: "25客户端存储", link: "/pages/Base/javascript/红宝书/25客户端存储" },
+            {
+              text: "24网络请求",
+              link: "/pages/Base/javascript/红宝书/24网络请求",
+            },
+            {
+              text: "25客户端存储",
+              link: "/pages/Base/javascript/红宝书/25客户端存储",
+            },
           ],
         },
         {
           text: "coderwhy js 高级",
           collapsed: true,
           items: [
-            { text: "浏览器工作原理与v8引擎", link: "/pages/Base/javascript/coderwhy/01_浏览器工作原理与v8引擎" },
-            { text: "函数作用域", link: "/pages/Base/javascript/coderwhy/02_函数作用域" },
-            { text: "闭包的内存泄漏", link: "/pages/Base/javascript/coderwhy/03_闭包的内存泄漏" },
-            { text: "闭包的回收与this指向", link: "/pages/Base/javascript/coderwhy/04_闭包的回收与this指向" },
+            {
+              text: "浏览器工作原理与v8引擎",
+              link: "/pages/Base/javascript/coderwhy/01_浏览器工作原理与v8引擎",
+            },
+            {
+              text: "函数作用域",
+              link: "/pages/Base/javascript/coderwhy/02_函数作用域",
+            },
+            {
+              text: "闭包的内存泄漏",
+              link: "/pages/Base/javascript/coderwhy/03_闭包的内存泄漏",
+            },
+            {
+              text: "闭包的回收与this指向",
+              link: "/pages/Base/javascript/coderwhy/04_闭包的回收与this指向",
+            },
           ],
         },
         { text: "基本内容", link: "/pages/Base/javascript/index" },
@@ -240,34 +275,65 @@ export default defineConfig({
 
       "/pages/Base/NodeJs": [
         {
-          text: "基础", link: "/pages/Base/NodeJs/index"
+          text: "基础",
+          link: "/pages/Base/NodeJs/index",
         },
         {
           text: "事件循环和异步IO",
-          link: "/pages/Base/NodeJs/事件循环和异步IO/index"
+          link: "/pages/Base/NodeJs/事件循环和异步IO/index",
         },
         {
           text: "Buffer和二进制",
-          link: "/pages/Base/NodeJs/Buffer和二进制/index"
+          link: "/pages/Base/NodeJs/Buffer和二进制/index",
         },
-        { text: "内置解析模块 events", link: "/pages/Base/NodeJs/内置解析模块/events/index" },
-        { text: "内置解析模块 fs", link: "/pages/Base/NodeJs/内置解析模块/fs/index" },
-        { text: "内置解析模块 path", link: "/pages/Base/NodeJs/内置解析模块/path/index" },
-        { text: 'Stream流', link: "/pages/Base/NodeJs/Stream流/index.md" },
+        {
+          text: "内置解析模块 events",
+          link: "/pages/Base/NodeJs/内置解析模块/events/index",
+        },
+        {
+          text: "内置解析模块 fs",
+          link: "/pages/Base/NodeJs/内置解析模块/fs/index",
+        },
+        {
+          text: "内置解析模块 path",
+          link: "/pages/Base/NodeJs/内置解析模块/path/index",
+        },
+        { text: "Stream流", link: "/pages/Base/NodeJs/Stream流/index.md" },
         {
           text: "创建npm脚手架",
-          link: "/pages/Base/NodeJs/createNpm/index"
+          link: "/pages/Base/NodeJs/createNpm/index",
         },
         {
           text: "http服务器",
           items: [
-            { text: "http创建服务器方式", link: "/pages/Base/NodeJs/http服务器/http创建服务器方式" },
-            { text: "请求头 header", link: "/pages/Base/NodeJs/http服务器/headers" },
-            { text: "request对象", link: "/pages/Base/NodeJs/http服务器/request对象" },
-            { text: "response 对象", link: "/pages/Base/NodeJs/http服务器/response" },
-            { text: "statusCode 状态码", link: "/pages/Base/NodeJs/http服务器/statusCode" },
-            { text: "http中发送网络请求", link: "/pages/Base/NodeJs/http服务器/http中发送网络请求" },
-            { text: "http开发web服务器", link: "/pages/Base/NodeJs/http服务器/http开发web服务器" },
+            {
+              text: "http创建服务器方式",
+              link: "/pages/Base/NodeJs/http服务器/http创建服务器方式",
+            },
+            {
+              text: "请求头 header",
+              link: "/pages/Base/NodeJs/http服务器/headers",
+            },
+            {
+              text: "request对象",
+              link: "/pages/Base/NodeJs/http服务器/request对象",
+            },
+            {
+              text: "response 对象",
+              link: "/pages/Base/NodeJs/http服务器/response",
+            },
+            {
+              text: "statusCode 状态码",
+              link: "/pages/Base/NodeJs/http服务器/statusCode",
+            },
+            {
+              text: "http中发送网络请求",
+              link: "/pages/Base/NodeJs/http服务器/http中发送网络请求",
+            },
+            {
+              text: "http开发web服务器",
+              link: "/pages/Base/NodeJs/http服务器/http开发web服务器",
+            },
           ],
         },
 
@@ -281,9 +347,18 @@ export default defineConfig({
           text: "框架",
           items: [
             { text: "express", link: "/pages/Base/NodeJs/框架/express/index" },
-            { text: "koa", link: "/pages/Base/NodeJs/框架/koa/index" }
+            { text: "koa", link: "/pages/Base/NodeJs/框架/koa/index" },
           ],
-        }
+        },
+      ],
+      "/pages/Notes/bug": [
+        {
+          text: "2023",
+          items: [
+            { text: "2023-4", link: "/pages/Notes/bug/2023/4" },
+            { text: "2023-9", link: "/pages/Notes/bug/2023/9" },
+          ],
+        },
       ],
       "/pages/Base/vue全家桶/vue": [
         { text: "index", link: "/pages/Base/vue全家桶/vue/" },
@@ -317,28 +392,6 @@ export default defineConfig({
         //     { text: "Details", link: "/pages/ComponentsExample/details" },
         //     { text: "Icon", link: "/pages/ComponentsExample/icon" },
         //     { text: "引导页", link: "/pages/ComponentsExample/引导页" },
-        //   ],
-        // },
-      ],
-      "/pages/Notes": [
-        // {
-        //   text: "Notes",
-        //   items: [
-        //     { text: "min_title", link: "/pages/Notes/2023/title" },
-        //     { text: "2023/4", link: "/pages/Notes/2023/4" },
-        //     {
-        //       text: "learn_vue3_doc",
-        //       link: "/pages/Notes/2023/learn_vue3_doc",
-        //     },
-        //     {
-        //       text: "learn_vue3_coderwhy",
-        //       link: "/pages/Notes/2023/learn_vue3_coderwhy",
-        //     },
-        //     { text: "default", link: "/pages/Notes/2023/Others/Nodes/default" },
-        //     {
-        //       text: "third_party_warehouse",
-        //       link: "/pages/Notes/2023/Others/Nodes/third_party_warehouse",
-        //     },
         //   ],
         // },
       ],
@@ -429,7 +482,7 @@ export default defineConfig({
     lineNumbers: true, // 显示行号
   },
   sitemap: {
-    hostname: 'https://example.com',
-    lastmodDateOnly: false
-  }
+    hostname: "https://example.com",
+    lastmodDateOnly: false,
+  },
 });

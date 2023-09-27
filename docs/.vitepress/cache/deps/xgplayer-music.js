@@ -3,8 +3,8 @@ import {
   Plugin,
   events_exports,
   util
-} from "./chunk-ARSWWNTN.js";
-import "./chunk-5WWUZCGV.js";
+} from "./chunk-TPLPVHFF.js";
+import "./chunk-HM4MQYWN.js";
 
 // node_modules/xgplayer-music/es/_virtual/_rollupPluginBabelHelpers.js
 function ownKeys(object, enumerableOnly) {

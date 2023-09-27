@@ -3,6 +3,8 @@
 
 - ### 安装依赖
 
+<br>
+
   ```
   npm i postcss-pxtorem autoprefixer amfe-flexible -S
   ```
@@ -12,6 +14,8 @@
   > amfe-flexible：可伸缩布局方案，替代了原先lib-flexible，选用了当前众多浏览器兼容的viewport
 
 - ### 配置vite.config.ts
+
+<br>
 
   ```
   //引入依赖
@@ -45,9 +49,13 @@
 
 - ### 导入依赖
 
+<br>
+
   ```
   import "amfe-flexible/index.js";
   ```
+
+<br>
 
 > 
 >
