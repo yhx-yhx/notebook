@@ -119,6 +119,14 @@ export default defineConfig({
           { text: "引导页", link: "/pages/ComponentsExample/引导页" },
           { text: "vue-count-to", link: "/pages/ComponentsExample/vueCountTo" },
           { text: "wordTemplaterDocx", link: "/pages/ComponentsExample/wordTemplaterDocx" },
+           {
+            text: "二维码",
+            link: "/pages/ComponentsExample/二维码",
+          },
+            {
+            text: "水印",
+            link: "/pages/Components/waterMarker/index",
+          },
         ],
       },
       { text: "interview", link: "/pages/Interview/自检100题" },

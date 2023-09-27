@@ -1,60 +1,66 @@
 {
-  "hash": "3e6cfda5",
-  "browserHash": "d5ab7f61",
+  "hash": "33e47eb2",
+  "browserHash": "6ccee94c",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "c1a98bfc",
+      "fileHash": "8696448b",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "10186951",
+      "fileHash": "28d76688",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "297f6a18",
+      "fileHash": "9253d038",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "b50c9764",
+      "fileHash": "1631e3c6",
       "needsInterop": false
     },
     "xgplayer": {
       "src": "../../../../node_modules/xgplayer/es/index.js",
       "file": "xgplayer.js",
-      "fileHash": "96bb12cc",
+      "fileHash": "34d46a81",
       "needsInterop": false
     },
     "xgplayer-hls": {
       "src": "../../../../node_modules/xgplayer-hls/es/index.js",
       "file": "xgplayer-hls.js",
-      "fileHash": "e0376d8d",
+      "fileHash": "336ae061",
       "needsInterop": false
     },
     "xgplayer-flv": {
       "src": "../../../../node_modules/xgplayer-flv/es/index.js",
       "file": "xgplayer-flv.js",
-      "fileHash": "9747b247",
+      "fileHash": "755bb544",
       "needsInterop": false
     },
     "xgplayer-mp4": {
       "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
       "file": "xgplayer-mp4.js",
-      "fileHash": "3d584347",
+      "fileHash": "fe6245dd",
       "needsInterop": false
     },
     "xgplayer-music": {
       "src": "../../../../node_modules/xgplayer-music/es/index.js",
       "file": "xgplayer-music.js",
-      "fileHash": "628d1de2",
+      "fileHash": "6ababea4",
       "needsInterop": false
+    },
+    "qrcode": {
+      "src": "../../../../node_modules/qrcode/lib/browser.js",
+      "file": "qrcode.js",
+      "fileHash": "6a2fc57c",
+      "needsInterop": true
     }
   },
   "chunks": {

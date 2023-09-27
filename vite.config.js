@@ -1,9 +1,10 @@
 // vite.config.js
-import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
+import createVitePlugins from './vite/plugins';
+console.log(createVitePlugins());
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [vue()],
+    plugins: createVitePlugins(),
     build: {
         assetsInlineLimit: 0,
         rollupOptions: {
