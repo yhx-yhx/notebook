@@ -138,6 +138,10 @@ export default defineConfig({
             text: "tesseract.js实现读取图片文字的tool",
             link: "/pages/Components/OCRTesseract/index",
           },
+          {
+            text: "无缝滚动",
+            link: "/pages/Components/ScrollView/index",
+          },
         ],
       },
       { text: "interview", link: "/pages/Interview/自检100题" },

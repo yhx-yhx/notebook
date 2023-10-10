@@ -28,6 +28,7 @@
     "qweather-icons": "^1.4.0",
     "sass": "^1.64.1",
     "tesseract.js": "^4.1.2",
+    "three": "^0.157.0",
     "uuid": "^9.0.0",
     "vue": "^3.3.4",
     "vue-count-to": "^1.0.13",

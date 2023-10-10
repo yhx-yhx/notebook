@@ -49,7 +49,7 @@
     }
 }
 
-.Layout {
+/* .Layout {
     background: url(/images/wallImage/bz_008.png) no-repeat;
     background-size: 100% 100vh;
     background-attachment: fixed;
@@ -61,7 +61,7 @@
         background-size: 100% 100vh;
         background-attachment: fixed;
     }
-}
+} */
 
 .VPCarbonAds {
     background: url(/images/wallImage/bz_001.png) no-repeat !important;
