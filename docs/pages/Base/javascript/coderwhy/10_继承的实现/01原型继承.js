@@ -34,7 +34,7 @@ console.log(Object.getOwnPropertyDescriptors(hho.prototype));
 
 /**
  * 继承 
- * 原型继承 
+ * 1 原型继承 
  * 缺点
  * 1.某些属性看不到 原因：peototype 不可枚举的
  * 2.参数传递 存在问题
@@ -55,3 +55,4 @@ Teacher.prototype = new Person()
 let t1 = new Teacher(1, 2, 3, 4)
 console.log(t1.name);
 t1.Play();
+
