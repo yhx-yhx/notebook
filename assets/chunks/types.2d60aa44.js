@@ -1,1 +1,0 @@
-import{a6 as n}from"./framework.57530656.js";const t=e=>e===void 0,r=e=>typeof e=="boolean",i=e=>typeof e=="number",o=e=>typeof Element>"u"?!1:e instanceof Element,a=e=>n(e)?!Number.isNaN(Number(e)):!1;export{a,t as b,o as c,r as d,i};
