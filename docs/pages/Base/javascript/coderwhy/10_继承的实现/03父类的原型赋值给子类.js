@@ -11,7 +11,7 @@ function Funs(name, age, sex, likes) {
 
 function Fun(name, age, sex, likes) { }
 
-
+//  共享 同一个 原型 会影响 父级对象
 Fun.prototype = Funs.prototype;
 
 Fun.prototype.play = function () {
