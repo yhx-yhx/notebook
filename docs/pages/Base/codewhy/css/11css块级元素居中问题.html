@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css快级元素居中问题</title>
+    <style>
+        .c {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            /* display: flex; */
+
+            .v {
+                /* 必须声明 宽度 */
+                margin: auto;
+                width: 20px;
+                height: 20px;
+                background-color: aquamarine;
+                vertical-align: middle;
+
+            }
+        }
+
+        /* margin:auto 优劣势分析 */
+
+
+        /* 外轮廓   */
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <div class="v"></div>
+    </div>
+</body>
+
+</html>

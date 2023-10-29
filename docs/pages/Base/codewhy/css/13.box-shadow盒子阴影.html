@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c {
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            padding: 75px;
+            border: 2px dotted #CCC;
+
+            .v {
+                width: 50px;
+                height: 50px;
+                background-color: aquamarine;
+                box-shadow: 5px 5px #ccc inset;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+                /* 设置 inset 阴影 被设置到了左上侧 */
+                /* box-shadow:offset-x offset-y spread（扩散范围） blur(扩散程度) color 方向（inset） */
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <div class="v"></div>
+    </div>
+
+</body>
+
+</html>

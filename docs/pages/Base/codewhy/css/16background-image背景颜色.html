@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前置背景</title>
+    <style>
+        .c {
+            .v {
+                width: 200px;
+                height: 100px;
+                color: red;
+                overflow: auto;
+
+                background-image: url(./images/img.png);
+                /* 背景图片 : 可以设置一张或多张 背景图像 图像会在z轴方向上堆叠；
+                最先设置的会放在最上层；
+                border会放置在background上面绘制；
+                若url内容无法解析 浏览器等同于设置了none；
+                当放置多个 图片资源时 若有一张图片资源失效 则显示none；
+                default:true;
+                适用范围：all elements and ::first-letter and ::first-line
+                */
+
+                background-color: aqua;
+                /* background-color: currentColor; */
+                /* 背景颜色: 
+                default：transparent
+                适用范围：all elements and ::first-letter and ::first-line
+                可配置关键字：颜色关键字 、 transparent 、 currentColor（获取当前文字的颜色）
+                */
+                background-repeat: repeat-y;
+                /* 背景重复:定义图像的重复方式
+                default:
+                可设置关键字：repeat-x repeat-y repeat no-repeat space(均匀分布) round（放缩）;
+                单值语法：xy同时分配一个值
+                多值语法：分别设置； 
+                */
+                background-position: 0 0;
+                /* 背景位置  :设置图片初始值位置
+                初始值：0% 0%；
+                关键字：top left center bottom right;
+                百发比：相对于宽高 百分比（当前元素）
+                两个值：x，y
+                三个值：前两个为关键字，第三个为偏移量
+                四个值：第一个第三个为关键字（length/prencentage），二四分别是x，y偏移量
+                */
+                /* background-size: contain; */
+                background-size: auto;
+
+                /*背景尺寸
+                关键字 cover（全覆盖 可能会隔断背景） contain （保持原比例进行缩放 可能会留白）
+
+                */
+
+                /* 默认值 fixed */
+                /* 滚动效果 相对父级  跟随还是 固定（背景）*/
+                /* background-attachment: fixed; */
+                background-attachment: local;
+                /* background-attachment: scroll; */
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <div class="v">10月27日，第十届联合国大会紧急特别会议就巴以相关决议草案进行投票，最终以同意票达到三分之二的多数票获得通过。美国、以色列等投票反对</div>
+    </div>
+
+</body>
+
+</html>
