@@ -142,6 +142,14 @@ export default defineConfig({
             text: "无缝滚动",
             link: "/pages/Components/ScrollView/index",
           },
+          {
+            text: "图片裁切",
+            link: "/pages/Components/cropper/index",
+          },
+          {
+            text: "窗格拆分器",
+            link: "/pages/Components/splitpanes/index",
+          }
         ],
       },
       { text: "interview", link: "/pages/Interview/自检100题" },
