@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --v-c-b: 20px;
+        }
+
+        .func {
+            position: relative;
+            width: calc(700px - var(--v-c-b));
+            height: 700px;
+            border: var(--v-c-b) solid black;
+            background: url(./images/img.png) no-repeat;
+            /* filter: blur(1px); */
+            /* filter: brightness(1.2); */
+            background-size: 100% 100%;
+        }
+
+        .func .box {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .2);
+
+            /* 给元素背后的所有区域添加图形效果 */
+            backdrop-filter: blur(2px);
+        }
+
+        .func .grand {
+            position: absolute;
+            top: 40%;
+            bottom: 40%;
+            left: 40%;
+            right: 40%;
+            background: linear-gradient(#e66465, #9198e5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="func">
+        <div class="box"></div>
+        <div class="grand"></div>
+    </div>
+</body>
+
+</html>

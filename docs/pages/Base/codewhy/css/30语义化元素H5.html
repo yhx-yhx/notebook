@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main></main>
+    <section></section>
+    <aside></aside>
+    <footer></footer>
+    <article></article>
+    <!-- https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video#%E5%B1%9E%E6%80%A7 -->
+    <!-- controls poster muted autoplay loop preload-->
+    <video src="./"></video>
+    <!-- https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio#%E5%B1%9E%E6%80%A7 -->
+    <audio src="./" controls></audio>
+    <div class="size" onclick="sizeClick(event)" data-size="30">NULL</div>
+    <script>
+        let sizeDom = document.querySelector('.size');
+        function sizeClick(event) {
+            console.log(sizeDom.dataset.size);
+            console.log(sizeDom.getAttribute('data-size'));
+        }
+    </script>
+</body>
+
+</html>

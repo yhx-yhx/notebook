@@ -38,13 +38,18 @@
             overflow: auto;
             scroll-behavior: auto;
             padding: 10px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .cards .card .content p {
+        .cards .card .content .item {
             word-wrap: break-word;
             /* 两端对齐 */
             text-align: justify;
             text-indent: 2em;
+            display: flex;
+            flex: 1;
+            flex-direction: row;
         }
 
         .cards .card footer {
@@ -66,6 +71,76 @@
         /* flex-warp 
             换行设置    
         */
+        /* flex-flow 是 flex-warp 和 flex-direction 的简写属性 */
+        .cards .card .content .item {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            /* normal 与 stretch 一样 */
+            /* 设置为 normal or stretch 当子元素没有高度时 会将子元素高度设置为auto */
+
+        }
+
+        .cards .card .content .item .item_content {
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            margin-bottom: 10px;
+        }
+
+        .cards .card .content .item:first-child {
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+
+        .cards .card .content .item:first-child .item_content {
+            background-color: red;
+            width: 200px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        /* aligin-content  多行设置*/
+
+        /* flex-item */
+
+        /* order 按order 大小依次排布 */
+
+
+        /* align-self  独立设置元素交叉轴布局 */
+
+        /* flex-grow 成长序数 */
+        /* 初始值 0
+            number 类型
+        */
+
+        /* flex-shrink 缩小系数 
+        默认值 1
+        */
+
+        /* flex-basis 初始大小 */
+
+        /* 似乎没什么用啊！！！ */
+
+        /* flex */
+        /* flex-grow flex-shrink flex-basis */
+        /* flex:none; 0 0 auto
+            flex:auto; 1 1 auto    
+        */
+
+
+
+
+        /* 常见问题 
+            1：布局问题 等距问题 矩阵放置 缺失方格；
+            计算得出间距
+            通过 行内元素实现(追加的元素个数 空缺数量)
+
+        */
+        .cards .card .content .item span {
+            width: 200px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 
@@ -74,46 +149,89 @@
         <div class="card">
             <div class="header">header</div>
             <div class="content">
-                <p>This card has a lot more content which means that it defines the height of the container the cards
-                    are
-                    in. I've laid the cards out using grid layout, so the cards themselves will stretch to the same
-                    height.
-                </p>
-                <p>This card has a lot more content which means that it defines the height of the container the cards
-                    are
-                    in. I've laid the cards out using grid layout, so the cards themselves will stretch to the same
-                    height.
-                </p>
-                <p>This card has a lot more content which means that it defines the height of the container the cards
-                    are
-                    in. I've laid the cards out using grid layout, so the cards themselves will stretch to the same
-                    height.
-                </p>
-                <p>This card has a lot more content which means that it defines the height of the container the cards
-                    are
-                    in. I've laid the cards out using grid layout, so the cards themselves will stretch to the same
-                    height.
-                </p>
-                <p>This card has a lot more content which means that it defines the height of the container the cards
-                    are
-                    in. I've laid the cards out using grid layout, so the cards themselves will stretch to the same
-                    height.
-                </p>
-                <p>This card has a lot more content which means that it defines the height of the container the cards
-                    are
-                    in. I've laid the cards out using grid layout, so the cards themselves will stretch to the same
-                    height.
-                </p>
-                <p>This card has a lot more content which means that it defines the height of the container the cards
-                    are
-                    in. I've laid the cards out using grid layout, so the cards themselves will stretch to the same
-                    height.
-                </p>
-                <p>This card has a lot more content which means that it defines the height of the container the cards
-                    are
-                    in. I've laid the cards out using grid layout, so the cards themselves will stretch to the same
-                    height.
-                </p>
+                <div class="item">
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <!-- <div class="item_content"></div> -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+                <div class="item">
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                </div>
+                <div class="item">
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                </div>
+                <div class="item">
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                </div>
+                <div class="item">
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                </div>
+                <div class="item">
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                </div>
+                <div class="item">
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                </div>
+                <div class="item">
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                    <div class="item_content"></div>
+                </div>
             </div>
             <footer>Card footer</footer>
         </div>
