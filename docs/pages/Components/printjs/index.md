@@ -15,10 +15,10 @@ https://printjs.crabbly.com/#documentation
 <br/>
 
 <script setup>
-import Print from "./index.vue"
+// import Print from "./index.vue"
 </script>
 
-<Print/>
+<!-- <Print/> -->
 
 <br>
 

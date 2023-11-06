@@ -1,8 +1,8 @@
 <script setup>
-import HxPdf from "./HxPdf.vue"
+// import HxPdf from "./HxPdf.vue"
 </script>
 
-<HxPdf/>
+<!-- <HxPdf/> -->
 
 <br>
 
