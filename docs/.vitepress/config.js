@@ -139,6 +139,14 @@ export default defineConfig({
             link: "/pages/Components/OCRTesseract/index",
           },
           {
+            text: "print-js打印功能",
+            link: "/pages/Components/printjs/index",
+          },
+          {
+            text: "vue-pdf-embed 实现的预览pdf功能",
+            link: "/pages/Components/perview/pdf/index",
+          },
+          {
             text: "无缝滚动",
             link: "/pages/Components/ScrollView/index",
           },
