@@ -157,7 +157,7 @@ export default defineConfig({
           {
             text: "窗格拆分器",
             link: "/pages/Components/splitpanes/index",
-          }
+          },
         ],
       },
       { text: "interview", link: "/pages/Interview/自检100题" },
@@ -268,19 +268,31 @@ export default defineConfig({
           items: [
             {
               text: "浏览器工作原理与v8引擎",
-              link: "/pages/Base/javascript/coderwhy/01_浏览器工作原理与v8引擎",
+              link: "/pages/Base/coderwhy/js/01_浏览器工作原理与v8引擎",
             },
             {
               text: "函数作用域",
-              link: "/pages/Base/javascript/coderwhy/02_函数作用域",
+              link: "/pages/Base/coderwhy/js/02_函数作用域",
             },
             {
               text: "闭包的内存泄漏",
-              link: "/pages/Base/javascript/coderwhy/03_闭包的内存泄漏",
+              link: "/pages/Base/coderwhy/js/03_闭包的内存泄漏",
             },
             {
               text: "闭包的回收与this指向",
-              link: "/pages/Base/javascript/coderwhy/04_闭包的回收与this指向",
+              link: "/pages/Base/coderwhy/js/04_闭包的回收与this指向",
+            },
+            {
+              text: "纯函数-科里化实现-组合函数",
+              link: "/pages/Base/coderwhy/js/07_纯函数-科里化实现-组合函数",
+            },
+            {
+              text: "with-eval-严格模式-面向对象",
+              link: "/pages/Base/coderwhy/js/08_with-eval-严格模式-面向对象",
+            },
+            {
+              text: "面向对象的原型链和继承实现",
+              link: "/pages/Base/coderwhy/js/09_面向对象的原型链和继承实现",
             },
           ],
         },
@@ -383,6 +395,13 @@ export default defineConfig({
       "/pages/Base/vue全家桶/vue": [
         { text: "index", link: "/pages/Base/vue全家桶/vue/" },
         { text: "安全", link: "/pages/Base/vue全家桶/vue/学习vue文档/安全" },
+      ],
+      "/pages/Other/Link/Docs": [
+        { text: "Docs", link: "/pages/Other/Link/Docs/index" },
+        {
+          text: "Echarts",
+          link: "/pages/Other/Link/Docs/qianduan/Echarts/index.md",
+        },
       ],
       "/pages/ComponentsExample/": [
         // {

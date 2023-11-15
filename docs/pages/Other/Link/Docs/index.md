@@ -1,53 +1,118 @@
 
 #  组件库
 
-### ElementPlus
-https://element-plus.org/zh-CN/
+<br/>
 
-### Vant
-https://vant-contrib.gitee.io/vant/#/zh-CN
+<BaseInfo :data="datazujian"/>
 
-### quasar
-https://quasar.dev/docs
+<br/>
 
-### Echarts
-https://echarts.apache.org/zh/
+# vue 全家桶
 
-[社区]  https://www.makeapie.cn/echarts
+<br/>
+
+<BaseInfo :data="datakuangjia"/>
+
+# other
+
+<br/>
+
+<BaseInfo :data="dataother"/>
+
+# 第三方插件
+
+<br/>
+
+<BaseInfo :data="datadisanfang"/>
 
 
-# 框架
+<script setup>
+    import BaseInfo from "../../../Components/common/baseInfo.vue"
 
-## vue3 全家桶
-### vue3
-https://cn.vuejs.org/
+    const datazujian = [
+    {
+        link:"https://element-plus.org/zh-CN/",
+        title:"ElementUI",
+        icon:"https://element-plus.org/images/element-plus-logo-small.svg"
+    },
+      {
+        link:"https://vant-contrib.gitee.io/vant/#/zh-CN",
+        title:"Vant",
+        icon:"https://fastly.jsdelivr.net/npm/@vant/assets/logo.png"
+    },  {
+        link:"https://quasar.dev/docs",
+        title:"quasar",
+        icon:"https://cdn.quasar.dev/logo-v2/favicon/favicon-32x32.png"
+    }, {
+        link:"https://echarts.apache.org/zh",
+        title:"Echarts官方",
+        icon:"https://echarts.apache.org/favicon.ico",
+    }, {
+        link:"https://www.makeapie.cn/echarts",
+        title:"makeapie",
+        icon:"https://www.makeapie.cn/favicon.ico"
+    }
+]
 
-### vue-router
-https://router.vuejs.org/zh/
+const datakuangjia =
+[
+ {
+   link: "https://cn.vuejs.org/",
+   title: "Vue3",
+   icon: "https://cn.vuejs.org/images/logo.png"
+ },
+ {
+   link: "https://router.vuejs.org/zh/",
+   title: "Vue Router",
+   icon: "https://cn.vuejs.org/images/logo.png"
+ },
+ {
+   link: "https://pinia.vuejs.org/zh/",
+   title: "Pinia",
+   icon: "https://pinia.vuejs.org/logo.png"
+ }
+]
 
-### pinia
-https://pinia.vuejs.org/zh/
+const dataother = 
+[
+ {
+   link: "https://snippet-generator.app/",
+   title: "代码片段",
+   icon: "https://snippet-generator.app/favicon.ico"
+ },
+ {
+   link: "https://www.emojiall.com/zh-hans/all-emojis",
+   title: "emjoy",
+   icon: "https://www.emojiall.com/favicon.ico"
+ }
+]
 
-# Other
+const datadisanfang = [
+ {
+   link: "http://mockjs.com/",
+   title: "mock",
+   icon: "http://mockjs.com/assets/img/logo-2.svg"
+ },
+ {
+   link: "https://dayjs.fenxianglu.cn/",
+   title: "dayjs",
+   icon: "https://dayjs.fenxianglu.cn//assets/favicon.png"
+ },
+ {
+   link: "https://www.runoob.com/",
+   title: "菜鸟教程",
+   icon: "https://www.runoob.com/favicon.ico"
+ },
+ {
+   link: "https://developer.mozilla.org/zh-CN/",
+   title: "mdn",
+   icon: "https://developer.mozilla.org/favicon-48x48.cbbd161b.png"
+ },
+ {
+   link: "https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json",
+   title: "emojis",
+   icon: "😀"
+ }
+]
 
-### 代码片段
-https://snippet-generator.app/
-
-### emjoy
-https://www.emojiall.com/zh-hans/all-emojis
- 
-## 第三方js库
-### mock
-http://mockjs.com/
-
-### dayjs
-https://dayjs.fenxianglu.cn/
-
-### 菜鸟教程
-https://www.runoob.com/
-
-### mdn
-https://developer.mozilla.org/zh-CN/
-
-### emojis
- [emojis](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json)
+</script>

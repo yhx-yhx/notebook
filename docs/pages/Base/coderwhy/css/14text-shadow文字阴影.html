@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字阴影</title>
+    <style>
+        .c {
+            .v {
+                font-size: 30px;
+                /* 没有 spread 向外延伸范围 没有inset 关键字 */
+                text-shadow: 2px 5px 4px red;
+            }
+        }
+
+        /* 【行内非替换 需要注意以下内容】*/
+
+        /* 行内非替换元素 上下被撑开 padding top 不占位 */
+        /* 行内非替换元素  border 一样 上下被撑开 不占位 */
+        /* 行内非替换元素  margin 上下不生效 */
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <div class="v">HELLO WORLD</div>
+    </div>
+
+</body>
+
+</html>

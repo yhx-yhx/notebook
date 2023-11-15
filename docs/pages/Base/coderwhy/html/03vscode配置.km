@@ -1,0 +1,88 @@
+{
+    "root": {
+        "data": {
+            "id": "cw8829r8wtc0",
+            "created": 1697292742688,
+            "text": "VScode"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cw882i2s4ag0",
+                    "created": 1697292760800,
+                    "text": "快捷键"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cw88qr7a9fk0",
+                            "created": 1697294661403,
+                            "text": "复制上一行【alt+shift+向下】"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cw88vaf6irk0",
+                            "created": 1697295016696,
+                            "text": "注释【ctrl+/】"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cw882j3z6xs0",
+                    "created": 1697292763049,
+                    "text": "topic"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cw882s7labc0",
+                    "created": 1697292782859,
+                    "text": "插件"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cw8835x1skg0",
+                            "created": 1697292812696,
+                            "text": "中文插件 【Chinese】"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cw883e55bdk0",
+                            "created": 1697292830600,
+                            "text": "主题【one dark】"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cw883ou5u000",
+                            "created": 1697292853880,
+                            "text": "在浏览器打开页面【open in Brower、Live Sever】"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cw8849qr6nc0",
+                            "created": 1697292899387,
+                            "text": "自动重命名标签【auto rename tag】"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

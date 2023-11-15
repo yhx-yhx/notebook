@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子高度计算</title>
+    <style>
+        /* border不做设置， 默认显示文字颜色 */
+        /* 多行省略号实现 */
+        .c {
+            .v {
+                width: 200px;
+
+                /* 最后一行显示省略号 */
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            /* 单行省略号 */
+            .b {
+                width: 200px;
+                /* felx 布局会有小问题  */
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-wrap: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <h3>多行省略号</h3>
+        <div class="v">Friendship is a valuable treasure that can enrich our lives. True friends are those who stand by
+            us in times of need and
+            offer support and encouragement. They are people we can trust and confide in, sharing both happiness and
+            sorrow. A good
+            friend is someone who listens with understanding and offers honest advice. With friends, life becomes more
+            enjoyable and
+            meaningful. Let us cherish our friendships and nurture them with love and kindness.</div>
+        <h3>单行省略号</h3>
+        <div class="b">
+            Friendship is a valuable treasure that can enrich our lives.
+        </div>
+    </div>
+
+
+</body>
+
+</html>

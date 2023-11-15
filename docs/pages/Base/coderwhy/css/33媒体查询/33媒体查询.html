@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 方式二 -->
+    <!-- <link rel="stylesheet" media="(max-width:500px)" href="./index2.css"> -->
+    <title>Document</title>
+    <style>
+        /* 写在最前面 */
+        /* import 媒体查询 
+            可以使用这种方式做多端适配
+        */
+        /* 同样条件时候 
+        后者覆盖前者
+        不同条件叠加
+        【不建议混用】
+        */
+        /* 方式一 */
+        @import url(./index.css)(max-width: 500px);
+
+        /* 方式三 */
+        @media screen and (max-width: 500px) {
+            body {
+                background-color: black;
+            }
+        }
+
+        .media {
+            width: 500px;
+            height: 500px;
+            /* background-color: antiquewhite; */
+        }
+
+        /* 媒体运算符 
+            not and only or（，）
+        */
+    </style>
+</head>
+
+<body>
+    <div class="media">red</div>
+</body>
+
+</html>

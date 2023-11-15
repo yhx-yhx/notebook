@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位布局</title>
+    <style>
+        /* 标准流 normal flow */
+        /* 默认情况下 不会出现层叠关系的
+            从上往下依次往后排布
+        */
+        .flow {
+            /* position
+            默认值 static;
+            相对定位 relative;
+            绝对定位 absolute;
+            固定定位 fixed;
+            粘性定位 sticky;
+             */
+
+            /* 相对定位 */
+            /* 布局方式 标准流 
+                可以通过 left top right bottom 来设置位置
+             */
+
+            /* 场景  
+                1.不影响 其他元素进行元素的微调
+                2.绝对定位
+            */
+
+            position: relative;
+
+            /* 祖先元素 定位元素相对于上一个定位（不是static 都是可以作为父级的 */
+
+
+
+            /* absolute 绝对定位*/
+            /* 定位参考元素 祖先的定位元素 若没有 则相对于视口*/
+            position: absolute;
+            /* absolute fixed 可以随意的设置宽高【行内元素 也可以】 */
+            /* 不严格区分 块级元素 行内块元素 */
+
+            /* 拖标元素 不会向父级 汇报高度 */
+
+
+
+            /* 粘性定位 
+                相对于 最近的滚动视口
+            */
+            position: sticky;
+        }
+
+        .flow {
+            height: 2000px;
+            width: 100%;
+
+            .sticky {
+                position: sticky;
+                width: 20px;
+                height: 20px;
+                margin-top: 1000px;
+                background-color: aqua;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flow">
+        <div class="sticky">
+            12122
+        </div>
+    </div>
+
+</body>
+
+</html>

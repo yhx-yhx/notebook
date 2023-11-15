@@ -22,8 +22,8 @@
   --vp-c-divider-dark-1: rgba(84, 84, 84, .65);
   --vp-c-divider-dark-2: rgba(84, 84, 84, .48);
   --vp-c-text-light-1: var(--vp-c-indigo-deep);
-  --vp-c-text-light-2: rgb(180, 110, 245);
-  /* --vp-c-text-light-2: rgba(60, 60, 60, .7); */
+  /* --vp-c-text-light-2: rgb(180, 110, 245); */
+  --vp-c-text-light-2: rgba(60, 60, 60, .7);
   --vp-c-text-light-3: rgba(60, 60, 60, .33);
   --vp-c-text-light-4: rgba(60, 60, 60, .18);
   --vp-c-text-dark-1: rgba(255, 255, 255, .87);
@@ -32,7 +32,7 @@
   --vp-c-text-dark-4: rgba(235, 235, 235, .18);
   --vp-c-indigo: #213547;
   --vp-c-indigo-soft: #476582;
-  --vp-c-indigo-deep: rgb(134, 12, 248);
+  --vp-c-indigo-deep: #14212e;
   --vp-c-indigo-light: #aac8e4;
   --vp-c-indigo-lighter: #c9def1;
   --vp-c-indigo-dark: #1d2f3f;
