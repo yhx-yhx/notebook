@@ -25,3 +25,26 @@ const { name: n, age } = obj
 const { like = 'zhang' } = obj
 console.log(like);
 console.log(n);
+
+/** 
+ * 函数的剩余参数
+ * 为了替代 argument 的
+ * 剩余参数 必须放在最后一个
+ * 当参数唯一时 可以放在前面
+ */
+
+const sum = (...numbers) => {
+    console.dir(numbers);
+    return numbers.reduce((pre, cur) => pre + cur)
+}
+
+console.log(sum(1, 2, 3, 4, 5));
+
+const info = {
+    name: 'zhang',
+    age: 23
+}
+const obj12 = { ...info, name: "instance" }
+console.log(obj12.age);
+info.age = 33
+console.log(obj12.age);

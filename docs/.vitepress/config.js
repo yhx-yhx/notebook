@@ -294,6 +294,10 @@ export default defineConfig({
               text: "面向对象的原型链和继承实现",
               link: "/pages/Base/coderwhy/js/09_面向对象的原型链和继承实现",
             },
+            {
+              text: "ES6类的使用",
+              link: "/pages/Base/coderwhy/js/11_ES6类的使用",
+            },
           ],
         },
         { text: "基本内容", link: "/pages/Base/javascript/index" },
