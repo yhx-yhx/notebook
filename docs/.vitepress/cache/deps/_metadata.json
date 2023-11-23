@@ -1,25 +1,86 @@
 {
   "hash": "3da9de0b",
-  "browserHash": "28efb1b2",
+  "browserHash": "b1b9fd7b",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "8ed1894d",
+      "fileHash": "9d244a95",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "c7b88d65",
+      "fileHash": "1efc57bc",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "14e9eed2",
+      "fileHash": "05ebaf0f",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "d76248af",
+      "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../../../node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "a4a44f96",
+      "needsInterop": false
+    },
+    "gsap": {
+      "src": "../../../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "897111a0",
+      "needsInterop": false
+    },
+    "xgplayer": {
+      "src": "../../../../node_modules/xgplayer/es/index.js",
+      "file": "xgplayer.js",
+      "fileHash": "1793775f",
+      "needsInterop": false
+    },
+    "xgplayer-hls": {
+      "src": "../../../../node_modules/xgplayer-hls/es/index.js",
+      "file": "xgplayer-hls.js",
+      "fileHash": "fdb3e457",
+      "needsInterop": false
+    },
+    "xgplayer-flv": {
+      "src": "../../../../node_modules/xgplayer-flv/es/index.js",
+      "file": "xgplayer-flv.js",
+      "fileHash": "95fcbb93",
+      "needsInterop": false
+    },
+    "xgplayer-mp4": {
+      "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
+      "file": "xgplayer-mp4.js",
+      "fileHash": "b03a7179",
+      "needsInterop": false
+    },
+    "xgplayer-music": {
+      "src": "../../../../node_modules/xgplayer-music/es/index.js",
+      "file": "xgplayer-music.js",
+      "fileHash": "f68c1503",
       "needsInterop": false
     }
   },
-  "chunks": {}
+  "chunks": {
+    "chunk-V5EGXLXH": {
+      "file": "chunk-V5EGXLXH.js"
+    },
+    "chunk-ARSWWNTN": {
+      "file": "chunk-ARSWWNTN.js"
+    },
+    "chunk-IYO332YY": {
+      "file": "chunk-IYO332YY.js"
+    },
+    "chunk-5WWUZCGV": {
+      "file": "chunk-5WWUZCGV.js"
+    }
+  }
 }

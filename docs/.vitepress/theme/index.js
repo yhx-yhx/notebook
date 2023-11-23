@@ -4,6 +4,7 @@ import Theme from 'vitepress/theme'
 import './style.css'
 import './base.css'
 import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 import TimeFipping from "./components/TimeFipping.vue"
 
 export default {

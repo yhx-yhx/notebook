@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Example</title>
+    <style>
+        /* Tabs container styles */
+        #tabsContainer {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            background-color: #f1eded;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 1em 1em 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Tabs switch button styles */
+        .tabs-header {
+            display: flex;
+        }
+
+        .tabButton {
+            padding: 10px 20px;
+            background-color: #f1eded;
+            border-radius: 1em 1em 0 0;
+            cursor: pointer;
+            position: relative;
+
+            /* 设置变形原点 */
+            transform-origin: center bottom;
+            flex: 1;
+        }
+
+        .tabButton.active {
+            background-color: rgb(206, 202, 193);
+            /* border-bottom: 2px solid blueviolet; */
+            border-radius: 0;
+            /* background: url(./t.png) no-repeat; */
+            background-size: cover;
+
+        }
+
+        /* --header-before-width:20px; */
+        /* 
+        .tabButton.active::before,
+        .tabButton.active::after {
+            position: absolute;
+            content: '';
+            width: 43px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .tabButton.active::before {
+            left: -43px;
+            background: radial-gradient(circle at 0 0,
+                    transparent 40px,
+                    rgb(206, 202, 193) 10px);
+        }
+
+        .tabButton.active::after {
+            left: 166px;
+            right: -20px;
+            background: radial-gradient(circle at 43px 0,
+                    transparent 40px,
+                    rgb(206, 202, 193) 10px);
+        } */
+
+        /* Tabs content styles */
+        .tabContent {
+            flex: 1;
+            display: none;
+        }
+
+        .tabContent.active {
+            display: block;
+            background-color: rgb(39, 157, 225);
+            border-radius: 1em 1em 0 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tabsContainer" onclick="event.stopPropagation();">
+        <div class="tabs-header">
+            <div class="tabButton active" id="tab1Button" onclick="switchTab(1);">Tab 1</div>
+            <div class="tabButton" id="tab2Button" onclick="switchTab(2);">Tab 2</div>
+            <div class="tabButton" id="tab3Button" onclick="switchTab(3);">Tab 2</div>
+        </div>
+        <div class="tabContent active" id="tab1Content">
+            <div>Tab 1</div>
+            <div>这是第一个Tab的内容。</div>
+        </div>
+        <div class="tabContent" id="tab2Content">
+            <div>Tab 2</div>
+            <div>这是第二个Tab的内容。</div>
+        </div>
+        <div class="tabContent" id="tab3Content">
+            <div>Tab 3</div>
+            <div>这是第三个Tab的内容。</div>
+        </div>
+    </div>
+
+    <div class="t"></div>
+
+    <script>
+        const tab1Button = document.getElementById('tab1Button')
+        const tab2Button = document.getElementById('tab2Button')
+        const tab3Button = document.getElementById('tab3Button')
+        const tab1Content = document.getElementById('tab1Content')
+        const tab2Content = document.getElementById('tab2Content')
+        const tab3Content = document.getElementById('tab3Content')
+
+        // Switch tab
+        function switchTab(tab) {
+            const tb = [tab1Button, tab2Button, tab3Button]
+            const tc = [tab1Content, tab2Content, tab3Content]
+            tb.forEach((item, i, arr) => {
+                if (i + 1 === tab) {
+                    item.classList.add('active')
+                    tc[i].classList.add('active')
+                } else {
+                    item.classList.remove('active')
+                    tc[i].classList.remove('active')
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

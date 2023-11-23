@@ -81,6 +81,7 @@ export default defineConfig({
                 link: "/pages/Base/vue全家桶/vue-router/index",
               },
               { text: "pinia", link: "/pages/Base/vue全家桶/pinia/index" },
+              { text: "vueuse", link: "/pages/Base/vue全家桶/vueuse/index" },
             ],
           },
           { text: "vite", link: "/pages/Base/vite" },
