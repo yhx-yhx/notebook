@@ -1,7 +1,7 @@
 <template>
     <div>
         <video ref="videoRef" controls width="300">
-            <source src="./video.mp4" type="video/mp4">
+            <!-- <source src="./video.mp4" type="video/mp4"> -->
         </video>
         <button @click="toggleFullscreen">Toggle Fullscreen Video</button>
     </div>
