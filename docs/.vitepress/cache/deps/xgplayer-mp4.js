@@ -7,18 +7,18 @@ import {
   MSE,
   NetLoader,
   concatUint8Array
-} from "./chunk-V5EGXLXH.js";
+} from "./chunk-2BJDUXWD.js";
 import {
   BasePlugin,
   Errors,
   events_exports,
   require_eventemitter3,
   sniffer
-} from "./chunk-ARSWWNTN.js";
+} from "./chunk-TPLPVHFF.js";
 import {
   __commonJS,
   __toESM
-} from "./chunk-5WWUZCGV.js";
+} from "./chunk-HM4MQYWN.js";
 
 // node_modules/concat-typed-array/lib/concat.js
 var require_concat = __commonJS({
