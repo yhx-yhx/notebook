@@ -161,7 +161,13 @@ export default defineConfig({
           },
         ],
       },
-      { text: "interview", link: "/pages/Interview/自检100题" },
+      {
+        text: "interview",
+        items: [
+          { text: "自检100题", link: "/pages/Interview/自检100题" },
+          { text: "interview", link: "/pages/Interview/interview" },
+        ],
+      },
       {
         text: "Notes",
         items: [
