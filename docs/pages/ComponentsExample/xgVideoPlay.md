@@ -6,8 +6,11 @@ import xgMusicPlay from "../../pages/Components/xgMusicPlay.vue"
 </script>
 
 <client-only>
-<!-- <xgVideoPlay/> -->
+
+<xgVideoPlay/>
+
 <xgMusicPlay/>
+
 </client-only>
 
 ::: warning 视频格式支持

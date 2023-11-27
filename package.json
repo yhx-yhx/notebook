@@ -40,11 +40,11 @@
     "vue-pdf-embed": "^1.2.1",
     "vue3-count-to": "^1.1.2",
     "vue3-pdfjs": "^0.1.6",
-    "xgplayer": "^3.0.7",
-    "xgplayer-flv": "^3.0.7",
-    "xgplayer-hls": "^3.0.7",
-    "xgplayer-mp4": "^3.0.7",
-    "xgplayer-music": "^3.0.9",
+    "xgplayer": "^3.0.10",
+    "xgplayer-flv": "^3.0.10",
+    "xgplayer-hls": "^3.0.10",
+    "xgplayer-mp4": "^3.0.10",
+    "xgplayer-music": "^3.0.10",
     "xlsx": "^0.18.5",
     "xlsx-js-style": "^1.2.0"
   }

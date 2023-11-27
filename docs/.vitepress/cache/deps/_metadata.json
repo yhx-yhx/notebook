@@ -1,114 +1,117 @@
 {
   "hash": "433f4a61",
-  "browserHash": "ee645ac0",
+  "browserHash": "63558966",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "bc38e55a",
+      "fileHash": "a5db660a",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "3f33bd7a",
+      "fileHash": "cea378c9",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "1334892e",
+      "fileHash": "9b914ed7",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "d187b6db",
+      "fileHash": "53b06718",
       "needsInterop": false
     },
     "echarts": {
       "src": "../../../../node_modules/echarts/index.js",
       "file": "echarts.js",
-      "fileHash": "1107b446",
+      "fileHash": "bff05fab",
       "needsInterop": false
     },
     "docxtemplater": {
       "src": "../../../../node_modules/docxtemplater/js/docxtemplater.js",
       "file": "docxtemplater.js",
-      "fileHash": "9b9cb4a3",
+      "fileHash": "669cc1c0",
       "needsInterop": true
     },
     "pizzip": {
       "src": "../../../../node_modules/pizzip/js/index.js",
       "file": "pizzip.js",
-      "fileHash": "347b2385",
+      "fileHash": "7b728f22",
       "needsInterop": true
     },
     "jszip-utils": {
       "src": "../../../../node_modules/jszip-utils/lib/index.js",
       "file": "jszip-utils.js",
-      "fileHash": "74f0b28f",
+      "fileHash": "57c427c6",
       "needsInterop": true
     },
     "file-saver": {
       "src": "../../../../node_modules/file-saver/dist/FileSaver.min.js",
       "file": "file-saver.js",
-      "fileHash": "c88a2257",
+      "fileHash": "b223c009",
       "needsInterop": true
     },
     "docxtemplater-image-module-free": {
       "src": "../../../../node_modules/docxtemplater-image-module-free/js/index.js",
       "file": "docxtemplater-image-module-free.js",
-      "fileHash": "cb52ee89",
+      "fileHash": "c393e113",
       "needsInterop": true
     },
     "docxtemplater/expressions.js": {
       "src": "../../../../node_modules/docxtemplater/expressions.js",
       "file": "docxtemplater_expressions__js.js",
-      "fileHash": "62b6051f",
+      "fileHash": "de86b160",
       "needsInterop": true
     },
     "xgplayer": {
       "src": "../../../../node_modules/xgplayer/es/index.js",
       "file": "xgplayer.js",
-      "fileHash": "d16d0765",
+      "fileHash": "bfb4fa53",
       "needsInterop": false
     },
     "xgplayer-hls": {
       "src": "../../../../node_modules/xgplayer-hls/es/index.js",
       "file": "xgplayer-hls.js",
-      "fileHash": "fd0c0ce5",
+      "fileHash": "1edc6156",
       "needsInterop": false
     },
     "xgplayer-flv": {
       "src": "../../../../node_modules/xgplayer-flv/es/index.js",
       "file": "xgplayer-flv.js",
-      "fileHash": "2d6f94b2",
+      "fileHash": "6116c6bf",
       "needsInterop": false
     },
     "xgplayer-mp4": {
       "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
       "file": "xgplayer-mp4.js",
-      "fileHash": "69332446",
+      "fileHash": "8612a9fb",
       "needsInterop": false
     },
     "xgplayer-music": {
       "src": "../../../../node_modules/xgplayer-music/es/index.js",
       "file": "xgplayer-music.js",
-      "fileHash": "d1694616",
+      "fileHash": "79b250b5",
       "needsInterop": false
     },
     "xlsx-js-style": {
       "src": "../../../../node_modules/xlsx-js-style/dist/xlsx.min.js",
       "file": "xlsx-js-style.js",
-      "fileHash": "a11ed134",
+      "fileHash": "919a7eaa",
       "needsInterop": true
+    },
+    "@vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "f07efd03",
+      "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-MF5UU7OQ": {
-      "file": "chunk-MF5UU7OQ.js"
-    },
     "chunk-2BJDUXWD": {
       "file": "chunk-2BJDUXWD.js"
     },
@@ -117,6 +120,9 @@
     },
     "chunk-IYO332YY": {
       "file": "chunk-IYO332YY.js"
+    },
+    "chunk-MF5UU7OQ": {
+      "file": "chunk-MF5UU7OQ.js"
     },
     "chunk-HM4MQYWN": {
       "file": "chunk-HM4MQYWN.js"
