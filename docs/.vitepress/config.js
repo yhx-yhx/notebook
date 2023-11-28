@@ -174,8 +174,9 @@ export default defineConfig({
         text: "Notes",
         items: [
           { text: "遇到的bug", link: "/pages/Notes/bug/index" },
+          { text: "github问题", link: "/pages/Notes/github/index" },
           {
-            text: "default",
+            text: "AL交互结果",
             link: "/pages/Notes/bug/2023/Others/Nodes/default",
           },
 
