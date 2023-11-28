@@ -76,6 +76,7 @@ export default defineConfig({
             text: "Vue",
             items: [
               { text: "vue", link: "/pages/Base/vue全家桶/vue/" },
+              { text: "coderwhyVues", link: "/pages/Base/coderwhy/vue/" },
               {
                 text: "vue-router",
                 link: "/pages/Base/vue全家桶/vue-router/index",
@@ -166,35 +167,27 @@ export default defineConfig({
         items: [
           { text: "自检100题", link: "/pages/Interview/自检100题" },
           { text: "interview", link: "/pages/Interview/interview" },
+          { text: "title", link: "/pages/Interview/title/index" },
         ],
       },
       {
         text: "Notes",
         items: [
-          { text: "min_title", link: "/pages/Notes/title/index" },
-          { text: "bug", link: "/pages/Notes/bug/index" },
-          {
-            text: "learn_vue3_doc",
-            link: "/pages/Notes/bug/2023/learn_vue3_doc",
-          },
-          {
-            text: "learn_vue3_coderwhy",
-            link: "/pages/Notes/bug/2023/learn_vue3_coderwhy",
-          },
+          { text: "遇到的bug", link: "/pages/Notes/bug/index" },
           {
             text: "default",
             link: "/pages/Notes/bug/2023/Others/Nodes/default",
           },
 
-          {
-            text: "经验帖",
-            items: [
-              {
-                text: "经验花裤衩Element-admin",
-                link: "/pages/Notes/经验帖/花裤衩Element-admin",
-              },
-            ],
-          },
+          // {
+          //   text: "经验帖",
+          //   items: [
+          //     {
+          //       text: "经验花裤衩Element-admin",
+          //       link: "/pages/Notes/经验帖/花裤衩Element-admin",
+          //     },
+          //   ],
+          // },
         ],
       },
       {
@@ -229,6 +222,7 @@ export default defineConfig({
           { text: "Docs", link: "/pages/Other/Link/Docs/index" },
           { text: "Live", link: "/pages/Other/Link/Live/index" },
           { text: "Tools", link: "/pages/Other/Link/Tools/index" },
+          { text: "share", link: "/pages/Other/Link/share/index" },
         ],
       },
     ],

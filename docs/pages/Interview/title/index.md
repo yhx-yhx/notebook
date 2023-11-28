@@ -1,4 +1,4 @@
-## 算法题(也算不上什么算法题哈)
+## 面试过程中遇到的小题目
 
 > 我印象里的第一道面试题 让我手写的题目
 
@@ -275,7 +275,23 @@ Array.form(pseudoArray)
 ### 16.new操作符
 
 
-### 17.
+### 17.字符串abcde如何反转
 
+1 . 首先字符串转成数组 
+- Array.from()
+- [...new Set()]
+- split
+
+:::code-group
+```javascript [reduce实现]
+let str = 'helloworld'
+let tt = [...str].reduce((a,b)=>b+a,'')
+```
+```javascript [unshift实现]
+let str = 'helloworld'
+let tt = [...str].reduce((a,b)=>b+a,'')
+```
+:::
+### 17.字符串abcde如何反转
 
 https://blog.csdn.net/Ed7zgeE9X/article/details/119336745
