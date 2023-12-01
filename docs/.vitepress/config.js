@@ -108,6 +108,10 @@ export default defineConfig({
             link: "/pages/ComponentsExample/Vue3Echarts",
           },
           {
+            text: "pdfjs",
+            link: "/pages/Components/pdfjs/index",
+          },
+          {
             text: "Vue3Perview",
             link: "/pages/ComponentsExample/Vue3Perview",
           },
@@ -508,10 +512,10 @@ export default defineConfig({
         },
       },
     },
-    carbonAds: {
-      // code: 'yhx',
-      // placement: 'yhx'
-    },
+    // carbonAds: {
+    // code: 'yhx',
+    // placement: 'yhx'
+    // },
     socialLinks: [
       { icon: "github", link: "https://gitee.com/yhx825/superdemo" },
     ],
