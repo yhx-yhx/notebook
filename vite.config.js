@@ -5,7 +5,7 @@ console.log(createVitePlugins());
 // https://vitejs.dev/config/
 export default defineConfig({
     define: {
-        'process.env': {}
+        'process.env': process.env
     },
     base: "/notebook",
     plugins: createVitePlugins(),
