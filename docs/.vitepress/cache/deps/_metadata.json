@@ -1,137 +1,56 @@
 {
-  "hash": "433f4a61",
-  "browserHash": "b5fcc4d0",
+  "hash": "67d9ad53",
+  "browserHash": "85254e96",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "b99f339b",
+      "fileHash": "00f93eda",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "ec95ea6e",
+      "fileHash": "f8ab4f6f",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "e7afd147",
+      "fileHash": "a5d25dd4",
       "needsInterop": false
+    },
+    "canvas": {
+      "src": "../../../../node_modules/canvas/browser.js",
+      "file": "canvas.js",
+      "fileHash": "7a2044bc",
+      "needsInterop": true
+    },
+    "path2d-polyfill": {
+      "src": "../../../../node_modules/path2d-polyfill/dist/path2d-polyfill.dev.js",
+      "file": "path2d-polyfill.js",
+      "fileHash": "a0d26af2",
+      "needsInterop": true
     },
     "element-plus": {
       "src": "../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "003894e4",
+      "fileHash": "9b8c1d4d",
       "needsInterop": false
     },
     "echarts": {
       "src": "../../../../node_modules/echarts/index.js",
       "file": "echarts.js",
-      "fileHash": "2598611d",
-      "needsInterop": false
-    },
-    "docxtemplater": {
-      "src": "../../../../node_modules/docxtemplater/js/docxtemplater.js",
-      "file": "docxtemplater.js",
-      "fileHash": "e13e2c3d",
-      "needsInterop": true
-    },
-    "pizzip": {
-      "src": "../../../../node_modules/pizzip/js/index.js",
-      "file": "pizzip.js",
-      "fileHash": "14862a99",
-      "needsInterop": true
-    },
-    "jszip-utils": {
-      "src": "../../../../node_modules/jszip-utils/lib/index.js",
-      "file": "jszip-utils.js",
-      "fileHash": "0f3c1080",
-      "needsInterop": true
-    },
-    "file-saver": {
-      "src": "../../../../node_modules/file-saver/dist/FileSaver.min.js",
-      "file": "file-saver.js",
-      "fileHash": "b888b519",
-      "needsInterop": true
-    },
-    "docxtemplater-image-module-free": {
-      "src": "../../../../node_modules/docxtemplater-image-module-free/js/index.js",
-      "file": "docxtemplater-image-module-free.js",
-      "fileHash": "5662c5b8",
-      "needsInterop": true
-    },
-    "docxtemplater/expressions.js": {
-      "src": "../../../../node_modules/docxtemplater/expressions.js",
-      "file": "docxtemplater_expressions__js.js",
-      "fileHash": "2c1f5c91",
-      "needsInterop": true
-    },
-    "xgplayer": {
-      "src": "../../../../node_modules/xgplayer/es/index.js",
-      "file": "xgplayer.js",
-      "fileHash": "d18c5546",
-      "needsInterop": false
-    },
-    "xgplayer-hls": {
-      "src": "../../../../node_modules/xgplayer-hls/es/index.js",
-      "file": "xgplayer-hls.js",
-      "fileHash": "ed09f29c",
-      "needsInterop": false
-    },
-    "xgplayer-flv": {
-      "src": "../../../../node_modules/xgplayer-flv/es/index.js",
-      "file": "xgplayer-flv.js",
-      "fileHash": "9790cf08",
-      "needsInterop": false
-    },
-    "xgplayer-mp4": {
-      "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
-      "file": "xgplayer-mp4.js",
-      "fileHash": "d953d77f",
-      "needsInterop": false
-    },
-    "xgplayer-music": {
-      "src": "../../../../node_modules/xgplayer-music/es/index.js",
-      "file": "xgplayer-music.js",
-      "fileHash": "10976533",
-      "needsInterop": false
-    },
-    "xlsx-js-style": {
-      "src": "../../../../node_modules/xlsx-js-style/dist/xlsx.min.js",
-      "file": "xlsx-js-style.js",
-      "fileHash": "f00687d3",
-      "needsInterop": true
-    },
-    "@vueuse/core": {
-      "src": "../../../../node_modules/@vueuse/core/index.mjs",
-      "file": "@vueuse_core.js",
-      "fileHash": "ab38df8c",
-      "needsInterop": false
-    },
-    "splitpanes": {
-      "src": "../../../../node_modules/splitpanes/dist/splitpanes.es.js",
-      "file": "splitpanes.js",
-      "fileHash": "f85286c6",
+      "fileHash": "2dba8d81",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-2BJDUXWD": {
-      "file": "chunk-2BJDUXWD.js"
-    },
-    "chunk-TPLPVHFF": {
-      "file": "chunk-TPLPVHFF.js"
-    },
     "chunk-IYO332YY": {
       "file": "chunk-IYO332YY.js"
     },
-    "chunk-MF5UU7OQ": {
-      "file": "chunk-MF5UU7OQ.js"
-    },
-    "chunk-HM4MQYWN": {
-      "file": "chunk-HM4MQYWN.js"
+    "chunk-5WWUZCGV": {
+      "file": "chunk-5WWUZCGV.js"
     }
   }
 }

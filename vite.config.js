@@ -7,6 +7,7 @@ export default defineConfig({
     define: {
         'process.env': {}
     },
+    base: "/notebook",
     plugins: createVitePlugins(),
     build: {
         assetsInlineLimit: 0,
