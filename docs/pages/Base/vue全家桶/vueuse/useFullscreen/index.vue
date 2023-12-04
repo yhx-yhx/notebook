@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="card-page">
         <video ref="videoRef" controls width="300">
             <!-- <source src="./video.mp4" type="video/mp4"> -->
         </video>

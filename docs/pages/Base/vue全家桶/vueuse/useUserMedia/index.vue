@@ -23,7 +23,7 @@ watchEffect(() => {
 </script>
 
 <template>
-    <div class="flex flex-col gap-4 text-center">
+    <div class="flex flex-col gap-4 text-center card-page">
         <div>
             <button @click="enabled = !enabled">
                 {{ enabled ? 'Stop' : 'Start' }}

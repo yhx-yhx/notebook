@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { useEyeDropper } from '@vueuse/core'
-import { ElButton, ElCard } from "element-plus"
+import { ElButton } from "element-plus"
 const { isSupported, open, sRGBHex } = useEyeDropper()
 </script>
 
 <template>
-    <el-card>
+    <div class="card-page">
         <template v-if="isSupported">
             <div>是否支持: {{ isSupported ? 'YES' : "NO" }}</div>
             <div>sRGBHex: <span :style="{ color: sRGBHex }">{{ sRGBHex }}</span></div>
@@ -16,5 +16,5 @@ const { isSupported, open, sRGBHex } = useEyeDropper()
         <div v-else>
             <span>Not Supported by Your Browser</span>
         </div>
-    </el-card>
+    </div>
 </template>

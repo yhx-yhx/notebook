@@ -13,6 +13,7 @@
     "@element-plus/icons-vue": "^2.1.0",
     "@jbtje/vite-vue3pdf": "^0.2.0",
     "@jbtje/vue3pdf": "^2.1.0",
+    "@vueuse/core": "^10.6.1",
     "angular-expressions": "^1.1.9",
     "axios": "^1.4.0",
     "canvas": "^2.11.2",

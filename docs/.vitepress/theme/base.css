@@ -62,3 +62,23 @@
         background-attachment: fixed;
     }
 } */
+
+.card-page {
+    border: 1px solid var(--vp-badge-info-border);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card-page:hover {
+    box-shadow: 0 0 15px var(--vp-badge-info-border);
+}
+
+.dark .card-page {
+    border: 1px solid var(--vp-badge-info-border);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.dark .card-page:hover {
+    box-shadow: 0 0 15px var(--vp-badge-info-border);
+}

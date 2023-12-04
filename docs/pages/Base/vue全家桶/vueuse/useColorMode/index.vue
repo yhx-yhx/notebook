@@ -24,15 +24,17 @@ function ttt() {
 </script>
 
 <template>
-    <el-button @click="next()">
-        <i v-if="state === 'dark'" i-carbon-moon inline-block align-middle class="align-middle" />
-        <i v-if="state === 'light'" i-carbon-sun inline-block align-middle class="align-middle" />
-        <i v-if="state === 'cafe'" i-carbon-cafe inline-block align-middle class="align-middle" />
-        <i v-if="state === 'contrast'" i-carbon-contrast inline-block align-middle class="align-middle" />
-        <i v-if="state === 'auto'" i-carbon-laptop inline-block align-middle class="align-middle" />
+    <div class="card-page">
+        <el-button @click="next()">
+            <i v-if="state === 'dark'" i-carbon-moon inline-block align-middle class="align-middle" />
+            <i v-if="state === 'light'" i-carbon-sun inline-block align-middle class="align-middle" />
+            <i v-if="state === 'cafe'" i-carbon-cafe inline-block align-middle class="align-middle" />
+            <i v-if="state === 'contrast'" i-carbon-contrast inline-block align-middle class="align-middle" />
+            <i v-if="state === 'auto'" i-carbon-laptop inline-block align-middle class="align-middle" />
 
-        <span class="ml-2 capitalize">{{ state }}</span>
-    </el-button>
+            <span class="ml-2 capitalize">{{ state }}</span>
+        </el-button>
+    </div>
 </template>
 
 <style>

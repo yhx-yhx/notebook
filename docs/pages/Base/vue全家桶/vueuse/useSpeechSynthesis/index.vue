@@ -1,8 +1,8 @@
-<script setup lang="ts">
+<script setup>
 import { onMounted, ref } from 'vue'
 import { useSpeechSynthesis } from '@vueuse/core'
 
-const voice = ref<SpeechSynthesisVoice>(undefined as unknown as SpeechSynthesisVoice)
+const voice = ref()
 const text = ref('Hello, everyone! Good morning!')
 const pitch = ref(1)
 const rate = ref(1)
@@ -13,9 +13,9 @@ const speech = useSpeechSynthesis(text, {
     rate,
 })
 
-let synth: SpeechSynthesis
+let synth
 
-const voices = ref<SpeechSynthesisVoice[]>([])
+const voices = ref([])
 
 onMounted(() => {
     if (speech.isSupported.value) {
@@ -48,7 +48,7 @@ function stop() {
 </script>
 
 <template>
-    <div>
+    <div class="card-page">
         <div v-if="!speech.isSupported">
             Your browser does not support SpeechSynthesis API,
             <a href="https://caniuse.com/mdn-api_speechsynthesis" target="_blank">more details</a>
@@ -58,8 +58,9 @@ function stop() {
             <input v-model="text" class="!inline-block" type="text">
 
             <br>
+
             <label class="font-bold mr-2">Language</label>
-            <div bg="$vp-c-bg" border="$vp-c-divider 1" inline-flex items-center relative rounded>
+            <div class="select" bg="$vp-c-bg" border="$vp-c-divider 1" inline-flex items-center relative rounded>
                 <i i-carbon-language absolute left-2 opacity-80 pointer-events-none />
                 <select v-model="voice" px-8 border-0 bg-transparent h-9 rounded appearance-none>
                     <option bg="$vp-c-bg" disabled>
@@ -102,3 +103,42 @@ function stop() {
         </div>
     </div>
 </template>
+<style lang="scss" scoped>
+button {
+    background-color: #5352ed;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:nth-child(n+1) {
+        margin-left: 10px;
+    }
+}
+
+
+input,
+select {
+    margin-left: 10px;
+    border: 1px solid #5352ed;
+    border-radius: 5px;
+    padding: 6px 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.select {
+    display: inline-block;
+}
+
+
+.dark {
+    button {
+        background-color: #3742fa;
+    }
+
+    input,
+    select {
+        border: 1px solid #3742fa;
+    }
+}
+</style>

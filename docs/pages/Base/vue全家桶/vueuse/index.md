@@ -38,11 +38,14 @@
 
 <br/>
 
+<UseUserMedia/>
+
 ### 使用语音合成
 
 <br/>
 
-<UseUserMedia/>
+<UseSpeechSynthesis/>
+
 
 ### 全屏
 

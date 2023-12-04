@@ -9,7 +9,7 @@ const { isSupported, memory } = useMemory()
 </script>
 
 <template>
-    <div v-if="isSupported && memory" class="inline-grid grid-cols-2 gap-x-4 gap-y-2">
+    <div v-if="isSupported && memory" class="inline-grid grid-cols-2 gap-x-4 gap-y-2 card-page">
         <template v-if="memory">
             <div>
                 <span opacity="50">
