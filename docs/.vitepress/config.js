@@ -69,7 +69,16 @@ export default defineConfig({
         text: "基础",
         items: [
           { text: "JavaScript", link: "/pages/Base/javascript/index" },
-          { text: "CSS", link: "/pages/Base/Css/index" },
+          {
+            text: "CSS",
+            items: [
+              { text: "基础", link: "/pages/Base/Css/index" },
+              {
+                text: "css布局demo",
+                link: "/pages/Base/Css/hd/响应式布局",
+              },
+            ],
+          },
           { text: "Html", link: "/pages/Base/html" },
           { text: "axios", link: "/pages/Base/axios/index" },
           {
