@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+}
+
+.header .logo {
+    display: flex;
+}
+
+.header .collapse {
+    display: flex;
+}
+
+.header .collapse .links {
+    display: flex;
+}
