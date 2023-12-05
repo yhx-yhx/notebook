@@ -14,7 +14,7 @@ export default defineConfig({
   // },
   lang: "zh-CN",
   title: "前端Yhx",
-  description: "A Random And Illogical Site",
+  description: "A Random And Illogical Site YHX yhx Yhx vue vue全家桶 css js JavaScript css3 node git vite vitepress",
   titleTemplate: "Jottings", // 网站标题后缀- “VitePress | Blog”
   base: "/notebook/", //base url
   head: [
@@ -74,8 +74,8 @@ export default defineConfig({
             items: [
               { text: "基础", link: "/pages/Base/Css/index" },
               {
-                text: "css布局demo",
-                link: "/pages/Base/Css/hd/响应式布局",
+                text: "CSS Demo",
+                link: "/pages/Base/Css/hd/index",
               },
             ],
           },
@@ -242,12 +242,18 @@ export default defineConfig({
     ],
 
     sidebar: {
+      "/pages/Base/Css/hd": [
+        { text: "总览", link: "/pages/Base/Css/hd/" },
+        { text: "11-栅格", link: "/pages/Base/Css/hd/11-栅格" },
+        { text: "14-帧动画", link: "/pages/Base/Css/hd/14-帧动画" },
+        { text: "15-响应式布局", link: "/pages/Base/Css/hd/15-响应式布局" },
+      ],
       "/pages/Base/axios": [
-        { text: "基础", link: "/pages/Base/axios/index" },
+        { text: "基础", link: "/pages/Base/axios/" },
         { text: "状态码", link: "/pages/Base/axios/状态码" },
       ],
       "/pages/Base/vite": [
-        { text: "基础", link: "/pages/Base/vite/index" },
+        { text: "基础", link: "/pages/Base/vite/" },
         { text: "环境变量", link: "/pages/Base/vite/环境变量" },
       ],
       // /pages/Base/ 基础
@@ -327,7 +333,7 @@ export default defineConfig({
       "/pages/Base/NodeJs": [
         {
           text: "基础",
-          link: "/pages/Base/NodeJs/index",
+          link: "/pages/Base/NodeJs/",
         },
         {
           text: "事件循环和异步IO",
@@ -349,7 +355,7 @@ export default defineConfig({
           text: "内置解析模块 path",
           link: "/pages/Base/NodeJs/内置解析模块/path/index",
         },
-        { text: "Stream流", link: "/pages/Base/NodeJs/Stream流/index.md" },
+        { text: "Stream流", link: "/pages/Base/NodeJs/Stream流/index" },
         {
           text: "创建npm脚手架",
           link: "/pages/Base/NodeJs/createNpm/index",
