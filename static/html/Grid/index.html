@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid-item1 {
+            display: grid;
+            /* grid-template-rows: repeat(2, 1fr); */
+            /* grid-template-rows: repeat(auto-fill, 100px);
+            grid-template-columns: repeat(auto-fill, 100px); */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            /* grid-gap: 10px; */
+            width: 400px;
+            height: 200px;
+            border: 3px solid #989797;
+            row-gap: 10px;
+            column-gap: 10px;
+            /* 简写形式 */
+            /* gap: 10px; */
+            grid-gap: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        .grid-item1>div {
+            background-color: #5352ed;
+            box-sizing: border-box;
+            /* background-clip: content-box; */
+            /* padding: 10px; */
+            border: 2px solid #ccc;
+        }
+
+        /* 划小窗格 */
+        .grid-item1>div:nth-child(1) {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        /* 用边线命名 放置元素 */
+        .grid-item2 {
+            display: grid;
+            /* grid-template-rows: repeat(2, 1fr); */
+            /* grid-template-rows: repeat(auto-fill, 100px);
+            grid-template-columns: repeat(auto-fill, 100px); */
+            /* grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr); */
+            grid-template-rows: [r1-s] 100px [r1-e r2-s] 100px [r2-e r3-s] 100px [r3-e];
+            grid-template-columns: [c1-s] 100px [c1-e c2-s] 100px [c2-e c3-s] 100px [c3-e];
+            /* grid-gap: 10px; */
+            width: 300px;
+            height: 300px;
+            border: 3px solid #989797;
+            /* row-gap: 10px; */
+            /* column-gap: 10px; */
+            /* 简写形式 */
+            /* gap: 10px; */
+            /* grid-gap: 10px; */
+            /* padding: 10px; */
+            margin-bottom: 10px;
+        }
+
+
+        .grid-item2>div {
+            /* background-color: #5352ed; */
+            box-sizing: border-box;
+            /* background-clip: content-box; */
+            /* padding: 10px; */
+            border: 2px solid #ccc;
+        }
+
+        /* 划小窗格 */
+        .grid-item2>div:nth-child(1) {
+            grid-row-start: r2-s;
+            grid-row-end: r2-e;
+            grid-column-start: c2-s;
+            grid-column-end: c2-e;
+            background-color: #5352ed;
+        }
+
+        /* repate 栅格窗格划分 */
+
+        .grid-item3 {
+            display: grid;
+            /* grid-template-rows: repeat(2, 1fr); */
+            /* grid-template-rows: repeat(auto-fill, 100px);
+            grid-template-columns: repeat(auto-fill, 100px); */
+            /* grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr); */
+            grid-template-rows: repeat(3, [r-s] 1fr [r-e]);
+            grid-template-columns: repeat(3, [c-s] 1fr [c-e]);
+            /* grid-gap: 10px; */
+            width: 300px;
+            height: 300px;
+            border: 3px solid #989797;
+            /* row-gap: 10px; */
+            /* column-gap: 10px; */
+            /* 简写形式 */
+            /* gap: 10px; */
+            /* grid-gap: 10px; */
+            /* padding: 10px; */
+            margin-bottom: 10px;
+        }
+
+
+        .grid-item3>div {
+            /* background-color: #5352ed; */
+            box-sizing: border-box;
+            /* background-clip: content-box; */
+            /* padding: 10px; */
+            border: 2px solid #ccc;
+        }
+
+        /* 划小窗格 */
+        .grid-item3>div:nth-child(1) {
+            grid-row-start: r-s 2;
+            grid-row-end: r-e 2;
+            grid-column-start: c-s 2;
+            grid-column-end: c-e 2;
+            background-color: #5352ed;
+        }
+
+        .grid-item4 {
+            display: grid;
+            /* grid-template-rows: repeat(2, 1fr); */
+            /* grid-template-rows: repeat(auto-fill, 100px);
+            grid-template-columns: repeat(auto-fill, 100px); */
+            /* grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr); */
+            grid-template-rows: repeat(3, [r-s] 1fr [r-e]);
+            grid-template-columns: repeat(3, [c-s] 1fr [c-e]);
+            /* grid-gap: 10px; */
+            width: 300px;
+            height: 300px;
+            border: 3px solid #989797;
+            /* row-gap: 10px; */
+            /* column-gap: 10px; */
+            /* 简写形式 */
+            /* gap: 10px; */
+            /* grid-gap: 10px; */
+            /* padding: 10px; */
+            margin-bottom: 10px;
+        }
+
+
+        .grid-item4>div {
+            /* background-color: #5352ed; */
+            box-sizing: border-box;
+            /* background-clip: content-box; */
+            /* padding: 10px; */
+            border: 2px solid #ccc;
+        }
+
+        /* 划小窗格 */
+        .grid-item4>div:nth-child(1) {
+            grid-row-start: 2;
+            grid-column-start: 2;
+            /* grid-column-end: span 1; */
+            grid-row-end: span 1;
+            /* or */
+            background-color: #5352ed;
+        }
+
+        /* grid 简写 */
+        .grid-item4>div:nth-child(1) {
+            grid-row: 3/4;
+            /* 数值指的是线序 */
+            grid-column: 3/4;
+            /* grid-row: 2/span 1;
+            grid-column: 2/span 1; */
+            background-color: #5352ed;
+        }
+
+        /* grid-area 简写方式*/
+        .grid-item4>div:nth-child(1) {
+            grid-area: 2/2/3/3;
+
+            /* 等价于 */
+            /* grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3; */
+
+            /* 等价于 */
+            /* grid-row: 2/span 1;
+            grid-column: 2/span 1; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="grid-item1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="grid-item2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="grid-item3">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="grid-item4">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template-are与grid-area 结合使用案例</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .grid {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 60px 1fr 46px;
+            grid-template-columns: 80px 1fr;
+            grid-template-areas: "header header" "nav main" "footer footer";
+            /* 默认生成边线名称 header-start header-end .... */
+            /* 可在 grid-area 中 划分窗格 */
+            /* 区域划分 */
+            /* justify-content: start;
+            align-content: start; */
+            /* justify-items: center;
+            align-items: center; */
+            /* justify-self: start;
+            align-self: start; */
+            /* place-content: ;
+            place-items: ;
+            place-self: ; */
+        }
+
+        header,
+        nav,
+        main,
+        footer {
+            background-color: aqua;
+            /* padding: 10px; */
+            background-clip: content-box;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #ff6b81;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #ff4757;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #5352ed;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #3742fa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <header></header>
+        <nav></nav>
+        <main></main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
