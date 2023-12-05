@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css选择器</title>
+    <style>
+        /* 通配符选择器 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 类名选择器 */
+        .p1{
+
+        }
+        /* id选择器 */
+        #id{
+
+        }
+        /* 标签选择器 */
+        div{
+
+        }
+
+        /* 属性选择器 */
+        [title*div]{
+            color: royalblue;
+        }
+
+        /* 后代选择器 */
+        div>span{
+            font-weight: bold;
+        }
+
+        /* 兄弟选择器 */
+
+        /* 后面的所有兄弟元素 */
+        div~span {
+            color: red;
+        }
+
+        /* 下一个兄弟 */
+        div+span {
+            color: green;
+        }
+
+
+        /* 交集元素选择器 */
+        div[title]{
+            color: greenyellow;
+        }
+
+        /* 并集选择器 */
+
+        div,span {
+
+        }
+
+       
+
+        /* 伪类选择器 */
+         .wl_box{
+            border: 1px solid #000;
+            .p_hover {
+                color: red;
+                &:hover{
+                    color: blueviolet;
+                }
+                &:link{
+                    color: blue;
+                }
+                &:active {
+                    color: green;
+                }
+                &:visited{
+                    color: #ccc;
+                }
+                /* 目标伪类 */
+                &:target {
+                    
+                }
+                /* 语言伪类 */
+                &:lang(){
+
+                }
+                /* 元素伪类 */
+                &:enabled{
+
+                }
+                &:disabled{
+
+                }
+                &:checked{
+
+                }
+
+                /* 结构伪类 */
+                &:nth-child(n){}
+                &:after{
+
+                }
+                &::before{
+
+                }
+                &:empty {}
+
+
+                /* 否定为了 */
+                &:not(){
+                    
+                }
+            }
+
+        }
+
+        .wys_box{
+            .p{
+                
+                /* 伪元素 */
+                &::first-letter{
+                    /* 首个字母 */
+                    background-color: red;
+                }
+                &::first-line{
+                    /* 第一行 */
+                    color:blueviolet;
+                }
+            }
+        }
+
+        .before_after {
+            &::before{
+                content: '===';
+                /* 图片路径 svg */
+                /* content: url(); */
+            }
+            &::after{
+                content: "@@@@";
+                position: relative;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background-color: aqua;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <span>前一个兄弟</span>
+    <div title="提示性文本 title 标签">提示性文本 title 标签
+        <span class="s1">span</span>
+        <span class="s2">span2</span>
+    </div>
+    <span title="span">兄弟1</span>
+    <span>兄弟2</span>
+    <div class="wl_box">
+        <h2>伪类选择器</h2>
+        <a class="p_hover">伪类选择器 hover</a>
+    </div>
+
+    <div class="wys_box">
+        <h2>伪元素选择器</h2>
+        <div class="p">Friendship is a valuable treasure that can enrich our lives. True friends are those who stand by us in times of need and
+        offer support and encouragement. They are people we can trust and confide in, sharing both happiness and sorrow. A good
+        friend is someone who listens with understanding and offers honest advice. With friends, life becomes more enjoyable and
+        meaningful. Let us cherish our friendships and nurture them with love and kindness. </div>
+    </div>
+
+    <div class="before_after">
+        <h2>:before 和 :after</h2>
+        <div class="p">Friendship is a valuable treasure that can enrich our lives. True friends are those who stand by us in times of need and
+        offer support and encouragement. They are people we can trust and confide in, sharing both happiness and sorrow. A good
+        friend is someone who listens with understanding and offers honest advice. With friends, life becomes more enjoyable and
+        meaningful. Let us cherish our friendships and nurture them with love and kindness.
+    </div>
+</body>
+</html>

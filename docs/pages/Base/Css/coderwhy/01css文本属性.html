@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css文本属性</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: auto;
+        }
+        .p1 {
+            text-align: center; /* 文本居中 */
+        }
+        .p2 {
+            text-transform: lowercase; /* 字母转小写 ... */
+        }
+        .p3 {
+            text-indent: 2em; /* 文本缩进*/
+        }
+        .p4 {
+            text-decoration: underline; /* 下划线 */
+            text-decoration: line-through;/* 贯穿线条 */
+            text-decoration: overline; /* 上划线 */
+        }
+        .p5 {
+            text-shadow: 2px 2px #ccc;
+        }
+        .p6 {
+            text-wrap: nowrap; /* 关闭自动换行 */
+        }
+        .p7 {
+            text-wrap: nowrap;  /* 关闭自动换行 */
+            overflow: hidden; /* 隐藏溢出 */
+            text-overflow: ellipsis; /* 省略符号 */
+        }
+        .p9{
+            word-wrap:break-word; /* 单词换行 */
+        }
+        .p10 {
+            text-align: justify; /* 两端对齐 */
+            text-align-last: left;/* 默认值 */
+            text-align-last: justify;
+        }
+        .p11 {
+            word-spacing: 2em;/* 单词之间的间距 */
+            letter-spacing:2em; /* 设置字母间的空间 */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="p1">描述 text-align 属性</p>
+        <p class="p2">描述 TEXT</p>
+        <p class="p3">描述 text-indent 文本缩进</p>
+        <p class="p4">描述 text-decoration </p>
+        <p class="p5">描述 text-shadow </p>
+        <p class="p6">描述 nowarp  描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述>描述 </p>
+        <p class="p7">描述 text-overflow: ellipsis; /* 省略符号 */ text-overflow: ellipsis; /* 省略符号 */text-overflow: ellipsis; /* 省略符号 */text-overflow: ellipsis; /* 省略符号 */</p>
+    
+    <p class="p8">描述</p>
+    <p class="p9">描述TheinheritCSSkeywordcausestheelementtotakethecomputedvalueofthepropertyfromitsparentelement.Itcanbe
+    applied to any CSS property, including the CSS shorthand property all. </p>
+    <p class="p10">Friendship is a valuable treasure that can enrich our lives. True friends are those who stand by us in times of need and
+    offer support and encouragement. They are people we can trust and confide in, sharing both happiness and sorrow. </p>
+    </div>
+    <p class="p11">Friendship is a valuable treasure that can enrich our lives. </p>
+   
+</body>
+</html>

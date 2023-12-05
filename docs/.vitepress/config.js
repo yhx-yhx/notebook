@@ -69,31 +69,10 @@ export default defineConfig({
         text: "基础",
         items: [
           { text: "JavaScript", link: "/pages/Base/javascript/index" },
-          {
-            text: "CSS",
-            items: [
-              { text: "基础", link: "/pages/Base/Css/index" },
-              {
-                text: "CSS Demo",
-                link: "/pages/Base/Css/hd/index",
-              },
-            ],
-          },
+          { text: "CSS", link: "/pages/Base/Css/index" },
           { text: "Html", link: "/pages/Base/html" },
           { text: "axios", link: "/pages/Base/axios/index" },
-          {
-            text: "Vue",
-            items: [
-              { text: "vue", link: "/pages/Base/vue全家桶/vue/" },
-              { text: "coderwhyVues", link: "/pages/Base/coderwhy/vue/" },
-              {
-                text: "vue-router",
-                link: "/pages/Base/vue全家桶/vue-router/index",
-              },
-              { text: "pinia", link: "/pages/Base/vue全家桶/pinia/index" },
-              { text: "vueuse", link: "/pages/Base/vue全家桶/vueuse/index" },
-            ],
-          },
+          { text: "Vue", link: "/pages/Base/vue全家桶/vue/" },
           { text: "vite", link: "/pages/Base/vite" },
           { text: "git", link: "/pages/Base/git" },
           { text: "scss", link: "/pages/Base/scss" },
@@ -176,15 +155,15 @@ export default defineConfig({
         ],
       },
       {
-        text: "interview",
+        text: "面试题",
         items: [
           { text: "自检100题", link: "/pages/Interview/自检100题" },
           { text: "interview", link: "/pages/Interview/interview" },
-          { text: "title", link: "/pages/Interview/title/index" },
+          { text: "算法题目", link: "/pages/Interview/title/index" },
         ],
       },
       {
-        text: "Notes",
+        text: "记录",
         items: [
           { text: "遇到的bug", link: "/pages/Notes/bug/index" },
           { text: "github问题", link: "/pages/Notes/github/index" },
@@ -202,6 +181,10 @@ export default defineConfig({
           //     },
           //   ],
           // },
+          {
+            text: "hello-algo",
+            link: '/pages/Notes/algorithm/hello-algo/'
+          }
         ],
       },
       {
@@ -242,20 +225,6 @@ export default defineConfig({
     ],
 
     sidebar: {
-      "/pages/Base/Css/hd": [
-        { text: "总览", link: "/pages/Base/Css/hd/" },
-        { text: "11-栅格", link: "/pages/Base/Css/hd/11-栅格" },
-        { text: "14-帧动画", link: "/pages/Base/Css/hd/14-帧动画" },
-        { text: "15-响应式布局", link: "/pages/Base/Css/hd/15-响应式布局" },
-      ],
-      "/pages/Base/axios": [
-        { text: "基础", link: "/pages/Base/axios/" },
-        { text: "状态码", link: "/pages/Base/axios/状态码" },
-      ],
-      "/pages/Base/vite": [
-        { text: "基础", link: "/pages/Base/vite/" },
-        { text: "环境变量", link: "/pages/Base/vite/环境变量" },
-      ],
       // /pages/Base/ 基础
       "/pages/Base/javascript": [
         {
@@ -328,6 +297,27 @@ export default defineConfig({
         { text: "异步编程", link: "/pages/Base/javascript/异步编程" },
         { text: "正则表达式", link: "/pages/Base/javascript/RegExp" },
         { text: "WebSocket", link: "/pages/Base/javascript/WebSocket" },
+      ],
+      "/pages/Base/Css": [
+        { text: "基础", link: "/pages/Base/Css/index" },
+        { text: "Scss", link: "/pages/Base/Css/Scss/" },
+        {
+          text: "CSS 在线示例",
+          items: [
+            { text: "11-栅格", link: "/pages/Base/Css/hd/11-栅格" },
+            { text: "14-帧动画", link: "/pages/Base/Css/hd/14-帧动画" },
+            { text: "15-响应式布局", link: "/pages/Base/Css/hd/15-响应式布局" },
+          ],
+        },
+        // 内容合并
+      ],
+      "/pages/Base/axios": [
+        { text: "基础", link: "/pages/Base/axios/" },
+        { text: "状态码", link: "/pages/Base/axios/状态码" },
+      ],
+      "/pages/Base/vite": [
+        { text: "基础", link: "/pages/Base/vite/" },
+        { text: "环境变量", link: "/pages/Base/vite/环境变量" },
       ],
 
       "/pages/Base/NodeJs": [
@@ -417,10 +407,29 @@ export default defineConfig({
           ],
         },
       ],
-      "/pages/Base/vue全家桶/vue": [
+      "/pages/Base/vue全家桶": [
         { text: "index", link: "/pages/Base/vue全家桶/vue/" },
+        { text: "coderwhyVues", link: "/pages/Base/coderwhy/vue/" },
+        {
+          text: "vue-router",
+          link: "/pages/Base/vue全家桶/vue-router/index",
+        },
+        { text: "pinia", link: "/pages/Base/vue全家桶/pinia/index" },
+        { text: "vueuse", link: "/pages/Base/vue全家桶/vueuse/index" },
         { text: "安全", link: "/pages/Base/vue全家桶/vue/学习vue文档/安全" },
       ],
+      "/pages/Base/coderwhy/vue": [
+        { text: "index", link: "/pages/Base/vue全家桶/vue/" },
+        { text: "coderwhyVues", link: "/pages/Base/coderwhy/vue/" },
+        {
+          text: "vue-router",
+          link: "/pages/Base/vue全家桶/vue-router/index",
+        },
+        { text: "pinia", link: "/pages/Base/vue全家桶/pinia/index" },
+        { text: "vueuse", link: "/pages/Base/vue全家桶/vueuse/index" },
+        { text: "安全", link: "/pages/Base/vue全家桶/vue/学习vue文档/安全" },
+      ],
+
       "/pages/Other/Link/Docs": [
         { text: "Docs", link: "/pages/Other/Link/Docs/index" },
         {
@@ -472,6 +481,12 @@ export default defineConfig({
         //     { text: "xgplayer", link: "/pages/Other/Plan/xgplayer" },
         //   ],
         // },
+      ],
+      "/pages/Notes/algorithm/hello-algo/": [
+        { text: "首页", link: "/pages/Notes/algorithm/hello-algo/" },
+        { text: "初识算法", link: "/pages/Notes/algorithm/hello-algo/1初识算法" },
+        { text: "复杂度分析", link: "/pages/Notes/algorithm/hello-algo/2复杂度分析" },
+        { text: "数据结构", link: "/pages/Notes/algorithm/hello-algo/3数据结构" }
       ],
       "pages/Config/": [
         // {

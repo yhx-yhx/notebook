@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体属性</title>
+    <style>
+        .f1{
+            /* *字体大小* */
+
+            /* 方式1 px */
+            /* 默认字体大小16px */
+            font-size: 14px;/* 字体大小 */
+            /* 方式2 em */
+            font-size: 2em; /* ?字体现在是多少 32px;原因：父级的font-size的两倍 */
+            /* 方式3 百分比 */
+            font-size: 200%; /* 32px 相对于包含块的 width */
+            /* 方式4 关键字 */
+            font-size: large; /* 18px*/
+
+            /* 字体 */
+
+            /* 默认 Microsoft YaHei */
+            /* 可以设计一个或多个 匹配第一个支持的字体 若都不支持则使用默认的字体 */
+            font-family: "微软雅黑";/* 字体 */
+
+            /* 文本的加粗 */
+            /* 默认 normal:400;bold:700;1 100 200 300 400 500 600 700 800 900 1000*/
+            font-weight: bold;/* 字体粗细 */
+
+            /* 字体样式 */
+
+            font-style: italic;/* 字体倾斜 */
+            font-style: oblique;/* 字体倾斜 */
+            /* 区别 italic自身支持斜体 寻找设置的斜体字体样式 */
+            /*  oblique 不论字体是否支持斜体 将文字倾斜 */
+
+            /* 小写字母 变成大写字字母的高度 */
+            font-variant: small-caps;/* 字体小型大写 */
+            
+            font-stretch: extra-expanded;/* 字体拉伸 */
+
+
+            /* 行高（常用）*/
+            /* 行高：两行文本基线的间距 */
+            line-height: 20px;/* 行高 */
+
+            /* font 简写形式 */
+            /* 特性 顺序 font-style font-variant font-weight font-size/line-height font-family */
+            font: italic small-caps bold 20px/1 sans-serif;
+
+
+            letter-spacing: 10px;/* 字间距 */
+            text-decoration: line-through;/* 删除线 */
+            text-transform: uppercase;/* 大写 */
+            word-spacing: 20px;/* 单词间距 */
+            color: red;/* 字体颜色 */
+            background-color: yellow;/* 字体背景色 */
+            /* 字体属性简写 */
+            /* font: italic bold 14px/20px "微软雅黑"; */
+
+            background-color: aqua;
+            border: 1px solid #ccc;
+            line-height: 1;
+        }
+
+       
+    </style>
+    <script>
+         const Random = (max, min = 0) => {
+                // 返回一个介于min和max之间的随机数
+                return Math.floor( Math.random()*max+min);
+            }
+    </script>
+</head>
+<body>
+  <p class="f1">字体style</p>
+  <p class="f2">字体</p>  
+</body>
+</html>
