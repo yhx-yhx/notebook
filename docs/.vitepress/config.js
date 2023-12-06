@@ -190,6 +190,7 @@ export default defineConfig({
       {
         text: "方案",
         items: [
+          { text: "屏幕安全区域", link: "/pages/Other/Plan/screenSafe" },
           { text: "hooks", link: "/pages/Other/Plan/hooks" },
           { text: "大屏可视化响应式", link: "/pages/Other/Plan/screen" },
           { text: "xlsx", link: "/pages/Other/Plan/xlsx/index" },
