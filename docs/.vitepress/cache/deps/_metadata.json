@@ -1,29 +1,29 @@
 {
   "hash": "9dda6c65",
-  "browserHash": "56364049",
+  "browserHash": "965ef8c4",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "e4d47f5d",
+      "fileHash": "f003a48e",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "7b0aeb06",
+      "fileHash": "df1cc130",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "63b5df5b",
+      "fileHash": "5c029b7c",
       "needsInterop": false
     },
     "canvas": {
       "src": "../../../../node_modules/canvas/browser.js",
       "file": "canvas.js",
-      "fileHash": "9b5f07df",
+      "fileHash": "a8a20b82",
       "needsInterop": true
     },
     "path2d-polyfill": {
@@ -35,19 +35,61 @@
     "@vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "ca2ab0ca",
+      "fileHash": "62290aa4",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "adafffd1",
+      "fileHash": "641d1cc6",
       "needsInterop": false
     },
     "xlsx-js-style": {
       "src": "../../../../node_modules/xlsx-js-style/dist/xlsx.min.js",
       "file": "xlsx-js-style.js",
-      "fileHash": "7dbdf765",
+      "fileHash": "29c974f5",
+      "needsInterop": true
+    },
+    "echarts": {
+      "src": "../../../../node_modules/echarts/index.js",
+      "file": "echarts.js",
+      "fileHash": "24e6b602",
+      "needsInterop": false
+    },
+    "docxtemplater": {
+      "src": "../../../../node_modules/docxtemplater/js/docxtemplater.js",
+      "file": "docxtemplater.js",
+      "fileHash": "d2a619d1",
+      "needsInterop": true
+    },
+    "pizzip": {
+      "src": "../../../../node_modules/pizzip/js/index.js",
+      "file": "pizzip.js",
+      "fileHash": "b3b7db26",
+      "needsInterop": true
+    },
+    "jszip-utils": {
+      "src": "../../../../node_modules/jszip-utils/lib/index.js",
+      "file": "jszip-utils.js",
+      "fileHash": "ee905aaf",
+      "needsInterop": true
+    },
+    "file-saver": {
+      "src": "../../../../node_modules/file-saver/dist/FileSaver.min.js",
+      "file": "file-saver.js",
+      "fileHash": "d9529f2a",
+      "needsInterop": true
+    },
+    "docxtemplater-image-module-free": {
+      "src": "../../../../node_modules/docxtemplater-image-module-free/js/index.js",
+      "file": "docxtemplater-image-module-free.js",
+      "fileHash": "19dbe174",
+      "needsInterop": true
+    },
+    "docxtemplater/expressions.js": {
+      "src": "../../../../node_modules/docxtemplater/expressions.js",
+      "file": "docxtemplater_expressions__js.js",
+      "fileHash": "147db2fa",
       "needsInterop": true
     }
   },
@@ -55,8 +97,11 @@
     "chunk-IYO332YY": {
       "file": "chunk-IYO332YY.js"
     },
-    "chunk-WNKWOKNR": {
-      "file": "chunk-WNKWOKNR.js"
+    "chunk-MF5UU7OQ": {
+      "file": "chunk-MF5UU7OQ.js"
+    },
+    "chunk-HM4MQYWN": {
+      "file": "chunk-HM4MQYWN.js"
     }
   }
 }
