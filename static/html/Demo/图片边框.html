@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图片边框</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .bg {
+        border: 50px solid #fff;
+        width: 400px;
+        height: 300px;
+        border-image: url("/images/border.jpg") 100 round;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+  </body>
+</html>
