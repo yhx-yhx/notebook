@@ -14,7 +14,8 @@ export default defineConfig({
   // },
   lang: "zh-CN",
   title: "前端Yhx",
-  description: "A Random And Illogical Site YHX yhx Yhx vue vue全家桶 css js JavaScript css3 node git vite vitepress",
+  description:
+    "A Random And Illogical Site YHX yhx Yhx vue vue全家桶 css js JavaScript css3 node git vite vitepress",
   titleTemplate: "Jottings", // 网站标题后缀- “VitePress | Blog”
   base: "/notebook/", //base url
   head: [
@@ -155,6 +156,14 @@ export default defineConfig({
         ],
       },
       {
+        text: "Demo",
+        items: [
+          { text: "图形边框", link: "/pages/Demo/css/图形边框" },
+          { text: "跳动的文字", link: "/pages/Demo/css/跳动的文字" },
+          { text: "语音转文字", link: "/pages/Demo/css/语音转文字" },
+        ],
+      },
+      {
         text: "面试题",
         items: [
           { text: "自检100题", link: "/pages/Interview/自检100题" },
@@ -183,8 +192,8 @@ export default defineConfig({
           // },
           {
             text: "hello-algo",
-            link: '/pages/Notes/algorithm/hello-algo/'
-          }
+            link: "/pages/Notes/algorithm/hello-algo/",
+          },
         ],
       },
       {
@@ -485,9 +494,18 @@ export default defineConfig({
       ],
       "/pages/Notes/algorithm/hello-algo/": [
         { text: "首页", link: "/pages/Notes/algorithm/hello-algo/" },
-        { text: "初识算法", link: "/pages/Notes/algorithm/hello-algo/1初识算法" },
-        { text: "复杂度分析", link: "/pages/Notes/algorithm/hello-algo/2复杂度分析" },
-        { text: "数据结构", link: "/pages/Notes/algorithm/hello-algo/3数据结构" }
+        {
+          text: "初识算法",
+          link: "/pages/Notes/algorithm/hello-algo/1初识算法",
+        },
+        {
+          text: "复杂度分析",
+          link: "/pages/Notes/algorithm/hello-algo/2复杂度分析",
+        },
+        {
+          text: "数据结构",
+          link: "/pages/Notes/algorithm/hello-algo/3数据结构",
+        },
       ],
       "pages/Config/": [
         // {

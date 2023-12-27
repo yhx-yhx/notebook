@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="voiceinator">
+      <select name="voice" id="voices">
+        <option value="">Select A Voice</option>
+      </select>
+      <div>
+        <label for="rate">Rate:</label>
+        <input name="rate" type="range" min="0" max="3" value="1" step="0.1" />
+      </div>
+
+      <div>
+        <label for="pitch">Pitch:</label>
+        <input name="pitch" type="range" min="0" max="2" step="0.1" />
+      </div>
+      <div>
+        <label for="text">文字:</label>
+        <textarea id="text" name="text">士不可以不弘毅，任重而道远！</textarea>
+      </div>
+
+      <button id="stop">Stop!</button>
+      <button id="speak">Speak</button>
+    </div>
+
+    <script>
+      const synth = window.speechSynthesis;
+      const msg = new SpeechSynthesisUtterance();
+      let voices = [];
+      const voicesDropdown = document.querySelector('[name="voice"]');
+      const options = document.querySelectorAll(
+        '[type="range"], [name="text"]'
+      );
+      const speakButton = document.querySelector("#speak");
+      const stopButton = document.querySelector("#stop");
+
+      msg.text = "士不可以不弘毅，任重而道远！";
+      msg.lang = "zh-CN";
+
+      synth.addEventListener("voiceschanged", getSupportVoices);
+      speakButton.addEventListener("click", throttle(handleSpeak, 1000));
+      stopButton.addEventListener("click", handleStop);
+      options.forEach((e) => e.addEventListener("change", handleChange));
+
+      // 用于表示当前设备上所有可用的语音。
+      function getSupportVoices() {
+        voices = synth.getVoices();
+        voices.forEach((e) => {
+          const option = document.createElement("option");
+          option.value = e.lang;
+          option.text = e.name;
+          voicesDropdown.appendChild(option);
+        });
+      }
+
+      document.querySelector("textarea").addEventListener("change", (e) => {
+        msg.text = e.target.value;
+      });
+
+      // 调用 speak 方法
+      function handleSpeak(e) {
+        // msg.lang = voicesDropdown.selectedOptions[0].value
+        synth.speak(msg);
+      }
+
+      // 调用 cancel 方法
+      function handleStop(e) {
+        synth.cancel(msg);
+      }
+      // 切换
+      function handleChange(e) {
+        console.log(e);
+        msg[this.name] = this.value;
+      }
+      function throttle(fn, delay) {
+        let last = 0;
+        return function () {
+          const now = new Date();
+          if (now - last > delay) {
+            fn.apply(this, arguments);
+            last = now;
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
