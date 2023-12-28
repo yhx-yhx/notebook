@@ -86,15 +86,15 @@ export default defineConfig({
         items: [
           {
             text: "西瓜视频播放器",
-            link: "/pages/ComponentsExample/xgVideoPlay",
+            link: "/pages/Components/video/xgVideoPlay/index",
           },
           {
             text: "阿里云视频播放器",
-            link: "/pages/ComponentsExample/alyVideoPlay",
+            link: "/pages/Components/video/alyVideoPlay/index",
           },
           {
             text: "Vue3Echarts",
-            link: "/pages/ComponentsExample/Vue3Echarts",
+            link: "/pages/Components/Vue3Echarts/index",
           },
           {
             text: "pdfjs",
@@ -114,12 +114,12 @@ export default defineConfig({
           { text: "引导页", link: "/pages/Components/guide/index" },
           { text: "vue-count-to", link: "/pages/ComponentsExample/vueCountTo" },
           {
-            text: "wordTemplaterDocx",
-            link: "/pages/ComponentsExample/wordTemplaterDocx",
+            text: "doxctemplater",
+            link: "/pages/Components/doxctemplater/index",
           },
           {
-            text: "二维码",
-            link: "/pages/ComponentsExample/二维码",
+            text: "QRcode",
+            link: "/pages/Components/QRcode/index",
           },
           {
             text: "水印",
@@ -152,6 +152,10 @@ export default defineConfig({
           {
             text: "窗格拆分器",
             link: "/pages/Components/splitpanes/index",
+          },
+          {
+            text: "tree 原生js实现",
+            link: "/pages/Components/Tree/index",
           },
         ],
       },

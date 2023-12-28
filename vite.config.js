@@ -10,7 +10,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./docs/pages", import.meta.url)),
-      "@Base": fileURLToPath(new URL("./docs/pages/Base", import.meta.url)),
+      // "@Base": fileURLToPath(new URL("./docs/pages/Base", import.meta.url)),
     },
   },
   base: "/notebook",
