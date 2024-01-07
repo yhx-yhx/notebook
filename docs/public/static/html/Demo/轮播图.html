@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轮播图</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+      }
+      .carousel {
+        margin: auto;
+        border: 1px solid #ccc;
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 0.5em;
+        position: relative;
+      }
+
+      .carousel-inner {
+        width: 100%;
+        height: 100%;
+      }
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+      .carousel-inner img.active {
+        display: inline-block;
+      }
+
+      .carousel-switch {
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+      .carousel-switch .circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        margin: 0 5px;
+      }
+      .carousel-switch .circle.active {
+        background-color: #777;
+      }
+
+      .carousel-prev {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      .carousel-next {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <img
+          class="active"
+          src="https://img1.baidu.com/it/u=1699929707,733321099&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800"
+          alt=""
+        />
+        <img
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5d88a972-1b34-43ed-8b3a-4a7ebbb900a1%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1707137285&t=252830e370a70d6190eb7cbcdcdb832c"
+          alt=""
+        />
+        <img
+          src="https://img1.baidu.com/it/u=1300823040,1107837353&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889"
+          alt=""
+        />
+      </div>
+      <div class="carousel-switch">
+        <div class="circle active" data-index="0"></div>
+        <div class="circle" data-index="1"></div>
+        <div class="circle" data-index="2"></div>
+      </div>
+      <div class="carousel-prev"><</div>
+      <div class="carousel-next">></div>
+    </div>
+    <script>
+      // 实现一个轮播图
+      let rotationMap = document.querySelector(".carousel");
+
+      function switchCarousel(index) {
+        switchMarker(index);
+        switchImage(index);
+      }
+
+      // 切换switch circle
+      function switchMarker(index) {
+        let circles = document.querySelectorAll(".carousel-switch .circle");
+        circles.forEach((circle, i) => {
+          if (i === index) {
+            circle.classList.add("active");
+          } else {
+            circle.classList.remove("active");
+          }
+        });
+      }
+
+      function switchImage(index) {
+        let images = document.querySelectorAll(".carousel img");
+        images.forEach((image, i) => {
+          if (i === index) {
+            image.classList.add("active");
+          } else {
+            image.classList.remove("active");
+          }
+        });
+      }
+
+      //   翻页
+      let activeIndex = 0;
+
+      let circles = document.querySelectorAll(".carousel-switch .circle");
+      circles.forEach((circle, i) => {
+        circle.addEventListener("click", (e) => {
+          activeIndex = +e.target.getAttribute("data-index");
+          switchCarousel(activeIndex);
+        });
+      });
+
+      function prev() {
+        activeIndex = (activeIndex - 1 + circles.length) % circles.length;
+        switchCarousel();
+      }
+      function next() {
+        activeIndex = (activeIndex + 1) % circles.length;
+        switchCarousel(activeIndex);
+      }
+      let prevBtn = document.querySelector(".carousel-prev");
+      prevBtn.addEventListener("click", () => {
+        prev();
+      });
+
+      let nextBtn = document.querySelector(".carousel-next");
+      nextBtn.addEventListener("click", () => {
+        next();
+      });
+
+      //   自动播放
+      let autoPlayInterval = 3000;
+      let autoPlayTimeout;
+      function startAutoPlay() {
+        autoPlayTimeout = setInterval(() => {
+          next();
+          console.log(activeIndex);
+        }, autoPlayInterval);
+      }
+      function stopAutoPlay() {
+        clearInterval(autoPlayTimeout);
+      }
+      startAutoPlay();
+
+      // 鼠标悬停时暂停自动播放
+      let carousel = document.querySelector(".carousel");
+      carousel.addEventListener("mouseover", stopAutoPlay);
+      carousel.addEventListener("mouseout", startAutoPlay);
+      //   键盘左右键切换图片
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") {
+          prev();
+        } else if (e.key === "ArrowRight") {
+          next();
+        }
+      });
+    </script>
+  </body>
+</html>

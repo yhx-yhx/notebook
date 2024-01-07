@@ -161,11 +161,7 @@ export default defineConfig({
       },
       {
         text: "Demo",
-        items: [
-          { text: "图形边框", link: "/pages/Demo/css/图形边框" },
-          { text: "跳动的文字", link: "/pages/Demo/css/跳动的文字" },
-          { text: "语音转文字", link: "/pages/Demo/css/语音转文字" },
-        ],
+        items: [{ text: "html", link: "/pages/Demo/css/htmlDemo" }],
       },
       {
         text: "面试题",
@@ -215,6 +211,7 @@ export default defineConfig({
       {
         text: "配置",
         items: [
+          { text: "过程文档", link: "/pages/Config/过程文档" },
           { text: "nvm", link: "/pages/Config/nvm" },
           { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
           { text: "nginx配置", link: "/pages/Config/nginx配置" },
@@ -235,6 +232,10 @@ export default defineConfig({
           { text: "Tools", link: "/pages/Other/Link/Tools/index" },
           { text: "share", link: "/pages/Other/Link/share/index" },
         ],
+      },
+      {
+        text: "个人中心",
+        link: "/pages/Own/index",
       },
     ],
 

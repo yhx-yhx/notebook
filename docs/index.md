@@ -10,7 +10,6 @@ hero:
   actions:
     - theme: brand
       text: Link
-      link: /pages/Other/HistoricalProjectProgress
     - theme: alt
       text: Go Away
       link: /api-examples

@@ -1,9 +1,9 @@
 <script setup>
-import HistoryTime from '../../pages/Components/HistoryTime.vue'
+import BiographicalNotes from '../../pages/Components/BiographicalNotes/index.vue'
 </script>
 
 
 
-<HistoryTime />
+<BiographicalNotes />
 
 ## More docs

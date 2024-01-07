@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>图文混排示例</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 0.5em;
+        max-width: 1024px;
+      }
+      @media screen and (max-width: 600px) {
+        .container {
+          max-width: 85%;
+        }
+      }
+      @media screen and (min-width: 601px) and (max-width: 1024px) {
+        .container {
+          max-width: 80%;
+        }
+      }
+      img {
+        float: left;
+        display: flex;
+        width: 100px;
+        height: 100px;
+        margin: 0 10px 10px 0;
+        border-radius: 0.1em;
+        object-fit: scale-down;
+        border: 1px solid #ccc;
+      }
+      .text {
+        text-indent: 2em;
+        color: #333;
+        font-size: 14px;
+        text-align: center;
+        text-align-last: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://picsum.photos/300" alt="示例图片" />
+      <div class="text">
+        梦，是每个人心中的秘密花园。它充满奇幻，充满无限可能。在梦中，我们可以翱翔在蓝天之上，探索未知的星球，也可以深入海底，与鱼儿共舞。梦，让我们感受到无尽的喜悦和兴奋，也让我们品味到深深的恐惧和悲伤。
+        然而，无论梦多么美好，多么惊险，它始终是梦。一旦我们从梦中醒来，一切美好和恐惧都瞬间消失。就像烟火一样，在夜空中绽放出绚烂的光芒，但瞬间后却只留下寂寞的夜空。梦醒时分，我们会意识到现实的平淡和乏味，会怀念梦中的美好时光。
+        但是，我们不能永远沉浸在梦中。因为只有现实才是我们真实生活的舞台。只有在现实中，我们才能真正地感受爱、体验痛苦、分享快乐。只有现实，才是我们成长的土壤和舞台。
+        虽然梦醒时分可能会带来失落和遗憾，但这也是我们成长的必经之路。因为只有在现实中，我们才能真正地认识自己、了解世界。只有在现实中，我们才能真正地实现自己的梦想和目标。
+        所以，当梦醒时分到来时，我们不应该沉溺于遗憾和失落之中。相反，我们应该珍惜现实中的每一个瞬间，努力去追求自己的梦想和目标。因为只有这样，我们才能真正地活出自己的人生价值。
+        在梦中，我们可以尽情地想象和探索。但在现实中，我们需要勇敢地面对和奋斗。只有这样，我们才能成为真正的赢家，才能让自己的生活更加充实和美好。
+      </div>
+    </div>
+  </body>
+</html>
