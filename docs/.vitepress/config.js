@@ -215,6 +215,7 @@ export default defineConfig({
           { text: "nvm", link: "/pages/Config/nvm" },
           { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
           { text: "nginx配置", link: "/pages/Config/nginx配置" },
+          { text: "json-server", link: "/pages/Config/json-server" },
         ],
       },
       {
