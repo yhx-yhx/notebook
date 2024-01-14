@@ -166,7 +166,6 @@ export default defineConfig({
       {
         text: "面试题",
         items: [
-          { text: "自检100题", link: "/pages/Interview/自检100题" },
           { text: "interview", link: "/pages/Interview/interview" },
           { text: "算法题目", link: "/pages/Interview/title/index" },
         ],

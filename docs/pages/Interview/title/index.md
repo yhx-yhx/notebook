@@ -292,6 +292,31 @@ let str = 'helloworld'
 let tt = [...str].reduce((a,b)=>b+a,'')
 ```
 :::
-### 17.字符串abcde如何反转
+
+### 18.实现将树结构替换字段
+:::code-group
+```javascript [修改原始值.js]
+function replaceTreeField(obj, newFiled, oldFiled) {
+  for (const key in obj) {
+    if (key === oldFiled) {
+      obj[newFiled] = obj[key];
+      delete obj[key];
+    }
+    if (obj.hasOwnProperty("children")) {
+      obj.children.forEach((child) => {
+        replaceWwField(child, newFiled, oldFiled);
+      });
+    }
+  }
+}
+
+```
+
+``` javascript [修改引用值.js]
+function replaceTreeField(obj, newFiled, oldFiled){
+    
+}
+:::
+
 
 https://blog.csdn.net/Ed7zgeE9X/article/details/119336745
