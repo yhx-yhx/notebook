@@ -79,6 +79,7 @@ export default defineConfig({
           { text: "scss", link: "/pages/Base/scss" },
           { text: "TypeScript", link: "/pages/Base/typescript" },
           { text: "Node.js", link: "/pages/Base/NodeJs/index" },
+          { text: "jQuery", link: "/pages/Base/jQuery" },
         ],
       },
       {
