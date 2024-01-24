@@ -320,6 +320,7 @@ export default defineConfig({
         {
           text: "CSS 在线示例",
           items: [
+            { text: "10-弹性盒子", link: "/pages/Base/Css/hd/10-弹性盒子" },
             { text: "11-栅格", link: "/pages/Base/Css/hd/11-栅格" },
             { text: "14-帧动画", link: "/pages/Base/Css/hd/14-帧动画" },
             { text: "15-响应式布局", link: "/pages/Base/Css/hd/15-响应式布局" },
