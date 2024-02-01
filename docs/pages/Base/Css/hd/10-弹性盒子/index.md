@@ -6,11 +6,11 @@
 
 ## 
 ::: details 代码实现
-<<< ./Flex/基础案例.vue
+<<< ./基础案例.vue
 :::
 
 <script setup>
 
-import FlexBase from "./Flex/基础案例.vue"
+import FlexBase from "./基础案例.vue"
 </script>
 
