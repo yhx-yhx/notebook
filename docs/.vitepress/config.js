@@ -71,7 +71,7 @@ export default defineConfig({
         items: [
           { text: "JavaScript", link: "/pages/Base/javascript/index" },
           { text: "CSS", link: "/pages/Base/Css/index" },
-          { text: "Html", link: "/pages/Base/html" },
+          { text: "Html", link: "/pages/Base/html/index" },
           { text: "axios", link: "/pages/Base/axios/index" },
           { text: "Vue", link: "/pages/Base/vue全家桶/vue/" },
           { text: "vite", link: "/pages/Base/vite" },
@@ -241,6 +241,13 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/pages/Base/html': [
+        {
+          text: 'html', collapsed: true,
+          items: [{
+            text: 'canvas', link: '/pages/Base/html/canvas/index'
+          }]}
+      ],
       // /pages/Base/ 基础
       "/pages/Base/javascript": [
         {

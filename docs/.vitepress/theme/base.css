@@ -82,3 +82,9 @@
 .dark .card-page:hover {
     box-shadow: 0 0 15px var(--vp-badge-info-border);
 }
+
+.VPSidebarItem {
+    .caret {
+        margin: auto;
+    }
+}

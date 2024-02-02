@@ -60,6 +60,60 @@ import { ref } from "vue"
         <div class="row">5</div>
         <div class="row">6</div>
     </div>
+
+    <h4>flex-direction</h4>
+    <pre>flex-direction属性决定主轴的方向（即项目的排列方向）。</pre>
+    <br>
+    <!--  -->
+    <h4>flex-direction:row</h4>
+    <div class="base-flex-1">
+        <div class="row">1</div>
+        <div class="row">2</div>
+        <div class="row">3</div>
+        <div class="row">4</div>
+        <div class="row">5</div>
+        <div class="row">6</div>
+    </div>
+
+    <h4>flex-direction:row-reverse</h4>
+    <div class="base-flex-row-reverse base-flex-1">
+        <div class="row">1</div>
+        <div class="row">2</div>
+        <div class="row">3</div>
+        <div class="row">4</div>
+        <div class="row">5</div>
+        <div class="row">6</div>
+    </div>
+
+    <h4>flex-direction:column</h4>
+    <div class="base-flex-column base-flex-1">
+        <div class="row">1</div>
+        <div class="row">2</div>
+        <div class="row">3</div>
+    </div>
+
+    <h4>flex-direction:column-reverse</h4>
+    <div class="base-flex-column-reverse base-flex-1">
+        <div class="row">1</div>
+        <div class="row">2</div>
+        <div class="row">3</div>
+    </div>
+
+    <h4>flex-flow</h4>
+    <pre>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</pre>
+
+    <h4>flex</h4>
+    <pre>flex属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</pre>
+
+
+    <h4>test</h4>
+    <div class="base-flex-1 test">
+        <div class="row">1</div>
+        <div class="row">2</div>
+        <div class="row">3</div>
+        <div class="row">4</div>
+        <div class="row">5</div>
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -211,6 +265,48 @@ import { ref } from "vue"
         align-items: center;
         justify-content: center;
         margin-top: 1em;
+    }
+}
+
+
+.base-flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.base-flex-column {
+    flex-direction: column;
+
+    .row {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.base-flex-column-reverse {
+    flex-direction: column-reverse;
+
+    .row {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.test {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    // margin: auto;
+    align-content: space-evenly;
+    height: 260px;
+    border: 1px solid black;
+    border-radius: 12px;
+
+    .row {
+        border: 1px solid black;
+        width: 200px;
+        margin: 0;
+        align-self: center;
+        margin-left: 22px;
     }
 }
 </style>
