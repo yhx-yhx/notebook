@@ -1,29 +1,29 @@
 {
   "hash": "4a0e9e1b",
-  "browserHash": "cd7c2239",
+  "browserHash": "88c4de6a",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "8e2d91e2",
+      "fileHash": "1316682b",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "c6918c57",
+      "fileHash": "8b3d96c0",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "fbf69e2f",
+      "fileHash": "63b267e6",
       "needsInterop": false
     },
     "canvas": {
       "src": "../../../../node_modules/canvas/browser.js",
       "file": "canvas.js",
-      "fileHash": "06183891",
+      "fileHash": "567d71fd",
       "needsInterop": true
     },
     "path2d-polyfill": {
@@ -35,31 +35,67 @@
     "gitalk": {
       "src": "../../../../node_modules/gitalk/dist/gitalk.js",
       "file": "gitalk.js",
-      "fileHash": "8d48b5e8",
+      "fileHash": "77196555",
       "needsInterop": true
     },
     "@giscus/vue": {
       "src": "../../../../node_modules/@giscus/vue/dist/index.mjs",
       "file": "@giscus_vue.js",
-      "fileHash": "127dbe05",
+      "fileHash": "d97dd662",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "8d14e560",
+      "fileHash": "9d40b2b9",
+      "needsInterop": false
+    },
+    "xgplayer": {
+      "src": "../../../../node_modules/xgplayer/es/index.js",
+      "file": "xgplayer.js",
+      "fileHash": "ab7a0c77",
+      "needsInterop": false
+    },
+    "xgplayer-hls": {
+      "src": "../../../../node_modules/xgplayer-hls/es/index.js",
+      "file": "xgplayer-hls.js",
+      "fileHash": "8e9d9472",
+      "needsInterop": false
+    },
+    "xgplayer-flv": {
+      "src": "../../../../node_modules/xgplayer-flv/es/index.js",
+      "file": "xgplayer-flv.js",
+      "fileHash": "16192aa4",
+      "needsInterop": false
+    },
+    "xgplayer-mp4": {
+      "src": "../../../../node_modules/xgplayer-mp4/es/index.js",
+      "file": "xgplayer-mp4.js",
+      "fileHash": "2edafcd1",
+      "needsInterop": false
+    },
+    "xgplayer-music": {
+      "src": "../../../../node_modules/xgplayer-music/es/index.js",
+      "file": "xgplayer-music.js",
+      "fileHash": "74fb0c40",
       "needsInterop": false
     }
   },
   "chunks": {
-    "giscus-aTimukGI-Q3QRIJZF": {
-      "file": "giscus-aTimukGI-Q3QRIJZF.js"
+    "giscus-aTimukGI-AWKDYXM2": {
+      "file": "giscus-aTimukGI-AWKDYXM2.js"
+    },
+    "chunk-VK7MV3IH": {
+      "file": "chunk-VK7MV3IH.js"
+    },
+    "chunk-AYXDSXDH": {
+      "file": "chunk-AYXDSXDH.js"
     },
     "chunk-IYO332YY": {
       "file": "chunk-IYO332YY.js"
     },
-    "chunk-UXIASGQL": {
-      "file": "chunk-UXIASGQL.js"
+    "chunk-5WWUZCGV": {
+      "file": "chunk-5WWUZCGV.js"
     }
   }
 }

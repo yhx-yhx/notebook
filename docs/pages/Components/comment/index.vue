@@ -45,4 +45,8 @@ import Giscus from '@giscus/vue';
         theme="preferred_color_scheme" lang="zh-CN" loading="lazy" />
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.color-text-secondary.text-sm {
+    display: none;
+}
+</style>
