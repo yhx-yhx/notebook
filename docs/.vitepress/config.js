@@ -215,7 +215,7 @@ export default defineConfig({
           { text: "nvm", link: "/pages/Config/nvm" },
           { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
           { text: "nginx配置", link: "/pages/Config/nginx配置" },
-          { text: "json-server", link: "/pages/Config/json-server" },
+          { text: "第三方库", link: "/pages/Config/第三方库/gitalk" },
         ],
       },
       {
@@ -534,6 +534,10 @@ export default defineConfig({
         //     { text: "nginx配置", link: "/pages/Config/nginx配置" },
         //   ],
         // },
+      ],
+      "/pages/Config/第三方库": [
+        { text: "gitalk", link: "/pages/Config/第三方库/gitalk" },
+         { text: "json-server", link: "/pages/Config/第三方库/json-server" },
       ],
       "/pages/Other/Live": [
         {
