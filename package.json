@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
+    "@giscus/vue": "^2.4.0",
     "@jbtje/vite-vue3pdf": "^0.2.0",
     "@jbtje/vue3pdf": "^2.1.0",
     "@vueuse/core": "^10.6.1",

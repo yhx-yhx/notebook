@@ -1,6 +1,7 @@
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
 import BiographicalNotes from '../../pages/Components/BiographicalNotes/index.vue'
+import Comment from "../Components/comment/index.vue"
 
 const members = [
   {
@@ -28,6 +29,8 @@ const members = [
 <VPTeamMembers size="small" :members="members" />
 
 <BiographicalNotes />
+
+<Comment/>
 
 <style scoped>
 
