@@ -20,7 +20,6 @@ const init = () => {
             admin: ['yhx-yhx'], // GitHub repo 所有者
             labels: ['Gitalk'], // GitHub issue 标签
             distractionFreeMode: false,
-            proxy: 'https://yhx-yhx.github.io/notebook',
             createIssueManually: true //如果当前页面没有相应的 issue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
         })
         gitTalk.render('gitalk-page-container')
