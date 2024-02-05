@@ -211,11 +211,12 @@ export default defineConfig({
       {
         text: "配置",
         items: [
-          { text: "过程文档", link: "/pages/Config/过程文档" },
+          { text: "hooks", link: "/pages/Config/hooks/fullscreen/index" },
           { text: "nvm", link: "/pages/Config/nvm" },
           { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
           { text: "nginx配置", link: "/pages/Config/nginx配置" },
           { text: "第三方库", link: "/pages/Config/第三方库/gitalk" },
+          { text: "过程文档", link: "/pages/Config/过程文档" },
         ],
       },
       {
@@ -534,6 +535,9 @@ export default defineConfig({
         //     { text: "nginx配置", link: "/pages/Config/nginx配置" },
         //   ],
         // },
+      ],
+      '/pages/Config/hooks': [
+         { text: "fullscreen", link: "/pages/Config/hooks/fullscreen/index" },
       ],
       "/pages/Config/第三方库": [
         { text: "gitalk", link: "/pages/Config/第三方库/gitalk" },
