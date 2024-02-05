@@ -1,0 +1,18 @@
+            - name: Gitee Pages Action
+  # You may pin to the exact commit or the version.
+  # uses: yanglbme/gitee-pages-action@b70eff28cd340913f899eab8d0f485b978d78d54
+  uses: yanglbme/gitee-pages-action@v1.4.2
+  with:
+    # The Gitee username, like yanglbme
+    gitee-username: ${{secrets.GITEENAME}}
+    # The Gitee password
+    gitee-password: ${{secrets.GITEEPASSWORD}}
+    # The Gitee repository, like doocs/leetcode
+    gitee-repo: yhx825/notebook
+    # Which branch to build
+    branch: # optional, default is master
+    # Which directory to build
+    directory: # optional, default is 
+    # Use force https or not
+    https: # optional, default is true
+          
