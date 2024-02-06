@@ -3,7 +3,7 @@
 <fullScreenDemo />
 
 ::: details 代码实现
-<<< ./index.vue
+<<< ./fullscreen.js
 :::
 <script setup>
 

@@ -538,6 +538,7 @@ export default defineConfig({
       ],
       '/pages/Config/hooks': [
          { text: "fullscreen", link: "/pages/Config/hooks/fullscreen/index" },
+         { text: "copyToClipboard", link: "/pages/Config/hooks/copyToClipboard/index" },
       ],
       "/pages/Config/第三方库": [
         { text: "gitalk", link: "/pages/Config/第三方库/gitalk" },
