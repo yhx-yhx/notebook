@@ -11,9 +11,9 @@ const createSquare = () => {
     //绘制正方形
     app.fillRect(0, 0, 200, 200);
 }
-onMounted(() => {
-    createSquare()
-})
+// onMounted(() => {
+//     createSquare()
+// })
 
 
 // 长方形
@@ -28,9 +28,9 @@ const createRectangle = () => {
     app.fillRect(0, 0, 200, 400);
 }
 
-onMounted(() => {
-    createRectangle()
-})
+// onMounted(() => {
+//     createRectangle()
+// })
 
 // 空心矩形
 const createEmptyRectangle = () => {
@@ -49,9 +49,9 @@ const createEmptyRectangle = () => {
     app.strokeRect(50, 50, 400, 400);
 }
 
-onMounted(() => {
-    createEmptyRectangle()
-})
+// onMounted(() => {
+//     createEmptyRectangle()
+// })
 
 // 绘制圆环
 const createRing = () => {
@@ -69,9 +69,9 @@ const createRing = () => {
     app.stroke();
 }
 
-onMounted(() => {
-    createRing()
-})
+// onMounted(() => {
+//     createRing()
+// })
 
 // 绘制实心圆
 function createCircle() {
@@ -89,9 +89,9 @@ function createCircle() {
 
 }
 
-onMounted(() => {
-    createCircle()
-})
+// onMounted(() => {
+//     createCircle()
+// })
 
 // 绘制三角形
 function createTriangle() {
@@ -120,9 +120,9 @@ function createTriangle() {
     //画线
     app.stroke();
 }
-onMounted(() => {
-    createTriangle()
-})
+// onMounted(() => {
+//     createTriangle()
+// })
 
 // 渐变效果局部填充
 function createGradient() {
@@ -154,9 +154,9 @@ function createGradient() {
     // app.strokeRect(100, 100, 300, 300)
 }
 
-onMounted(() => {
-    createGradient()
-})
+// onMounted(() => {
+//     createGradient()
+// })
 
 // 渐变效果全面填充
 function createLinearGradient() {
@@ -176,9 +176,9 @@ function createLinearGradient() {
     app.fillRect(0, 0, 500, 500);
 }
 
-onMounted(() => {
-    createLinearGradient()
-})
+// onMounted(() => {
+//     createLinearGradient()
+// })
 // 某一区域变成透明
 function createRegionalTransparency() {
     //创建画布
@@ -191,9 +191,9 @@ function createRegionalTransparency() {
     canvas.clearRect(200, 200, 100, 100);
 }
 
-onMounted(() => {
-    createRegionalTransparency()
-})
+// onMounted(() => {
+//     createRegionalTransparency()
+// })
 
 // 文字填充
 function createTextFill() {
@@ -209,9 +209,9 @@ function createTextFill() {
     canvas.fillText('今天星期五，明天星期六,再有一天我就要放假了', 1, 100)
     canvas.strokeRect(0, 0, 500, 500);
 }
-onMounted(() => {
-    createTextFill()
-})
+// onMounted(() => {
+//     createTextFill()
+// })
 
 
 // 文字颜色渐变（文字描边）
@@ -228,9 +228,9 @@ function createTextGradient() {
     canvas.strokeText('这是一个canvas渐变效果', 50, 200);
 }
 
-onMounted(() => {
-    createTextGradient()
-})
+// onMounted(() => {
+//     createTextGradient()
+// })
 
 // 图片填充
 function createImageFill() {
@@ -249,9 +249,9 @@ function createImageFill() {
         canvas.fillRect(0, 0, 600, 600)
     }
 }
-onMounted(() => {
-    createImageFill()
-})
+// onMounted(() => {
+//     createImageFill()
+// })
 
 
 // 图片缩放
@@ -270,14 +270,14 @@ const createyh = () => {
     // ctn.fillText('三角形', 50, 50)
 }
 
-onMounted(() => {
-    createyh()
+// onMounted(() => {
+//     createyh()
 
-})
+// })
 </script>
 
 <template>
-    <div class="flex">
+    <!-- <div class="flex">
         <div>
             <h4>0-1绘制正方形</h4>
             <canvas id="square"></canvas>
@@ -303,7 +303,7 @@ onMounted(() => {
             <h4>矩形</h4>
             <canvas id="rectangle"></canvas>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <style scoped lang="scss">
