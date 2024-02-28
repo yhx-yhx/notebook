@@ -102,7 +102,7 @@ export default defineConfig({
           },
           {
             text: "Vue3Perview",
-            link: "/pages/ComponentsExample/Vue3Perview",
+            link: "/pages/Components/Vue3Preview/index",
           },
           { text: "weather", link: "/pages/ComponentsExample/weather" },
           {
