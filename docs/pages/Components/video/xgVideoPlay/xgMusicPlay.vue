@@ -4,7 +4,7 @@ import 'element-plus/dist/index.css'
 import { ElButton, ElSelect, ElOption, ElForm, ElFormItem, ElInput, ElRow, ElCol, ElCard } from 'element-plus'
 import { onMounted, reactive, ref, watch } from 'vue';
 import Player from 'xgplayer';
-import 'xgplayer/dist/index.min.css'
+// import 'xgplayer/dist/index.min.css'
 import "xgplayer"
 import "xgplayer-music/dist/index.min.css"
 // 现在music作为一个固定的preset使用，不再继承player, 解决耦合性过大问题
@@ -38,8 +38,7 @@ onMounted(() => {
   window.analyze = new Music.Analyze(player, document.querySelector('#canvasMusic>canvas'), {
     bgColor: 'rgba(0,0,0,0.7)',
     stroke: 3,
-    count: 256
-
+    // count: 256
   })
 
   // 初始化歌词模块
@@ -47,22 +46,21 @@ onMounted(() => {
   lyric.bind(player)
   let nullText = 0;
   player.on('lyricUpdate', (res) => {
-    console.log('lyricUpdate');
-    if (res.lyric === '\n') {
+    if (res.lyric.includes('\n')) {
       nullText++;
     }
   });
 
   player.on('playing', function () {
     lyric.show();
-    let nodeLists = document.querySelectorAll('.xgplayer-lyric-item')
+    // let nodeLists = document.querySelectorAll('.xgplayer-lyric-item')
     // console.log(nodeLists, 'nodeLists');
     // nodeLists && (nodeLists = Array.from(nodeLists))
     // nodeLists.forEach(item => {
-    //   item.display = "block";
+    //   item.style.display = "block";
     // })
     // console.log('playing');
-    // lyric.adjust();
+    lyric.adjust();
     player.mode = 2;
   });
 
@@ -131,7 +129,7 @@ const data = [
       </div>
     </div>
     <div id="canvasMusic">
-      <canvas width="550" height="110"></canvas>
+      <canvas></canvas>
     </div>
     <div id="mask">
       <div id="gc"></div>
@@ -145,7 +143,7 @@ const data = [
   width: 100% !important;
 }
 
-.xgplayer-lyric-item {
+:deep(.xgplayer-lyric-item) {
   display: block;
   text-align: center;
   line-height: 22px !important;
@@ -153,7 +151,7 @@ const data = [
   color: rgba(225, 225, 225, .8) !important;
 }
 
-.xgplayer-lyric-item-active {
+:deep(.xgplayer-lyric-item-active) {
   color: rgb(49, 194, 124) !important;
 }
 
@@ -174,17 +172,17 @@ const data = [
 }
 
 
-.xg-lyric-item {
-  display: block !important;
-  text-align: center;
-  line-height: 22px !important;
-  font-size: 12px !important;
-  color: rgba(225, 225, 225, .8) !important;
-}
+// .xg-lyric-item {
+//   display: block !important;
+//   text-align: center;
+//   line-height: 22px !important;
+//   font-size: 12px !important;
+//   color: rgba(225, 225, 225, .8) !important;
+// }
 
-.xgplayer-lyric-item-active {
-  color: rgb(49, 194, 124) !important;
-}
+// .xgplayer-lyric-item-active {
+//   color: rgb(49, 194, 124) !important;
+// }
 
 .xgplayer-lrcForward {
   left: 0px !important;
@@ -199,6 +197,7 @@ const data = [
   position: relative;
   background-image: url('//sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/music/bg.jpg');
   background-size: 100% 100%;
+  min-height: 500px;
 
   #left {
     position: absolute;
@@ -261,13 +260,29 @@ const data = [
 #canvasMusic {
   width: 100%;
   position: absolute;
-  bottom: 45px;
+  bottom: 0;
   left: 0;
+  top: 0;
+  right: 0;
   z-index: 0;
   -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0, rgba(255, 255, 255, .8) 70%, rgba(255, 255, 255, 0.9) 100%);
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-canvas {
-  width: 100%;
+#mask {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .6) 15%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, .1) 85%, rgba(255, 255, 255, 0) 100%);
 }
+
+// canvas {
+//   width: 100%;
+// }
 </style>

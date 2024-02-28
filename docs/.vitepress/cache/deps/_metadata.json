@@ -1,56 +1,41 @@
 {
-  "hash": "e85b2132",
-  "browserHash": "8bdb92b0",
+  "hash": "18a16385",
+  "browserHash": "175cce7c",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "98cda1b0",
+      "fileHash": "05a4cf83",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "971b65c4",
+      "fileHash": "dba23ea9",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "58323db6",
+      "fileHash": "6460b25c",
       "needsInterop": false
     },
     "canvas": {
       "src": "../../../../node_modules/canvas/browser.js",
       "file": "canvas.js",
-      "fileHash": "ed5e1291",
+      "fileHash": "12746763",
       "needsInterop": true
     },
     "path2d-polyfill": {
       "src": "../../../../node_modules/path2d-polyfill/dist/path2d-polyfill.dev.js",
       "file": "path2d-polyfill.js",
-      "fileHash": "ca0a135f",
+      "fileHash": "0b346e39",
       "needsInterop": true
-    },
-    "element-plus": {
-      "src": "../../../../node_modules/element-plus/es/index.mjs",
-      "file": "element-plus.js",
-      "fileHash": "33cb77df",
-      "needsInterop": false
-    },
-    "echarts": {
-      "src": "../../../../node_modules/echarts/index.js",
-      "file": "echarts.js",
-      "fileHash": "427cabb6",
-      "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-IYO332YY": {
-      "file": "chunk-IYO332YY.js"
-    },
-    "chunk-5WWUZCGV": {
-      "file": "chunk-5WWUZCGV.js"
+    "chunk-76J2PTFD": {
+      "file": "chunk-76J2PTFD.js"
     }
   }
 }

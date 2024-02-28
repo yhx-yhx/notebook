@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
+    "@giscus/vue": "^2.4.0",
     "@jbtje/vite-vue3pdf": "^0.2.0",
     "@jbtje/vue3pdf": "^2.1.0",
     "@vueuse/core": "^10.6.1",
@@ -24,6 +25,7 @@
     "echarts": "^5.4.3",
     "element-plus": "^2.3.8",
     "file-saver": "^2.0.5",
+    "gitalk": "^1.8.0",
     "gsap": "^3.12.2",
     "jszip-utils": "^0.1.0",
     "nodemon": "^3.0.1",

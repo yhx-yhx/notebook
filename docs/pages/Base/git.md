@@ -1,10 +1,123 @@
-# git
+#### git
+
+##### 安装配置
+ [git for  windows  ](https://github.com/git-for-windows/git/releases/tag/v2.37.2.windows.2)
+安装后通过以下命令查看是否安装成功：
+ ```javascript
+ git --version
+ ```
+
+##### 简单命令
+- pwd ：查看当前目录
+- ls ：查看当前目录下的文件
+- cd : 切换目录
+- ll ：查看当前目录下的文件
+- dir ：查看当前目录下的文件
+- mkdir ：创建文件夹
+- touch ：创建文件
+- ls -a :查看隐藏的文件（默认.开头为默认隐藏文件）
+- rm -rf :删除文件 [谨慎使用]
+
+##### 创建新仓库 和 维护旧仓库
+- 创建新仓库
+```javascript
+git init
+```
+- 维护旧仓库
+```javascript
+git clone xxx
+```
+
+##### git 基本流程(简单)
+
+###### 添加
+```javascript
+git add
+```
+
+###### 提交
+```javascript
+git commit -m "xxx"
+```
+
+###### 查看提交状态
+```javascript
+git status
+```
+
+###### 推送
+```javascript
+git push
+```
+
+###### 拉取
+```javascript
+git pull
+```
+
+###### 忽略文件
+- mkdir .gitignore
+```javascript
+!.txt
+dist
+*.zip
+```
+
+#### 修改数据
+
+##### 从版本库中删除资源
+
+- git rm xx.txt 删除本地数据 同时删除仓库
+- git rm --cached  xx.txt  不删本地 只删库
+
+##### 版本库更改资源名称
+- git mv x.txt newvalue.txt
+
+#### vim
+- vim xxx.txt 打开文件
+- i 进入编辑模式
+- esc 退出编辑模 
+- :wq 保存并退出
+- :q! 强制退出
+- :wq! 保存并强制退出
+- cat xxx.txt 查看文件
+
+##### 日志
+- git log -p -2
+- --online --name-only --nmae-status
+
+##### 修改最新一次提交的
+> 描述信息 提交内容
+- git commit --amend
+
+##### 清除暂存区某个文件
+- git rm --cache xxx.txt
+
+
+##### 还原文件
+- git checkout -- xxx.txt
+
+
+##### alias别名命名提高效率
+- git config --global alias.co checkout
+- git config --global alias.br branch
+- git config --global alias.ci commit
+- git config --global alias.st status
+
+##### branch 分支
+- git branch 查看分支
+- git branch xxx 创建分支
+- git checkout xxx 切换分支
+- git merge xxx 合并分支
+- git branch -d xxx 删除分支
+- git branch -D xxx 强制删除分支
+
 
 ## 安装 git for windows 
 
 选择自己需要的版本；   点击下载，安装比较简单，不再赘述；
 
- [git for  windows  ](https://github.com/git-for-windows/git/releases/tag/v2.37.2.windows.2)
+
 
 ## 常用的命令
 

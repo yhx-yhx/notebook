@@ -71,7 +71,7 @@ export default defineConfig({
         items: [
           { text: "JavaScript", link: "/pages/Base/javascript/index" },
           { text: "CSS", link: "/pages/Base/Css/index" },
-          { text: "Html", link: "/pages/Base/html" },
+          { text: "Html", link: "/pages/Base/html/index" },
           { text: "axios", link: "/pages/Base/axios/index" },
           { text: "Vue", link: "/pages/Base/vue全家桶/vue/" },
           { text: "vite", link: "/pages/Base/vite" },
@@ -79,6 +79,7 @@ export default defineConfig({
           { text: "scss", link: "/pages/Base/scss" },
           { text: "TypeScript", link: "/pages/Base/typescript" },
           { text: "Node.js", link: "/pages/Base/NodeJs/index" },
+          { text: "jQuery", link: "/pages/Base/jQuery" },
         ],
       },
       {
@@ -166,7 +167,6 @@ export default defineConfig({
       {
         text: "面试题",
         items: [
-          { text: "自检100题", link: "/pages/Interview/自检100题" },
           { text: "interview", link: "/pages/Interview/interview" },
           { text: "算法题目", link: "/pages/Interview/title/index" },
         ],
@@ -211,10 +211,12 @@ export default defineConfig({
       {
         text: "配置",
         items: [
-          { text: "过程文档", link: "/pages/Config/过程文档" },
+          { text: "hooks", link: "/pages/Config/hooks/fullscreen/index" },
           { text: "nvm", link: "/pages/Config/nvm" },
           { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
           { text: "nginx配置", link: "/pages/Config/nginx配置" },
+          { text: "第三方库", link: "/pages/Config/第三方库/gitalk" },
+          { text: "过程文档", link: "/pages/Config/过程文档" },
         ],
       },
       {
@@ -240,6 +242,13 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/pages/Base/html': [
+        {
+          text: 'html', collapsed: true,
+          items: [{
+            text: 'canvas', link: '/pages/Base/html/canvas/index'
+          }]}
+      ],
       // /pages/Base/ 基础
       "/pages/Base/javascript": [
         {
@@ -306,6 +315,7 @@ export default defineConfig({
           ],
         },
         { text: "基本内容", link: "/pages/Base/javascript/index" },
+        { text: "Symbol", link: "/pages/Base/javascript/Symbol" },
         { text: "对象", link: "/pages/Base/javascript/对象" },
         { text: "函数", link: "/pages/Base/javascript/函数" },
         { text: "数组", link: "/pages/Base/javascript/数组" },
@@ -319,6 +329,10 @@ export default defineConfig({
         {
           text: "CSS 在线示例",
           items: [
+            {
+              text: "10-弹性盒子",
+              link: "/pages/Base/Css/hd/10-弹性盒子/index",
+            },
             { text: "11-栅格", link: "/pages/Base/Css/hd/11-栅格" },
             { text: "14-帧动画", link: "/pages/Base/Css/hd/14-帧动画" },
             { text: "15-响应式布局", link: "/pages/Base/Css/hd/15-响应式布局" },
@@ -521,6 +535,14 @@ export default defineConfig({
         //     { text: "nginx配置", link: "/pages/Config/nginx配置" },
         //   ],
         // },
+      ],
+      '/pages/Config/hooks': [
+         { text: "fullscreen", link: "/pages/Config/hooks/fullscreen/index" },
+         { text: "copyToClipboard", link: "/pages/Config/hooks/copyToClipboard/index" },
+      ],
+      "/pages/Config/第三方库": [
+        { text: "gitalk", link: "/pages/Config/第三方库/gitalk" },
+         { text: "json-server", link: "/pages/Config/第三方库/json-server" },
       ],
       "/pages/Other/Live": [
         {

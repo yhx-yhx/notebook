@@ -102,22 +102,6 @@ if (true) {
 
 ## 数组
 
-```js
-let fruits = ['Apple', 'Banana'];
-
-// 访问和修改
-fruits[0]; 
-fruits[1] = 'Pear';
-
-// 添加和删除
-fruits.push('Orange');
-fruits.pop();
-
-// 遍历
-fruits.forEach(fruit => {
-  console.log(fruit);  
-});
-```
 
 ## 函数
 

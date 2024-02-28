@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video 视口交互</title>
+</head>
+
+<body>
+    <div style="height: 10000px;">
+        <video src="https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4"
+            controls></video>
+    </div>
+
+    <script>
+
+        // 获取视频元素  
+        const videoElement = document.querySelector('video');
+
+        // 创建Intersection Observer实例  
+        const observer = new IntersectionObserver((entries, observer) => {
+            // entries是一个数组，包含所有被观察的目标元素  
+            entries.forEach(entry => {
+                if (entry.intersectionRatio > 0) {
+                    videoElement.play();
+                } else {
+                    videoElement.pause();
+                }
+            });
+        });
+
+        // 开始观察视频元素  
+        observer.observe(videoElement);
+
+        // window.addEventListener('scroll', (event) => {
+        //     // console.log(event);
+        //     observer.observe(videoElement);
+        // })
+    </script>
+
+</body>
+
+</html>

@@ -9,6 +9,8 @@ import xgMusicPlay from "./xgMusicPlay.vue"
 
 <xgVideoPlay/>
 
+<br/>
+
 <xgMusicPlay/>
 
 </client-only>
@@ -19,12 +21,14 @@ import xgMusicPlay from "./xgMusicPlay.vue"
 
 <br/>
 
-::: code-group  details 具体实现代码
+::: details 具体实现代码
+::: code-group  
 
 <<< @/pages/Components/video/xgVideoPlay/xgVideoPlay.vue
 <<< @/pages/Components/video/xgVideoPlay/xgMusicPlay.vue
 
 :::
+
 <br/>
 
 
