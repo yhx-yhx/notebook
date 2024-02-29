@@ -1,1 +1,0 @@
-import{e as s}from"./plugin-vue_export-helper.0a4ef27f.js";import{S as a,e as o,u as t}from"./framework.5dd7d4b8.js";const r=["","default","small","large"],u={large:40,default:32,small:24},c=s({type:String,values:r,required:!1}),n=Symbol("size"),m=()=>{const e=a(n,{});return o(()=>t(e.size)||"")};export{n as S,m as a,r as b,u as c,c as u};
