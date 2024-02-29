@@ -1,41 +1,15 @@
 {
-  "hash": "18a16385",
-  "browserHash": "175cce7c",
+  "hash": "8e44b84b",
+  "configHash": "64d3e325",
+  "lockfileHash": "82a9d78d",
+  "browserHash": "b5fdee7e",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "05a4cf83",
+      "fileHash": "0e02a183",
       "needsInterop": false
-    },
-    "vitepress > @vue/devtools-api": {
-      "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
-      "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "dba23ea9",
-      "needsInterop": false
-    },
-    "vitepress > minisearch": {
-      "src": "../../../../node_modules/minisearch/dist/es/index.js",
-      "file": "vitepress___minisearch.js",
-      "fileHash": "6460b25c",
-      "needsInterop": false
-    },
-    "canvas": {
-      "src": "../../../../node_modules/canvas/browser.js",
-      "file": "canvas.js",
-      "fileHash": "12746763",
-      "needsInterop": true
-    },
-    "path2d-polyfill": {
-      "src": "../../../../node_modules/path2d-polyfill/dist/path2d-polyfill.dev.js",
-      "file": "path2d-polyfill.js",
-      "fileHash": "0b346e39",
-      "needsInterop": true
     }
   },
-  "chunks": {
-    "chunk-76J2PTFD": {
-      "file": "chunk-76J2PTFD.js"
-    }
-  }
+  "chunks": {}
 }
