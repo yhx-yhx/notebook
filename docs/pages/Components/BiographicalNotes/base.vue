@@ -53,7 +53,7 @@ function handleChange() {
                 </div>
                 <div style="text-align: center;padding: 10px 0;">
                     <el-input style="display: inline;padding-right: 10px;" type="text" v-model="password"
-                        @change="handleChange" @keydown.enter="submit" @click="submit"></el-input>
+                        @change="handleChange" @keydown.enter="submit"></el-input>
                     <el-button style="display: inline-block;" @click="submit">提交</el-button>
 
                 </div>
