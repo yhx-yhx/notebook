@@ -1,29 +1,29 @@
 {
   "hash": "a5bde67f",
-  "browserHash": "044e4b06",
+  "browserHash": "e2227268",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "a8a3c41b",
+      "fileHash": "f5e70fce",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "c033e1ea",
+      "fileHash": "99daae7a",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "5e7d3738",
+      "fileHash": "e8548ce8",
       "needsInterop": false
     },
     "canvas": {
       "src": "../../../../node_modules/canvas/browser.js",
       "file": "canvas.js",
-      "fileHash": "da5b16f7",
+      "fileHash": "9a89593a",
       "needsInterop": true
     },
     "path2d-polyfill": {
@@ -31,11 +31,29 @@
       "file": "path2d-polyfill.js",
       "fileHash": "352d513d",
       "needsInterop": true
+    },
+    "@giscus/vue": {
+      "src": "../../../../node_modules/@giscus/vue/dist/index.mjs",
+      "file": "@giscus_vue.js",
+      "fileHash": "d62fa193",
+      "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../../../node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "dfa8d77b",
+      "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-76J2PTFD": {
-      "file": "chunk-76J2PTFD.js"
+    "chunk-IYO332YY": {
+      "file": "chunk-IYO332YY.js"
+    },
+    "giscus-aTimukGI-Q3QRIJZF": {
+      "file": "giscus-aTimukGI-Q3QRIJZF.js"
+    },
+    "chunk-UXIASGQL": {
+      "file": "chunk-UXIASGQL.js"
     }
   }
 }

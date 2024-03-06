@@ -63,7 +63,7 @@ export default defineConfig({
       prev: "上一节",
       next: "下一节",
     },
-    returnToTopLabel: "返回顶部",// 用于自定义返回顶部按钮的标签，该标签仅在移动端视图中显示。
+    returnToTopLabel: "返回顶部", // 用于自定义返回顶部按钮的标签，该标签仅在移动端视图中显示。
     nav: [
       { text: "首页", link: "/" },
       {
@@ -242,12 +242,17 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/pages/Base/html': [
+      "/pages/Base/html": [
         {
-          text: 'html', collapsed: true,
-          items: [{
-            text: 'canvas', link: '/pages/Base/html/canvas/index'
-          }]}
+          text: "html",
+          collapsed: true,
+          items: [
+            {
+              text: "canvas",
+              link: "/pages/Base/html/canvas/index",
+            },
+          ],
+        },
       ],
       // /pages/Base/ 基础
       "/pages/Base/javascript": [
@@ -536,13 +541,16 @@ export default defineConfig({
         //   ],
         // },
       ],
-      '/pages/Config/hooks': [
-         { text: "fullscreen", link: "/pages/Config/hooks/fullscreen/index" },
-         { text: "copyToClipboard", link: "/pages/Config/hooks/copyToClipboard/index" },
+      "/pages/Config/hooks": [
+        { text: "fullscreen", link: "/pages/Config/hooks/fullscreen/index" },
+        {
+          text: "copyToClipboard",
+          link: "/pages/Config/hooks/copyToClipboard/index",
+        },
       ],
       "/pages/Config/第三方库": [
         { text: "gitalk", link: "/pages/Config/第三方库/gitalk" },
-         { text: "json-server", link: "/pages/Config/第三方库/json-server" },
+        { text: "json-server", link: "/pages/Config/第三方库/json-server" },
       ],
       "/pages/Other/Live": [
         {
@@ -604,17 +612,17 @@ export default defineConfig({
   markdown: {
     // markdown 解析配置
     // theme: 'material-palenight', // 主体配色
-    math:true, //markdown-it-mathjax3 数学方程
+    math: true, //markdown-it-mathjax3 数学方程
     lineNumbers: true, // 显示行号
     lazyLoading: true, // 懒加载
-     // markdown-it-anchor 的选项
+    // markdown-it-anchor 的选项
     // https://github.com/valeriangalliat/markdown-it-anchor#usage
     // anchor: {
     //   permalink: markdownItAnchor.permalink.headerLink()
     // },
     // @mdit-vue/plugin-toc 的选项
     // https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-toc#options
-    toc: { level: [1, 2] },
+    // toc: { level: [1, 2] },
     // config: (md) => {
     //   // 使用更多的 Markdown-it 插件！
     //   md.use(markdownItFoo)
