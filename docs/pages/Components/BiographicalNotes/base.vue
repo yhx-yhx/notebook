@@ -49,7 +49,7 @@ function handleChange() {
                 </div>
                 <div style="display: flex;padding: 10px 0;">
                     <el-image style="width: 300px;height: 300px;text-align: center;margin: auto;"
-                        src="/images/二维码.jpg"></el-image>
+                        src="/notebook/images/二维码.jpg"></el-image>
                 </div>
                 <div style="text-align: center;padding: 10px 0;">
                     <el-input style="display: inline;padding-right: 10px;" type="text" v-model="password"
