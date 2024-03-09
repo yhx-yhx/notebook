@@ -614,7 +614,7 @@ export default defineConfig({
     // theme: 'material-palenight', // 主体配色
     // math: true, //markdown-it-mathjax3 数学方程
     lineNumbers: true, // 显示行号
-    lazyLoading: true, // 懒加载
+    // lazyLoading: true, // 懒加载
     // markdown-it-anchor 的选项
     // https://github.com/valeriangalliat/markdown-it-anchor#usage
     // anchor: {
