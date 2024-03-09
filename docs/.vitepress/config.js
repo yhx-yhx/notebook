@@ -631,6 +631,6 @@ export default defineConfig({
   sitemap: {
     hostname: "https://example.com",
     // 默认禁用图片懒加载
-    // lastmodDateOnly: true,
+    lastmodDateOnly: false,
   },
 });
