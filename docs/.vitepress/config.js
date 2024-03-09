@@ -612,7 +612,7 @@ export default defineConfig({
   markdown: {
     // markdown 解析配置
     // theme: 'material-palenight', // 主体配色
-    math: true, //markdown-it-mathjax3 数学方程
+    // math: true, //markdown-it-mathjax3 数学方程
     lineNumbers: true, // 显示行号
     lazyLoading: true, // 懒加载
     // markdown-it-anchor 的选项
