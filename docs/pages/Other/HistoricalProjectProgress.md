@@ -1,5 +1,5 @@
 <script setup>
-import BiographicalNotes from '../../pages/Components/BiographicalNotes/index.vue'
+import BiographicalNotes from '../../pages/Base/Components/BiographicalNotes/index.vue'
 </script>
 
 

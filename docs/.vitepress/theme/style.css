@@ -3636,11 +3636,6 @@ svg.DocSearch-Hit-Select-Icon {
   background-color: var(--vp-button-sponsor-active-bg)
 }
 
-.VPHero[data-v-c5cb5d29] {
-  margin-top: calc((var(--vp-nav-height) + var(--vp-layout-top-height, 0px)) * -1);
-  padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 48px) 24px 48px
-}
-
 @media (min-width: 640px) {
   .VPHero[data-v-c5cb5d29] {
     padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 80px) 48px 64px

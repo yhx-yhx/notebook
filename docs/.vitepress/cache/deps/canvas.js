@@ -1,6 +1,6 @@
 import {
   __commonJS
-} from "./chunk-Y2F7D3TJ.js";
+} from "./chunk-3EJPJMEH.js";
 
 // node_modules/canvas/lib/parse-font.js
 var require_parse_font = __commonJS({

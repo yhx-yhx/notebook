@@ -72,6 +72,7 @@ export default defineConfig({
           { text: "JavaScript", link: "/pages/Base/javascript/index" },
           { text: "CSS", link: "/pages/Base/Css/index" },
           { text: "Html", link: "/pages/Base/html/index" },
+          { text: "组件集合", link: "/pages/Base/Components/index" },
           { text: "axios", link: "/pages/Base/axios/index" },
           { text: "Vue", link: "/pages/Base/vue全家桶/vue/" },
           { text: "vite", link: "/pages/Base/vite" },
@@ -82,98 +83,17 @@ export default defineConfig({
           { text: "jQuery", link: "/pages/Base/jQuery" },
         ],
       },
-      {
-        text: "组件",
-        items: [
-          {
-            text: "西瓜视频播放器",
-            link: "/pages/Components/video/xgVideoPlay/index",
-          },
-          {
-            text: "阿里云视频播放器",
-            link: "/pages/Components/video/alyVideoPlay/index",
-          },
-          {
-            text: "Vue3Echarts",
-            link: "/pages/Components/Vue3Echarts/index",
-          },
-          {
-            text: "pdfjs",
-            link: "/pages/Components/pdfjs/index",
-          },
-          {
-            text: "Vue3Perview",
-            link: "/pages/Components/Vue3Preview/index",
-          },
-          { text: "weather", link: "/pages/ComponentsExample/weather" },
-          {
-            text: "VideoCamera",
-            link: "/pages/ComponentsExample/VideoCamera",
-          },
-          { text: "Details", link: "/pages/ComponentsExample/details" },
-          { text: "Icon", link: "/pages/ComponentsExample/icon" },
-          { text: "引导页", link: "/pages/Components/guide/index" },
-          { text: "vue-count-to", link: "/pages/ComponentsExample/vueCountTo" },
-          {
-            text: "doxctemplater",
-            link: "/pages/Components/doxctemplater/index",
-          },
-          {
-            text: "QRcode",
-            link: "/pages/Components/QRcode/index",
-          },
-          {
-            text: "水印",
-            link: "/pages/Components/waterMarker/index",
-          },
-          {
-            text: "gsap应用",
-            link: "/pages/Components/gsap/index",
-          },
-          {
-            text: "tesseract.js实现读取图片文字的tool",
-            link: "/pages/Components/OCRTesseract/index",
-          },
-          {
-            text: "print-js打印功能",
-            link: "/pages/Components/printjs/index",
-          },
-          {
-            text: "vue-pdf-embed 实现的预览pdf功能",
-            link: "/pages/Components/perview/pdf/index",
-          },
-          {
-            text: "无缝滚动",
-            link: "/pages/Components/ScrollView/index",
-          },
-          {
-            text: "图片裁切",
-            link: "/pages/Components/cropper/index",
-          },
-          {
-            text: "窗格拆分器",
-            link: "/pages/Components/splitpanes/index",
-          },
-          {
-            text: "tree 原生js实现",
-            link: "/pages/Components/Tree/index",
-          },
-        ],
-      },
-      {
-        text: "Demo",
-        items: [{ text: "html", link: "/pages/Demo/css/htmlDemo" }],
-      },
-      {
-        text: "面试题",
-        items: [
-          { text: "interview", link: "/pages/Interview/interview" },
-          { text: "算法题目", link: "/pages/Interview/title/index" },
-        ],
-      },
+      // {
+      //   text: "Demo",
+      //   items: [{ text: "html", link: "/pages/Demo/css/htmlDemo" }],
+      // },
       {
         text: "记录",
         items: [
+          {
+            text: "面试题",
+            link: "/pages/Notes/Interview/index",
+          },
           { text: "遇到的bug", link: "/pages/Notes/bug/index" },
           { text: "github问题", link: "/pages/Notes/github/index" },
           {
@@ -194,45 +114,22 @@ export default defineConfig({
             text: "hello-algo",
             link: "/pages/Notes/algorithm/hello-algo/",
           },
+          {
+            text: "配置",
+            link: "/pages/Notes/Config/index",
+          },
+          {
+            text: "方案",
+            link: "/pages/Notes/Plan/index",
+          },
         ],
       },
       {
-        text: "方案",
+        text: "其他",
         items: [
-          { text: "屏幕安全区域", link: "/pages/Other/Plan/screenSafe" },
-          { text: "hooks", link: "/pages/Other/Plan/hooks" },
-          { text: "大屏可视化响应式", link: "/pages/Other/Plan/screen" },
-          { text: "xlsx", link: "/pages/Other/Plan/xlsx/index" },
-          { text: "download", link: "/pages/Other/Plan/download" },
-          { text: "导出zip", link: "/pages/Other/Plan/导出zip" },
-          // { text: "国际化", link: "/pages/Other/Plan/国际化" },
-        ],
-      },
-      {
-        text: "配置",
-        items: [
-          { text: "hooks", link: "/pages/Config/hooks/fullscreen/index" },
-          { text: "nvm", link: "/pages/Config/nvm" },
-          { text: "浏览器兼容配置", link: "/pages/Config/broswer" },
-          { text: "nginx配置", link: "/pages/Config/nginx配置" },
-          { text: "第三方库", link: "/pages/Config/第三方库/gitalk" },
-          { text: "过程文档", link: "/pages/Config/过程文档" },
-        ],
-      },
-      {
-        text: "Live",
-        items: [
-          { text: "noisy", link: "/pages/Other/Live/noisy" },
-          { text: "trivial", link: "/pages/Other/Live/trivial" },
-        ],
-      },
-      {
-        text: "Link",
-        items: [
-          { text: "Docs", link: "/pages/Other/Link/Docs/index" },
-          { text: "Live", link: "/pages/Other/Link/Live/index" },
-          { text: "Tools", link: "/pages/Other/Link/Tools/index" },
-          { text: "share", link: "/pages/Other/Link/share/index" },
+          { text: "Live", link: "/pages/Other/Live/noisy" },
+          { text: "想法", link: "/pages/Other/Idea/index" },
+          { text: "Link", link: "/pages/Other/Link/Live/index" },
         ],
       },
       {
@@ -250,6 +147,89 @@ export default defineConfig({
             {
               text: "canvas",
               link: "/pages/Base/html/canvas/index",
+            },
+          ],
+        },
+      ],
+      "/pages/Base/Components": [
+        {
+          text: "组件",
+          items: [
+            {
+              text: "西瓜视频播放器",
+              link: "/pages/Base/Components/video/xgVideoPlay/index",
+            },
+            {
+              text: "阿里云视频播放器",
+              link: "/pages/Base/Components/video/alyVideoPlay/index",
+            },
+            {
+              text: "Vue3Echarts",
+              link: "/pages/Base/Components/Vue3Echarts/index",
+            },
+            {
+              text: "pdfjs",
+              link: "/pages/Base/Components/pdfjs/index",
+            },
+            {
+              text: "Vue3Perview",
+              link: "/pages/Base/Components/Vue3Preview/index",
+            },
+            { text: "weather", link: "/pages/Base/Components/weather/index" },
+            {
+              text: "VideoCamera",
+              link: "/pages/Base/Components/VideoCamera/index",
+            },
+            { text: "Details", link: "/pages/Base/Components/details/index" },
+            { text: "Icon", link: "/pages/Base/Components/Icon/index" },
+            { text: "引导页", link: "/pages/Base/Components/guide/index" },
+            {
+              text: "vue-count-to",
+              link: "/pages/Base/Components/vueCountTo/index",
+            },
+            {
+              text: "doxctemplater",
+              link: "/pages/Base/Components/doxctemplater/index",
+            },
+            {
+              text: "QRcode",
+              link: "/pages/Base/Components/QRcode/index",
+            },
+            {
+              text: "水印",
+              link: "/pages/Base/Components/waterMarker/index",
+            },
+            {
+              text: "gsap应用",
+              link: "/pages/Base/Components/gsap/index",
+            },
+            {
+              text: "tesseract.js实现读取图片文字的tool",
+              link: "/pages/Base/Components/OCRTesseract/index",
+            },
+            {
+              text: "print-js打印功能",
+              link: "/pages/Base/Components/printjs/index",
+            },
+            {
+              text: "vue-pdf-embed 实现的预览pdf功能",
+              link: "/pages/Base/Components/preview/pdf/index",
+            },
+            {
+              text: "无缝滚动",
+              link: "/pages/Base/Components/ScrollView/index",
+            },
+            {
+              text: "图片裁切",
+              link: "/pages/Base/Components/cropper/index",
+            },
+            {
+              text: "窗格拆分器",
+              link: "/pages/Base/Components/splitpanes/index",
+            },
+            {
+              text: "tree 原生js实现",
+              link: "/pages/Base/Components/Tree/index",
             },
           ],
         },
@@ -464,44 +444,70 @@ export default defineConfig({
         { text: "安全", link: "/pages/Base/vue全家桶/vue/学习vue文档/安全" },
       ],
 
-      "/pages/Other/Link/Docs": [
+      // "/pages/Other/Link/Docs": [
+      //   { text: "Docs", link: "/pages/Other/Link/Docs/index" },
+      //   {
+      //     text: "Echarts",
+      //     link: "/pages/Other/Link/Docs/qianduan/Echarts/index.md",
+      //   },
+      // ],
+      "/pages/Notes/Config/": [
+        { text: "hooks", link: "/pages/Notes/Config/hooks/fullscreen/index" },
+        { text: "nvm", link: "/pages/Notes/Config/nvm" },
+        { text: "浏览器兼容配置", link: "/pages/Notes/Config/broswer" },
+        { text: "nginx配置", link: "/pages/Notes/Config/nginx配置" },
+        { text: "第三方库", link: "/pages/Notes/Config/第三方库/gitalk" },
+        { text: "过程文档", link: "/pages/Notes/Config/过程文档" },
+      ],
+      "/pages/Notes/Plan": [
+        { text: "屏幕安全区域", link: "/pages/Notes/Plan/screenSafe" },
+        { text: "hooks", link: "/pages/Notes/Plan/hooks" },
+        { text: "大屏可视化响应式", link: "/pages/Notes/Plan/screen" },
+        { text: "xlsx", link: "/pages/Notes/Plan/xlsx/index" },
+        { text: "download", link: "/pages/Notes/Plan/download" },
+        { text: "导出zip", link: "/pages/Notes/Plan/导出zip" },
+      ],
+      "/pages/Notes/Interview": [
+        { text: "interview", link: "/pages/Notes/Interview/interview" },
+        { text: "算法题目", link: "/pages/Notes/Interview/title/index" },
+        { text: "自测100", link: "/pages/Notes/Interview/自检100题" },
+      ],
+      "/pages/Other/Link": [
         { text: "Docs", link: "/pages/Other/Link/Docs/index" },
-        {
-          text: "Echarts",
-          link: "/pages/Other/Link/Docs/qianduan/Echarts/index.md",
-        },
+        { text: "Tools", link: "/pages/Other/Link/Tools/index" },
+        { text: "share", link: "/pages/Other/Link/share/index" },
       ],
-      "/pages/ComponentsExample/": [
-        // {
-        //   text: "组件",
-        //   items: [
-        //     {
-        //       text: "西瓜视频播放器",
-        //       link: "/pages/ComponentsExample/xgVideoPlay",
-        //     },
-        //     {
-        //       text: "阿里云视频播放器",
-        //       link: "/pages/ComponentsExample/alyVideoPlay",
-        //     },
-        //     {
-        //       text: "Vue3Echarts",
-        //       link: "/pages/ComponentsExample/Vue3Echarts",
-        //     },
-        //     {
-        //       text: "Vue3Perview",
-        //       link: "/pages/ComponentsExample/Vue3Perview",
-        //     },
-        //     { text: "weather", link: "/pages/ComponentsExample/weather" },
-        //     {
-        //       text: "VideoCamera",
-        //       link: "/pages/ComponentsExample/VideoCamera",
-        //     },
-        //     { text: "Details", link: "/pages/ComponentsExample/details" },
-        //     { text: "Icon", link: "/pages/ComponentsExample/icon" },
-        //     { text: "引导页", link: "/pages/ComponentsExample/引导页" },
-        //   ],
-        // },
-      ],
+      // "/pages/ComponentsExample/": [
+      //   // {
+      //   //   text: "组件",
+      //   //   items: [
+      //   //     {
+      //   //       text: "西瓜视频播放器",
+      //   //       link: "/pages/ComponentsExample/xgVideoPlay",
+      //   //     },
+      //   //     {
+      //   //       text: "阿里云视频播放器",
+      //   //       link: "/pages/ComponentsExample/alyVideoPlay",
+      //   //     },
+      //   //     {
+      //   //       text: "Vue3Echarts",
+      //   //       link: "/pages/ComponentsExample/Vue3Echarts",
+      //   //     },
+      //   //     {
+      //   //       text: "Vue3Perview",
+      //   //       link: "/pages/ComponentsExample/Vue3Perview",
+      //   //     },
+      //   //     { text: "weather", link: "/pages/ComponentsExample/weather" },
+      //   //     {
+      //   //       text: "VideoCamera",
+      //   //       link: "/pages/ComponentsExample/VideoCamera",
+      //   //     },
+      //   //     { text: "Details", link: "/pages/ComponentsExample/details" },
+      //   //     { text: "Icon", link: "/pages/ComponentsExample/icon" },
+      //   //     { text: "引导页", link: "/pages/ComponentsExample/引导页" },
+      //   //   ],
+      //   // },
+      // ],
       "/pages/Other/Plan": [
         // {
         //   text: "Plan",
