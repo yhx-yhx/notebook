@@ -1,5 +1,5 @@
 <script setup>
-import { ExportBriefDataDocx, getBase64Sync, getImageSize } from '../../utils/templaterWord.js'
+import { ExportBriefDataDocx, getBase64Sync, getImageSize } from '../../../utils/templaterWord.js'
 import { ElButton, ElLink } from "element-plus"
 import Vue3Echarts from "../Vue3Echarts/index.vue"
 import { ref, onMounted } from "vue"

@@ -27,7 +27,7 @@
 
 
 <script setup>
-    import BaseInfo from "../../../Components/common/baseInfo.vue"
+    import BaseInfo from "../../../Base/Components/common/baseInfo.vue"
 
     const datazujian = [
     {
