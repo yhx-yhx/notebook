@@ -567,16 +567,6 @@ export default defineConfig({
           ],
         },
       ],
-      "/pages/Other/Link": [
-        // {
-        //   text: "Link",
-        //   items: [
-        //     { text: "Docs", link: "/pages/Other/Link/Docs/index" },
-        //     { text: "Live", link: "/pages/Other/Link/Live/index" },
-        //     { text: "Tools", link: "/pages/Other/Link/Tools/index" },
-        //   ],
-        // },
-      ],
     },
     search: {
       provider: "local",
